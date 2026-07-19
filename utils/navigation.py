@@ -74,7 +74,7 @@ def render_top_navigation(active: str) -> None:
         with brand_col:
             st.markdown(
                 '''
-                <div class="top-nav-brand">
+                <a href="/" target="_self" class="top-nav-brand-link" aria-label="Ir a Home">\n                <div class="top-nav-brand">
                     <div class="brand-symbol" aria-hidden="true">
                         <svg viewBox="0 0 100 100" role="img">
                             <circle cx="50" cy="50" r="35" class="pulse-ring"></circle>
@@ -88,6 +88,7 @@ def render_top_navigation(active: str) -> None:
                         <div class="brand-city">MADRID</div>
                     </div>
                 </div>
+                </a>
                 ''',
                 unsafe_allow_html=True,
             )
