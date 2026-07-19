@@ -1,0 +1,409 @@
+.prediction-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 350px;
+    padding: clamp(2.6rem, 5vw, 5rem);
+    border: 1px solid rgba(72, 212, 248, .25);
+    border-radius: 4px 4px 27px 4px;
+    background:
+        radial-gradient(circle at 86% 25%, rgba(49, 199, 237, .17), transparent 31%),
+        linear-gradient(112deg, rgba(3, 15, 26, .98), rgba(5, 34, 52, .90) 58%, rgba(4, 17, 28, .93));
+    box-shadow: 0 35px 84px rgba(0, 0, 0, .40), inset 0 1px rgba(174, 239, 255, .06);
+}
+
+.prediction-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(73, 183, 221, .07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(73, 183, 221, .07) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(90deg, transparent 26%, black);
+}
+
+.prediction-hero::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 220px;
+    right: -70px;
+    top: 62px;
+    border-top: 1px solid rgba(66, 220, 255, .34);
+    border-bottom: 1px solid rgba(66, 220, 255, .12);
+    transform: skewY(-11deg);
+    box-shadow: 0 0 55px rgba(37, 180, 222, .09);
+}
+
+.prediction-eyebrow,
+.prediction-section span,
+.prediction-insights > span,
+.prediction-methodology > span {
+    position: relative;
+    z-index: 1;
+    color: var(--cyan);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .21em;
+}
+
+.prediction-hero h1 {
+    position: relative;
+    z-index: 1;
+    margin: 1.15rem 0 .65rem;
+    color: #f1fbff;
+    font: 600 clamp(3rem, 5.8vw, 6.1rem)/.92 'Space Grotesk', sans-serif;
+    letter-spacing: -.065em;
+}
+
+.prediction-hero h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(91, 225, 255, .82);
+}
+
+.prediction-hero h2 {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 1.25rem 0 .7rem;
+    color: #d4eaf3;
+    font: 500 clamp(1rem, 1.9vw, 1.42rem)/1.35 'Space Grotesk', sans-serif;
+}
+
+.prediction-hero > p {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: .83rem;
+    line-height: 1.68;
+}
+
+.prediction-horizon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .7rem;
+    margin-top: 2.1rem;
+    color: var(--text-tertiary);
+    font-size: 9px;
+    letter-spacing: .12em;
+}
+
+.prediction-horizon span { color: #d3edf6; font-weight: 700; }
+.prediction-horizon strong { color: #8ca8b8; font-size: 8px; }
+.prediction-horizon b { color: var(--cyan); font-size: 13px; }
+.prediction-horizon i { width: 22px; height: 1px; background: rgba(69, 204, 238, .42); }
+
+.prediction-source {
+    margin: .9rem 0 1.1rem;
+    color: var(--text-tertiary);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .14em;
+}
+
+.prediction-source i {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #4ce1c0;
+    box-shadow: 0 0 10px #4ce1c0;
+}
+
+[class*="st-key-prediction_kpi_"] {
+    min-height: 158px;
+    background: linear-gradient(145deg, rgba(9, 29, 44, .89), rgba(5, 17, 28, .73));
+    border-color: rgba(78, 193, 232, .23) !important;
+    border-radius: 4px 4px 17px 4px !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .24), inset 0 1px rgba(180, 239, 255, .04);
+}
+
+[class*="st-key-prediction_kpi_"] [data-testid="stMetricValue"] {
+    color: #f1fbff;
+    font: 600 clamp(1.2rem, 1.75vw, 1.8rem)/1.1 'Space Grotesk', sans-serif;
+    overflow-wrap: anywhere;
+    white-space: normal;
+}
+
+[class*="st-key-prediction_kpi_confidence"] {
+    border-color: rgba(239, 182, 92, .34) !important;
+}
+
+.prediction-alert {
+    margin-top: 1rem;
+    padding: 1.2rem 1.4rem;
+    border: 1px solid rgba(255, 96, 112, .38);
+    border-left: 3px solid var(--red);
+    background: linear-gradient(90deg, rgba(78, 23, 35, .42), rgba(8, 23, 35, .68));
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .18);
+}
+
+.prediction-alert span { color: #ff9aa5; font-size: 9px; font-weight: 700; letter-spacing: .16em; }
+.prediction-alert h3 { margin: .42rem 0 .25rem; color: #ffe8eb; font: 600 1.15rem 'Space Grotesk', sans-serif; }
+.prediction-alert p { margin: 0; color: #c8d9e1; font-size: .76rem; line-height: 1.55; }
+
+.prediction-context {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin: .8rem 0 1rem;
+    padding: .68rem .9rem;
+    border: 1px solid rgba(72, 198, 235, .18);
+    border-left: 3px solid var(--cyan);
+    background: rgba(6, 25, 39, .68);
+    color: var(--text-secondary);
+}
+
+.prediction-context span,
+.prediction-context b { color: var(--cyan); font-size: 8px; font-weight: 700; letter-spacing: .14em; }
+.prediction-context strong { color: #e6f6fc; font: 500 .76rem 'Space Grotesk', sans-serif; }
+.prediction-context i { width: 1px; height: 16px; background: rgba(77, 202, 239, .28); }
+
+.prediction-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 3rem;
+    margin: 3.15rem 0 1rem;
+    padding-bottom: 1.05rem;
+    border-bottom: 1px solid rgba(78, 180, 220, .18);
+}
+
+.prediction-section h2 {
+    margin: .32rem 0 0;
+    color: #eaf8fe;
+    font: 600 clamp(1.65rem, 3vw, 2.8rem)/1 'Space Grotesk', sans-serif;
+    letter-spacing: -.04em;
+}
+
+.prediction-section p {
+    max-width: 550px;
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: .76rem;
+    line-height: 1.58;
+    text-align: right;
+}
+
+[class*="st-key-prediction-volume-table"] [data-testid="stDataFrame"],
+[class*="st-key-prediction-growth-table"] [data-testid="stDataFrame"],
+[class*="st-key-prediction-decline-table"] [data-testid="stDataFrame"] {
+    overflow: hidden;
+    border: 1px solid rgba(78, 180, 220, .17);
+    border-radius: 4px 4px 14px 4px;
+}
+
+.prediction-trend-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin: .65rem 0 .85rem;
+    overflow: hidden;
+    border: 1px solid rgba(78, 180, 220, .17);
+    border-radius: 4px 4px 16px 4px;
+    background: rgba(78, 180, 220, .13);
+}
+
+.prediction-trend-summary article { padding: .9rem 1rem; background: rgba(5, 20, 32, .94); }
+.prediction-trend-summary span { color: var(--text-tertiary); font-size: 8px; font-weight: 700; letter-spacing: .13em; }
+.prediction-trend-summary h3 { margin: .36rem 0 .26rem; color: #eefaff; font: 600 1.05rem/1.2 'Space Grotesk', sans-serif; overflow-wrap: anywhere; }
+.prediction-trend-summary strong { display: block; color: var(--cyan); font: 600 1.35rem 'Space Grotesk', sans-serif; }
+.prediction-trend-summary small { color: var(--text-secondary); font-size: .64rem; letter-spacing: .08em; }
+.prediction-trend-summary .uncertainty-tag { color: #efb65c; }
+
+.st-key-prediction_map_shell {
+    overflow: hidden;
+    border: 1px solid rgba(78, 180, 220, .17);
+    border-radius: 4px 4px 16px 4px;
+    background: rgba(3, 13, 22, .72);
+}
+
+.st-key-prediction_map_shell [data-testid="stPlotlyChart"],
+.st-key-prediction_map_shell .js-plotly-plot,
+.st-key-prediction_map_shell .plot-container {
+    width: 100% !important;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.uncertainty-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+
+.uncertainty-grid article {
+    min-height: 230px;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border: 1px solid rgba(79, 186, 225, .20);
+    border-radius: 4px 4px 19px 4px;
+    background: linear-gradient(145deg, rgba(8, 30, 45, .88), rgba(5, 17, 28, .75));
+    box-shadow: 0 18px 46px rgba(0, 0, 0, .23);
+}
+
+.uncertainty-grid.compact { gap: 1px; margin: .9rem 0 1rem; background: rgba(79, 186, 225, .14); }
+.uncertainty-grid.compact article { min-height: 0; padding: 1rem 1.1rem; border: 0; border-radius: 0; box-shadow: none; }
+.uncertainty-grid.compact h3 { margin: .38rem 0 .28rem; font-size: 1.12rem; }
+.uncertainty-grid.compact p,
+.uncertainty-grid.compact li { font-size: .7rem; }
+
+.uncertainty-grid .uncertain { border-color: rgba(239, 182, 92, .35); }
+.uncertainty-grid span { color: var(--cyan); font-size: 9px; font-weight: 700; letter-spacing: .16em; }
+.uncertainty-grid .uncertain span { color: #efb65c; }
+.uncertainty-grid h3 { margin: .55rem 0 .4rem; color: #eefaff; font: 600 1.55rem 'Space Grotesk', sans-serif; }
+.uncertainty-grid strong { color: #9fc1d0; font-size: .72rem; }
+.uncertainty-grid p,
+.uncertainty-grid li { color: var(--text-secondary); font-size: .74rem; line-height: 1.58; }
+.uncertainty-grid ul { margin: .8rem 0 0; padding-left: 1.2rem; }
+
+.emerging-case {
+    min-height: 285px;
+    padding: clamp(1.35rem, 2.5vw, 2rem);
+    border: 1px solid rgba(255, 96, 112, .34);
+    border-radius: 4px 4px 21px 4px;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(255, 96, 112, .13), transparent 35%),
+        linear-gradient(145deg, rgba(41, 17, 28, .84), rgba(7, 22, 34, .88));
+    box-shadow: 0 25px 58px rgba(0, 0, 0, .27);
+}
+
+.emerging-case > span { color: #ff9ba6; font-size: 9px; font-weight: 700; letter-spacing: .15em; }
+.emerging-case h3 { margin: .6rem 0 .7rem; color: #fff0f2; font: 600 clamp(1.5rem, 2.5vw, 2.4rem)/1.08 'Space Grotesk', sans-serif; }
+.emerging-case > strong { display: block; margin-bottom: 1rem; color: var(--red); font: 600 2.35rem 'Space Grotesk', sans-serif; }
+.emerging-case > div { display: inline-block; min-width: 125px; margin: 0 1rem 1rem 0; }
+.emerging-case b { color: var(--text-tertiary); font-size: 8px; letter-spacing: .12em; }
+.emerging-case div p { margin: .3rem 0 0; color: #eaf8fe; font: 600 1.2rem 'Space Grotesk', sans-serif; }
+.emerging-case small { display: block; color: var(--text-secondary); font-size: .68rem; line-height: 1.5; }
+
+.prediction-insights,
+.prediction-methodology {
+    margin-top: 3.2rem;
+    padding: clamp(1.35rem, 2.5vw, 2rem);
+    border: 1px solid rgba(78, 180, 220, .19);
+    border-radius: 4px 4px 23px 4px;
+    background: linear-gradient(125deg, rgba(7, 29, 44, .89), rgba(4, 15, 25, .77));
+    box-shadow: 0 27px 64px rgba(0, 0, 0, .25);
+}
+
+.prediction-insights h2,
+.prediction-methodology h2 {
+    margin: .45rem 0 1.25rem;
+    color: #ebf9ff;
+    font: 600 clamp(1.6rem, 2.8vw, 2.6rem)/1.05 'Space Grotesk', sans-serif;
+    letter-spacing: -.035em;
+}
+
+.prediction-insights > div {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 1.5rem;
+}
+
+.prediction-insights article {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: .8rem;
+    padding: .72rem 0;
+    border-bottom: 1px solid rgba(80, 169, 207, .13);
+}
+
+.prediction-insights article b { color: var(--cyan); font: 500 .66rem 'Space Grotesk', sans-serif; }
+.prediction-insights article p { margin: 0; color: #c5dde7; font-size: .76rem; line-height: 1.55; }
+
+.prediction-methodology-panel > span { color: var(--cyan); font-size: 9px; font-weight: 700; letter-spacing: .18em; }
+.prediction-methodology-panel > small { display: block; margin-top: .9rem; color: var(--text-tertiary); font-size: .66rem; }
+.wape-heading { display: flex; justify-content: space-between; gap: 1.5rem; align-items: end; margin: 1rem 0 .55rem; }
+.wape-heading b { color: #dceff6; font-size: 9px; letter-spacing: .13em; }
+.wape-heading p { margin: 0; color: var(--text-secondary); font-size: .7rem; }
+.method-notes { margin: .8rem 0 0; padding-left: 1.2rem; }
+.method-notes li { margin: .4rem 0; color: var(--text-secondary); font-size: .72rem; line-height: 1.55; }
+.method-notes strong { color: #d6edf5; }
+.method-conclusion { margin: .9rem 0 0; padding-top: .8rem; border-top: 1px solid rgba(78, 180, 220, .16); color: #dceff6; font-size: .73rem; font-weight: 600; }
+
+.wape-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    margin-bottom: 1.3rem;
+    background: rgba(77, 180, 220, .15);
+}
+
+.wape-strip article { padding: 1rem 1.15rem; background: rgba(5, 20, 32, .94); }
+.wape-strip b { color: var(--text-tertiary); font-size: 9px; letter-spacing: .13em; }
+.wape-strip strong { display: block; margin-top: .35rem; color: #eaf8fe; font: 600 1.35rem 'Space Grotesk', sans-serif; }
+.prediction-methodology ul { margin: 0; padding-left: 1.2rem; }
+.prediction-methodology li,
+.prediction-methodology > p { color: var(--text-secondary); font-size: .74rem; line-height: 1.62; }
+.prediction-methodology li { margin: .55rem 0; }
+.prediction-methodology li strong { color: #d6edf5; }
+.prediction-methodology > p { margin: 1.25rem 0 0; padding-top: 1.1rem; border-top: 1px solid rgba(78, 180, 220, .16); color: #dceff6; font-weight: 600; }
+
+@media (max-width: 800px) {
+    .prediction-hero { min-height: 410px; padding: 2.5rem 1.35rem; }
+    .prediction-section { display: block; margin-top: 3.9rem; }
+    .prediction-section p { margin-top: .75rem; text-align: left; }
+    .uncertainty-grid,
+    .prediction-trend-summary,
+    .prediction-insights > div { grid-template-columns: 1fr; }
+    .wape-strip { grid-template-columns: repeat(2, 1fr); }
+    .wape-heading { display: block; }
+    .wape-heading p { margin-top: .4rem; }
+}
+
+
+/* Mapa predictivo: visualización completamente estática.
+   staticPlot=True bloquea pan, zoom y gestos de navegación.
+   Estas reglas mantienen el contenido dentro de la tarjeta y ocultan
+   controles compactos residuales del motor cartográfico solo en este mapa. */
+.st-key-prediction_map_shell {
+    position: relative;
+    overflow: hidden !important;
+}
+
+.st-key-prediction_map_shell [data-testid="stPlotlyChart"],
+.st-key-prediction_map_shell .js-plotly-plot,
+.st-key-prediction_map_shell .plot-container,
+.st-key-prediction_map_shell .svg-container,
+.st-key-prediction_map_shell .mapboxgl-map,
+.st-key-prediction_map_shell .maplibregl-map {
+    overflow: hidden !important;
+    border-radius: inherit !important;
+}
+
+.st-key-prediction_map_shell .mapboxgl-ctrl-bottom-right,
+.st-key-prediction_map_shell .mapboxgl-ctrl-bottom-left,
+.st-key-prediction_map_shell .maplibregl-ctrl-bottom-right,
+.st-key-prediction_map_shell .maplibregl-ctrl-bottom-left,
+.st-key-prediction_map_shell .mapboxgl-ctrl-attrib,
+.st-key-prediction_map_shell .mapboxgl-ctrl-attrib-button,
+.st-key-prediction_map_shell .maplibregl-ctrl-attrib,
+.st-key-prediction_map_shell .maplibregl-ctrl-attrib-button {
+    display: none !important;
+}
+
+
+/* Selector territorial "Incluir Madrid" en la barra fija de Predicciones. */
+.st-key-home_filter_bar [data-testid="stToggle"] {
+    min-height: 2.65rem;
+    display: flex;
+    align-items: center;
+}
+
+.st-key-home_filter_bar [data-testid="stToggle"] label {
+    margin: 0 !important;
+}
+
+.st-key-home_filter_bar [data-testid="stToggle"] p {
+    font-size: .72rem !important;
+    font-weight: 600 !important;
+    letter-spacing: .02em;
+    white-space: nowrap;
+}

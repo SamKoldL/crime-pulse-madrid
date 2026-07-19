@@ -1,0 +1,399 @@
+.optimization-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 340px;
+    padding: clamp(2.5rem, 5vw, 5rem);
+    border: 1px solid rgba(77, 202, 241, .25);
+    border-radius: 4px 4px 26px 4px;
+    background:
+        linear-gradient(112deg, rgba(4, 17, 29, .97), rgba(5, 35, 52, .88) 58%, rgba(4, 17, 29, .90)),
+        radial-gradient(circle at 88% 28%, rgba(47, 202, 239, .16), transparent 34%);
+    box-shadow: 0 34px 82px rgba(0, 0, 0, .38), inset 0 1px rgba(178, 237, 255, .06);
+}
+
+.optimization-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(66, 177, 216, .07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(66, 177, 216, .07) 1px, transparent 1px);
+    background-size: 46px 46px;
+    mask-image: linear-gradient(90deg, transparent 28%, black);
+}
+
+.optimization-hero::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    right: -55px;
+    top: -95px;
+    border: 1px solid rgba(76, 220, 252, .20);
+    border-radius: 50%;
+    box-shadow: 0 0 70px rgba(29, 176, 220, .10), inset 0 0 55px rgba(29, 176, 220, .05);
+}
+
+.optimization-eyebrow,
+.optimization-section span,
+.optimization-insights > span,
+.optimization-methodology > span {
+    color: var(--cyan);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .21em;
+}
+
+.optimization-hero h1 {
+    position: relative;
+    z-index: 1;
+    margin: 1.15rem 0 .6rem;
+    color: #f1fbff;
+    font: 600 clamp(2.9rem, 5.6vw, 5.9rem)/.92 'Space Grotesk', sans-serif;
+    letter-spacing: -.065em;
+}
+
+.optimization-hero h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(89, 221, 251, .82);
+}
+
+.optimization-hero h2 {
+    position: relative;
+    z-index: 1;
+    max-width: 840px;
+    margin: 1.25rem 0 .7rem;
+    color: #d3e9f3;
+    font: 500 clamp(1rem, 1.8vw, 1.38rem)/1.35 'Space Grotesk', sans-serif;
+}
+
+.optimization-hero > p {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: .83rem;
+    line-height: 1.7;
+}
+
+.optimization-flow {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .72rem;
+    margin-top: 2rem;
+    color: var(--text-tertiary);
+    font-size: 9px;
+    letter-spacing: .12em;
+}
+
+.optimization-flow span { color: #cae7f2; font-weight: 700; }
+.optimization-flow strong { color: #7f9daf; font-size: 8px; }
+.optimization-flow b { color: var(--cyan); font-size: 13px; }
+.optimization-flow i { width: 18px; height: 1px; background: rgba(74, 198, 232, .4); }
+
+.optimization-source {
+    margin: 1.1rem 0 1.55rem;
+    color: var(--text-tertiary);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .14em;
+}
+
+.optimization-source i {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #4ce1c0;
+    box-shadow: 0 0 10px #4ce1c0;
+}
+
+.scenario-definition {
+    margin: .65rem 0 1rem;
+    padding: .85rem 1rem;
+    border: 1px solid rgba(73, 191, 229, .20);
+    border-left: 3px solid var(--cyan);
+    background: rgba(7, 25, 39, .66);
+}
+
+.scenario-definition span {
+    color: var(--cyan);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+.scenario-definition p {
+    margin: .4rem 0 0;
+    color: var(--text-secondary);
+    font-size: .76rem;
+    line-height: 1.55;
+}
+
+[class*="st-key-optimization_kpi_"] {
+    min-height: 150px;
+    background: linear-gradient(145deg, rgba(9, 29, 44, .88), rgba(5, 17, 28, .72));
+    border-color: rgba(79, 190, 230, .22) !important;
+    border-radius: 4px 4px 17px 4px !important;
+    box-shadow: 0 15px 38px rgba(0, 0, 0, .24), inset 0 1px rgba(180, 239, 255, .04);
+}
+
+[class*="st-key-optimization_kpi_"] [data-testid="stMetricValue"] {
+    color: #f1fbff;
+    font: 600 clamp(1.15rem, 1.55vw, 1.65rem)/1.1 'Space Grotesk', sans-serif;
+    overflow-wrap: anywhere;
+}
+
+[class*="st-key-optimization_kpi_pressure_peak"] {
+    border-color: rgba(242, 184, 91, .35) !important;
+}
+
+[class*="st-key-optimization_kpi_police_peak"] {
+    border-color: rgba(61, 141, 204, .42) !important;
+}
+
+.optimization-focus {
+    display: grid;
+    grid-template-columns: minmax(240px, 1.5fr) repeat(4, minmax(105px, .7fr));
+    align-items: stretch;
+    gap: 1px;
+    margin: .8rem 0 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(78, 187, 226, .18);
+    border-radius: 4px 4px 16px 4px;
+    background: rgba(78, 187, 226, .12);
+}
+
+.optimization-focus > div,
+.optimization-focus article {
+    padding: .85rem 1rem;
+    background: rgba(5, 20, 32, .94);
+}
+
+.optimization-focus > div { background: rgba(8, 32, 47, .88); }
+.optimization-focus article { border-left: 1px solid rgba(78, 187, 226, .14); }
+.optimization-focus span,
+.optimization-focus b { color: var(--text-tertiary); font-size: 8px; font-weight: 700; letter-spacing: .13em; }
+.optimization-focus h3 { margin: .32rem 0 .2rem; color: #edfaff; font: 600 1.05rem 'Space Grotesk', sans-serif; }
+.optimization-focus p { margin: 0; color: var(--text-secondary); font-size: .67rem; line-height: 1.45; }
+.optimization-focus article strong { display: block; margin-top: .42rem; color: #eaf9ff; font: 600 1.02rem 'Space Grotesk', sans-serif; }
+
+.madrid-case {
+    display: grid;
+    grid-template-columns: minmax(245px, 1.5fr) repeat(5, minmax(105px, .7fr));
+    align-items: stretch;
+    gap: 1px;
+    margin: .85rem 0 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(81, 188, 226, .20);
+    border-radius: 4px 4px 18px 4px;
+    background: rgba(6, 22, 35, .72);
+}
+
+.madrid-case > div,
+.madrid-case article { padding: .9rem 1rem; }
+.madrid-case > div { background: rgba(8, 32, 47, .76); }
+.madrid-case article { border-left: 1px solid rgba(81, 188, 226, .16); }
+.madrid-case span,
+.madrid-case b { color: var(--text-tertiary); font-size: 8px; font-weight: 700; letter-spacing: .13em; }
+.madrid-case h2 { margin: .32rem 0; color: #eaf8fe; font: 600 1.16rem 'Space Grotesk', sans-serif; }
+.madrid-case p { margin: 0; color: var(--text-secondary); font-size: .69rem; line-height: 1.5; }
+.madrid-case article strong { display: block; margin-top: .42rem; color: #eaf9ff; font: 600 1.08rem 'Space Grotesk', sans-serif; }
+
+.optimization-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 3rem;
+    margin: 3.25rem 0 1.05rem;
+    padding-bottom: 1.05rem;
+    border-bottom: 1px solid rgba(79, 178, 218, .18);
+}
+
+.optimization-section h2 {
+    margin: .32rem 0 0;
+    color: #eaf8fe;
+    font: 600 clamp(1.65rem, 3vw, 2.75rem)/1 'Space Grotesk', sans-serif;
+    letter-spacing: -.04em;
+}
+
+.optimization-section p {
+    max-width: 540px;
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: .76rem;
+    line-height: 1.58;
+    text-align: right;
+}
+
+.st-key-optimization_full_ranking [data-testid="stDataFrame"],
+.st-key-optimization_comparison_table [data-testid="stDataFrame"] {
+    border: 1px solid rgba(79, 178, 218, .17);
+    border-radius: 4px 4px 14px 4px;
+    overflow: hidden;
+}
+
+.comparison-categories {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    margin: .8rem 0 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(79, 178, 218, .17);
+    border-radius: 4px 4px 15px 4px;
+    background: rgba(79, 178, 218, .14);
+}
+
+.comparison-categories article {
+    padding: 1rem 1.1rem;
+    background: rgba(5, 20, 32, .94);
+}
+
+.comparison-categories b {
+    color: #82dff4;
+    font-size: 8px;
+    letter-spacing: .13em;
+}
+
+.comparison-categories p {
+    margin: .45rem 0 0;
+    color: var(--text-secondary);
+    font-size: .69rem;
+    line-height: 1.55;
+}
+
+.optimization-insights,
+.optimization-methodology {
+    margin-top: 3.25rem;
+    padding: clamp(1.35rem, 2.5vw, 2rem);
+    background: linear-gradient(125deg, rgba(7, 29, 44, .88), rgba(4, 15, 25, .76));
+    border: 1px solid rgba(79, 178, 218, .19);
+    border-radius: 4px 4px 23px 4px;
+    box-shadow: 0 26px 62px rgba(0, 0, 0, .25);
+}
+
+.optimization-insights h2,
+.optimization-methodology h2 {
+    margin: .45rem 0 1.2rem;
+    color: #ebf9ff;
+    font: 600 clamp(1.6rem, 2.8vw, 2.6rem)/1.05 'Space Grotesk', sans-serif;
+    letter-spacing: -.035em;
+}
+
+.optimization-insights > div {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 1.5rem;
+}
+
+.optimization-insights article {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: .8rem;
+    padding: .72rem 0;
+    border-bottom: 1px solid rgba(80, 169, 207, .13);
+}
+
+.optimization-insights article b { color: var(--cyan); font: 500 .66rem 'Space Grotesk', sans-serif; }
+.optimization-insights article p { margin: 0; color: #c4dce7; font-size: .76rem; line-height: 1.55; }
+
+.st-key-optimization_map_shell {
+    overflow: hidden;
+    border: 1px solid rgba(79, 178, 218, .17);
+    border-radius: 4px 4px 16px 4px;
+    background: rgba(3, 13, 22, .72);
+}
+
+.st-key-optimization_map_shell [data-testid="stPlotlyChart"],
+.st-key-optimization_map_shell .js-plotly-plot,
+.st-key-optimization_map_shell .plot-container {
+    width: 100% !important;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.st-key-home_filter_bar [data-testid="stCheckbox"] {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.st-key-home_filter_bar [data-testid="stCheckbox"] label {
+    color: var(--text-secondary) !important;
+    font-size: .72rem;
+}
+
+.optimization-methodology > div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: rgba(81, 174, 213, .15);
+}
+
+.optimization-methodology article {
+    padding: 1.25rem;
+    background: rgba(5, 20, 32, .94);
+}
+
+.optimization-methodology article.wide { grid-column: 1 / -1; }
+.optimization-methodology b { color: #85dff3; font-size: 9px; letter-spacing: .13em; }
+.optimization-methodology p { margin: .5rem 0 0; color: var(--text-secondary); font-size: .73rem; line-height: 1.6; }
+
+@media (max-width: 1150px) {
+    .madrid-case { grid-template-columns: repeat(3, 1fr); }
+    .madrid-case > div { grid-column: 1 / -1; }
+    .madrid-case article:first-of-type { border-left: 0; }
+    .optimization-focus { grid-template-columns: repeat(2, 1fr); }
+    .optimization-focus > div { grid-column: 1 / -1; }
+}
+
+@media (max-width: 760px) {
+    .optimization-hero { min-height: 400px; padding: 2.4rem 1.35rem; }
+    .optimization-flow { gap: .45rem; }
+    .optimization-section { display: block; margin-top: 3.8rem; }
+    .optimization-section p { margin-top: .75rem; text-align: left; }
+    .madrid-case { grid-template-columns: repeat(2, 1fr); }
+    .madrid-case article { border-top: 1px solid rgba(81, 188, 226, .16); }
+    .optimization-focus,
+    .optimization-insights > div,
+    .optimization-methodology > div,
+    .comparison-categories { grid-template-columns: 1fr; }
+    .optimization-methodology article.wide { grid-column: auto; }
+}
+
+
+/* Mapa de redistribución: visualización completamente estática.
+   staticPlot=True bloquea pan, zoom e interacción desde Plotly.
+   Estas reglas mantienen el contenido dentro de la tarjeta y ocultan
+   controles compactos residuales del motor cartográfico solo en este mapa. */
+.st-key-optimization_map_shell {
+    position: relative;
+    overflow: hidden !important;
+}
+
+.st-key-optimization_map_shell [data-testid="stPlotlyChart"],
+.st-key-optimization_map_shell .js-plotly-plot,
+.st-key-optimization_map_shell .plot-container,
+.st-key-optimization_map_shell .svg-container,
+.st-key-optimization_map_shell .mapboxgl-map,
+.st-key-optimization_map_shell .maplibregl-map {
+    overflow: hidden !important;
+    border-radius: inherit !important;
+}
+
+.st-key-optimization_map_shell .mapboxgl-ctrl-bottom-right,
+.st-key-optimization_map_shell .mapboxgl-ctrl-bottom-left,
+.st-key-optimization_map_shell .maplibregl-ctrl-bottom-right,
+.st-key-optimization_map_shell .maplibregl-ctrl-bottom-left,
+.st-key-optimization_map_shell .mapboxgl-ctrl-attrib,
+.st-key-optimization_map_shell .mapboxgl-ctrl-attrib-button,
+.st-key-optimization_map_shell .maplibregl-ctrl-attrib,
+.st-key-optimization_map_shell .maplibregl-ctrl-attrib-button {
+    display: none !important;
+}

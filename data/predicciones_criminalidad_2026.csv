@@ -1,0 +1,1777 @@
+﻿municipio,tipo de crimen,año,trimestre,num_trimestre,conteo_predicho,modelo,nivel_confianza
+Alcalá de Henares,Agresión sexual con penetración,2026,Q1,1,4.137116902987202,Gradient Boosting,Estándar
+Alcalá de Henares,Agresión sexual con penetración,2026,Q2,2,4.574096475108976,Gradient Boosting,Estándar
+Alcalá de Henares,Agresión sexual con penetración,2026,Q3,3,5.011932268019969,Gradient Boosting,Estándar
+Alcalá de Henares,Delitos contra la libertad sexual,2026,Q1,1,20.31638449147654,Gradient Boosting,Estándar
+Alcalá de Henares,Delitos contra la libertad sexual,2026,Q2,2,22.427383169828996,Gradient Boosting,Estándar
+Alcalá de Henares,Delitos contra la libertad sexual,2026,Q3,3,20.31638449147654,Gradient Boosting,Estándar
+Alcalá de Henares,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,17.769420226235567,Gradient Boosting,Estándar
+Alcalá de Henares,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,17.769420226235567,Gradient Boosting,Estándar
+Alcalá de Henares,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,17.769420226235567,Gradient Boosting,Estándar
+Alcalá de Henares,Estafas informáticas,2026,Q1,1,436.1199620644725,Gradient Boosting,Estándar
+Alcalá de Henares,Estafas informáticas,2026,Q2,2,449.39742266045505,Gradient Boosting,Estándar
+Alcalá de Henares,Estafas informáticas,2026,Q3,3,422.7722823969702,Gradient Boosting,Estándar
+Alcalá de Henares,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Alcalá de Henares,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Alcalá de Henares,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Alcalá de Henares,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,2.0,Mediana móvil 4,Alta incertidumbre
+Alcalá de Henares,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,2.0,Mediana móvil 4,Alta incertidumbre
+Alcalá de Henares,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,2.0,Mediana móvil 4,Alta incertidumbre
+Alcalá de Henares,Hurtos,2026,Q1,1,556.4170145905716,Gradient Boosting,Estándar
+Alcalá de Henares,Hurtos,2026,Q2,2,552.1877426144255,Gradient Boosting,Estándar
+Alcalá de Henares,Hurtos,2026,Q3,3,557.3471272843045,Gradient Boosting,Estándar
+Alcalá de Henares,Otros ciberdelitos,2026,Q1,1,81.97751953486578,Gradient Boosting,Estándar
+Alcalá de Henares,Otros ciberdelitos,2026,Q2,2,75.04909687080738,Gradient Boosting,Estándar
+Alcalá de Henares,Otros ciberdelitos,2026,Q3,3,72.54909370203085,Gradient Boosting,Estándar
+Alcalá de Henares,Resto de criminalidad convencional,2026,Q1,1,1097.1858947396556,Gradient Boosting,Estándar
+Alcalá de Henares,Resto de criminalidad convencional,2026,Q2,2,1103.6183329748792,Gradient Boosting,Estándar
+Alcalá de Henares,Resto de criminalidad convencional,2026,Q3,3,1096.5376041051359,Gradient Boosting,Estándar
+Alcalá de Henares,Resto de delitos contra la libertad sexual,2026,Q1,1,17.769420226235567,Gradient Boosting,Estándar
+Alcalá de Henares,Resto de delitos contra la libertad sexual,2026,Q2,2,22.640232891663487,Gradient Boosting,Estándar
+Alcalá de Henares,Resto de delitos contra la libertad sexual,2026,Q3,3,17.769420226235567,Gradient Boosting,Estándar
+Alcalá de Henares,Robos con fuerza en domicilios,2026,Q1,1,45.04755567570922,Gradient Boosting,Estándar
+Alcalá de Henares,Robos con fuerza en domicilios,2026,Q2,2,42.55594623896192,Gradient Boosting,Estándar
+Alcalá de Henares,Robos con fuerza en domicilios,2026,Q3,3,40.107009626154905,Gradient Boosting,Estándar
+Alcalá de Henares,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,75.44856307542229,Gradient Boosting,Estándar
+Alcalá de Henares,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,70.43320891970805,Gradient Boosting,Estándar
+Alcalá de Henares,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,73.04505424360477,Gradient Boosting,Estándar
+Alcalá de Henares,Robos con violencia e intimidación,2026,Q1,1,31.148138509559,Gradient Boosting,Estándar
+Alcalá de Henares,Robos con violencia e intimidación,2026,Q2,2,33.8007606941093,Gradient Boosting,Estándar
+Alcalá de Henares,Robos con violencia e intimidación,2026,Q3,3,33.9139194823928,Gradient Boosting,Estándar
+Alcalá de Henares,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Alcalá de Henares,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Alcalá de Henares,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Alcalá de Henares,Sustracciones de vehículos,2026,Q1,1,72.89181053393304,Gradient Boosting,Estándar
+Alcalá de Henares,Sustracciones de vehículos,2026,Q2,2,70.54505107482824,Gradient Boosting,Estándar
+Alcalá de Henares,Sustracciones de vehículos,2026,Q3,3,70.88776790673043,Gradient Boosting,Estándar
+Alcalá de Henares,Tráfico de drogas,2026,Q1,1,14.225123201265385,Gradient Boosting,Estándar
+Alcalá de Henares,Tráfico de drogas,2026,Q2,2,14.168279324908408,Gradient Boosting,Estándar
+Alcalá de Henares,Tráfico de drogas,2026,Q3,3,13.625513692761253,Gradient Boosting,Estándar
+Alcobendas,Agresión sexual con penetración,2026,Q1,1,2.768298227476903,Gradient Boosting,Estándar
+Alcobendas,Agresión sexual con penetración,2026,Q2,2,3.8118389545160203,Gradient Boosting,Estándar
+Alcobendas,Agresión sexual con penetración,2026,Q3,3,3.030986187077562,Gradient Boosting,Estándar
+Alcobendas,Delitos contra la libertad sexual,2026,Q1,1,13.246598551742201,Gradient Boosting,Estándar
+Alcobendas,Delitos contra la libertad sexual,2026,Q2,2,12.687036841544233,Gradient Boosting,Estándar
+Alcobendas,Delitos contra la libertad sexual,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Alcobendas,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,10.09305809841471,Gradient Boosting,Estándar
+Alcobendas,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,11.415270289174531,Gradient Boosting,Estándar
+Alcobendas,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,11.823546447225118,Gradient Boosting,Estándar
+Alcobendas,Estafas informáticas,2026,Q1,1,228.92575729585565,Gradient Boosting,Estándar
+Alcobendas,Estafas informáticas,2026,Q2,2,243.7330863808786,Gradient Boosting,Estándar
+Alcobendas,Estafas informáticas,2026,Q3,3,217.8845231744663,Gradient Boosting,Estándar
+Alcobendas,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Alcobendas,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Alcobendas,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Alcobendas,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,1.0,Mediana móvil 4,Alta incertidumbre
+Alcobendas,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,1.0,Mediana móvil 4,Alta incertidumbre
+Alcobendas,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,1.0,Mediana móvil 4,Alta incertidumbre
+Alcobendas,Hurtos,2026,Q1,1,328.5769060217842,Gradient Boosting,Estándar
+Alcobendas,Hurtos,2026,Q2,2,326.8339062215407,Gradient Boosting,Estándar
+Alcobendas,Hurtos,2026,Q3,3,323.0431696789727,Gradient Boosting,Estándar
+Alcobendas,Otros ciberdelitos,2026,Q1,1,27.992347842109268,Gradient Boosting,Estándar
+Alcobendas,Otros ciberdelitos,2026,Q2,2,20.64320877868204,Gradient Boosting,Estándar
+Alcobendas,Otros ciberdelitos,2026,Q3,3,21.505702396662787,Gradient Boosting,Estándar
+Alcobendas,Resto de criminalidad convencional,2026,Q1,1,696.9583303503146,Gradient Boosting,Estándar
+Alcobendas,Resto de criminalidad convencional,2026,Q2,2,743.2384620901511,Gradient Boosting,Estándar
+Alcobendas,Resto de criminalidad convencional,2026,Q3,3,742.9930256578388,Gradient Boosting,Estándar
+Alcobendas,Resto de delitos contra la libertad sexual,2026,Q1,1,10.09305809841471,Gradient Boosting,Estándar
+Alcobendas,Resto de delitos contra la libertad sexual,2026,Q2,2,10.09305809841471,Gradient Boosting,Estándar
+Alcobendas,Resto de delitos contra la libertad sexual,2026,Q3,3,10.09305809841471,Gradient Boosting,Estándar
+Alcobendas,Robos con fuerza en domicilios,2026,Q1,1,19.66221436041744,Gradient Boosting,Estándar
+Alcobendas,Robos con fuerza en domicilios,2026,Q2,2,16.84773945306936,Gradient Boosting,Estándar
+Alcobendas,Robos con fuerza en domicilios,2026,Q3,3,18.146506835261736,Gradient Boosting,Estándar
+Alcobendas,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,35.84937219689909,Gradient Boosting,Estándar
+Alcobendas,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,32.879079920943084,Gradient Boosting,Estándar
+Alcobendas,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,35.88937520817252,Gradient Boosting,Estándar
+Alcobendas,Robos con violencia e intimidación,2026,Q1,1,16.84773945306936,Gradient Boosting,Estándar
+Alcobendas,Robos con violencia e intimidación,2026,Q2,2,16.84773945306936,Gradient Boosting,Estándar
+Alcobendas,Robos con violencia e intimidación,2026,Q3,3,19.171587853256305,Gradient Boosting,Estándar
+Alcobendas,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Alcobendas,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Alcobendas,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Alcobendas,Sustracciones de vehículos,2026,Q1,1,41.33809433856602,Gradient Boosting,Estándar
+Alcobendas,Sustracciones de vehículos,2026,Q2,2,35.491699094219925,Gradient Boosting,Estándar
+Alcobendas,Sustracciones de vehículos,2026,Q3,3,37.98330853096722,Gradient Boosting,Estándar
+Alcobendas,Tráfico de drogas,2026,Q1,1,13.229802473691388,Gradient Boosting,Estándar
+Alcobendas,Tráfico de drogas,2026,Q2,2,12.687036841544233,Gradient Boosting,Estándar
+Alcobendas,Tráfico de drogas,2026,Q3,3,10.872504657027376,Gradient Boosting,Estándar
+Alcorcón,Agresión sexual con penetración,2026,Q1,1,2.681452735094849,Gradient Boosting,Estándar
+Alcorcón,Agresión sexual con penetración,2026,Q2,2,2.681452735094849,Gradient Boosting,Estándar
+Alcorcón,Agresión sexual con penetración,2026,Q3,3,2.9066627368585305,Gradient Boosting,Estándar
+Alcorcón,Delitos contra la libertad sexual,2026,Q1,1,12.086836666788727,Gradient Boosting,Estándar
+Alcorcón,Delitos contra la libertad sexual,2026,Q2,2,11.173423091517606,Gradient Boosting,Estándar
+Alcorcón,Delitos contra la libertad sexual,2026,Q3,3,12.579679117983876,Gradient Boosting,Estándar
+Alcorcón,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,16.19761609736185,Gradient Boosting,Estándar
+Alcorcón,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,18.521464497548795,Gradient Boosting,Estándar
+Alcorcón,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,15.049806900049228,Gradient Boosting,Estándar
+Alcorcón,Estafas informáticas,2026,Q1,1,205.66821312235166,Gradient Boosting,Estándar
+Alcorcón,Estafas informáticas,2026,Q2,2,205.61497530008867,Gradient Boosting,Estándar
+Alcorcón,Estafas informáticas,2026,Q3,3,210.7400592769996,Gradient Boosting,Estándar
+Alcorcón,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Alcorcón,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Alcorcón,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Alcorcón,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.5,Mediana móvil 4,Alta incertidumbre
+Alcorcón,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.25,Mediana móvil 4,Alta incertidumbre
+Alcorcón,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.375,Mediana móvil 4,Alta incertidumbre
+Alcorcón,Hurtos,2026,Q1,1,713.9972527704622,Gradient Boosting,Estándar
+Alcorcón,Hurtos,2026,Q2,2,716.2005796548605,Gradient Boosting,Estándar
+Alcorcón,Hurtos,2026,Q3,3,720.1040244936064,Gradient Boosting,Estándar
+Alcorcón,Otros ciberdelitos,2026,Q1,1,55.64765016489583,Gradient Boosting,Estándar
+Alcorcón,Otros ciberdelitos,2026,Q2,2,59.53805528609165,Gradient Boosting,Estándar
+Alcorcón,Otros ciberdelitos,2026,Q3,3,50.57502370974686,Gradient Boosting,Estándar
+Alcorcón,Resto de criminalidad convencional,2026,Q1,1,735.9066304005657,Gradient Boosting,Estándar
+Alcorcón,Resto de criminalidad convencional,2026,Q2,2,769.2464752035753,Gradient Boosting,Estándar
+Alcorcón,Resto de criminalidad convencional,2026,Q3,3,791.6897639344866,Gradient Boosting,Estándar
+Alcorcón,Resto de delitos contra la libertad sexual,2026,Q1,1,8.133214802020944,Gradient Boosting,Estándar
+Alcorcón,Resto de delitos contra la libertad sexual,2026,Q2,2,9.442934742707198,Gradient Boosting,Estándar
+Alcorcón,Resto de delitos contra la libertad sexual,2026,Q3,3,9.442934742707198,Gradient Boosting,Estándar
+Alcorcón,Robos con fuerza en domicilios,2026,Q1,1,23.11769226584589,Gradient Boosting,Estándar
+Alcorcón,Robos con fuerza en domicilios,2026,Q2,2,22.22093052081986,Gradient Boosting,Estándar
+Alcorcón,Robos con fuerza en domicilios,2026,Q3,3,27.342224486401758,Gradient Boosting,Estándar
+Alcorcón,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,71.65878032558581,Gradient Boosting,Estándar
+Alcorcón,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,68.73658564328615,Gradient Boosting,Estándar
+Alcorcón,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,74.39467203130768,Gradient Boosting,Estándar
+Alcorcón,Robos con violencia e intimidación,2026,Q1,1,37.40413368970614,Gradient Boosting,Estándar
+Alcorcón,Robos con violencia e intimidación,2026,Q2,2,40.10859284828793,Gradient Boosting,Estándar
+Alcorcón,Robos con violencia e intimidación,2026,Q3,3,40.414428976935575,Gradient Boosting,Estándar
+Alcorcón,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Alcorcón,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Alcorcón,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Alcorcón,Sustracciones de vehículos,2026,Q1,1,27.16012910384872,Gradient Boosting,Estándar
+Alcorcón,Sustracciones de vehículos,2026,Q2,2,26.618505597650902,Gradient Boosting,Estándar
+Alcorcón,Sustracciones de vehículos,2026,Q3,3,26.618505597650902,Gradient Boosting,Estándar
+Alcorcón,Tráfico de drogas,2026,Q1,1,9.442934742707198,Gradient Boosting,Estándar
+Alcorcón,Tráfico de drogas,2026,Q2,2,8.813094374985594,Gradient Boosting,Estándar
+Alcorcón,Tráfico de drogas,2026,Q3,3,8.133214802020944,Gradient Boosting,Estándar
+Algete,Agresión sexual con penetración,2026,Q1,1,0.8721091698062586,Gradient Boosting,Estándar
+Algete,Agresión sexual con penetración,2026,Q2,2,0.893002421187457,Gradient Boosting,Estándar
+Algete,Agresión sexual con penetración,2026,Q3,3,1.0281116633735434,Gradient Boosting,Estándar
+Algete,Delitos contra la libertad sexual,2026,Q1,1,1.4345847002223302,Gradient Boosting,Estándar
+Algete,Delitos contra la libertad sexual,2026,Q2,2,1.466513630084666,Gradient Boosting,Estándar
+Algete,Delitos contra la libertad sexual,2026,Q3,3,1.466513630084666,Gradient Boosting,Estándar
+Algete,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,2.271346604439703,Gradient Boosting,Estándar
+Algete,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,2.7458041343984534,Gradient Boosting,Estándar
+Algete,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,3.182783706520226,Gradient Boosting,Estándar
+Algete,Estafas informáticas,2026,Q1,1,66.13115474900755,Gradient Boosting,Estándar
+Algete,Estafas informáticas,2026,Q2,2,64.12711212180496,Gradient Boosting,Estándar
+Algete,Estafas informáticas,2026,Q3,3,64.12711212180496,Gradient Boosting,Estándar
+Algete,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Algete,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Algete,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Algete,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Algete,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Algete,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Algete,Hurtos,2026,Q1,1,31.912712527366384,Gradient Boosting,Estándar
+Algete,Hurtos,2026,Q2,2,32.879079920943084,Gradient Boosting,Estándar
+Algete,Hurtos,2026,Q3,3,32.992238709226584,Gradient Boosting,Estándar
+Algete,Otros ciberdelitos,2026,Q1,1,8.69883241161576,Gradient Boosting,Estándar
+Algete,Otros ciberdelitos,2026,Q2,2,6.976196796806383,Gradient Boosting,Estándar
+Algete,Otros ciberdelitos,2026,Q3,3,7.323199071350147,Gradient Boosting,Estándar
+Algete,Resto de criminalidad convencional,2026,Q1,1,102.50961862694619,Gradient Boosting,Estándar
+Algete,Resto de criminalidad convencional,2026,Q2,2,102.50961862694619,Gradient Boosting,Estándar
+Algete,Resto de criminalidad convencional,2026,Q3,3,94.62992103190415,Gradient Boosting,Estándar
+Algete,Resto de delitos contra la libertad sexual,2026,Q1,1,1.5421979743343204,Gradient Boosting,Estándar
+Algete,Resto de delitos contra la libertad sexual,2026,Q2,2,1.466513630084666,Gradient Boosting,Estándar
+Algete,Resto de delitos contra la libertad sexual,2026,Q3,3,1.9409711600434152,Gradient Boosting,Estándar
+Algete,Robos con fuerza en domicilios,2026,Q1,1,7.060702542919079,Gradient Boosting,Estándar
+Algete,Robos con fuerza en domicilios,2026,Q2,2,6.430862175197474,Gradient Boosting,Estándar
+Algete,Robos con fuerza en domicilios,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Algete,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,8.783338157728457,Gradient Boosting,Estándar
+Algete,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,10.09305809841471,Gradient Boosting,Estándar
+Algete,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,10.09305809841471,Gradient Boosting,Estándar
+Algete,Robos con violencia e intimidación,2026,Q1,1,1.4456203787034672,Gradient Boosting,Estándar
+Algete,Robos con violencia e intimidación,2026,Q2,2,1.4345847002223302,Gradient Boosting,Estándar
+Algete,Robos con violencia e intimidación,2026,Q3,3,1.4345847002223302,Gradient Boosting,Estándar
+Algete,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Algete,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Algete,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Algete,Sustracciones de vehículos,2026,Q1,1,3.8118389545160203,Gradient Boosting,Estándar
+Algete,Sustracciones de vehículos,2026,Q2,2,3.030986187077562,Gradient Boosting,Estándar
+Algete,Sustracciones de vehículos,2026,Q3,3,2.8057761853138805,Gradient Boosting,Estándar
+Algete,Tráfico de drogas,2026,Q1,1,1.6917236318483468,Gradient Boosting,Estándar
+Algete,Tráfico de drogas,2026,Q2,2,1.4345847002223302,Gradient Boosting,Estándar
+Algete,Tráfico de drogas,2026,Q3,3,1.9090422301810799,Gradient Boosting,Estándar
+Aranjuez,Agresión sexual con penetración,2026,Q1,1,1.9090422301810799,Gradient Boosting,Estándar
+Aranjuez,Agresión sexual con penetración,2026,Q2,2,2.1661149845996412,Gradient Boosting,Estándar
+Aranjuez,Agresión sexual con penetración,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Aranjuez,Delitos contra la libertad sexual,2026,Q1,1,7.060702542919079,Gradient Boosting,Estándar
+Aranjuez,Delitos contra la libertad sexual,2026,Q2,2,8.696263422154008,Gradient Boosting,Estándar
+Aranjuez,Delitos contra la libertad sexual,2026,Q3,3,9.463217730693106,Gradient Boosting,Estándar
+Aranjuez,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,2.7458041343984534,Gradient Boosting,Estándar
+Aranjuez,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,2.271346604439703,Gradient Boosting,Estándar
+Aranjuez,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Aranjuez,Estafas informáticas,2026,Q1,1,100.12242190643434,Gradient Boosting,Estándar
+Aranjuez,Estafas informáticas,2026,Q2,2,86.7710903288086,Gradient Boosting,Estándar
+Aranjuez,Estafas informáticas,2026,Q3,3,84.95610501746168,Gradient Boosting,Estándar
+Aranjuez,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Aranjuez,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Aranjuez,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Aranjuez,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.5,Mediana móvil 4,Alta incertidumbre
+Aranjuez,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.25,Mediana móvil 4,Alta incertidumbre
+Aranjuez,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.375,Mediana móvil 4,Alta incertidumbre
+Aranjuez,Hurtos,2026,Q1,1,185.98657335262632,Gradient Boosting,Estándar
+Aranjuez,Hurtos,2026,Q2,2,191.4053018579039,Gradient Boosting,Estándar
+Aranjuez,Hurtos,2026,Q3,3,169.42959580041833,Gradient Boosting,Estándar
+Aranjuez,Otros ciberdelitos,2026,Q1,1,13.775137095300295,Gradient Boosting,Estándar
+Aranjuez,Otros ciberdelitos,2026,Q2,2,14.397605589947588,Gradient Boosting,Estándar
+Aranjuez,Otros ciberdelitos,2026,Q3,3,13.572001864622592,Gradient Boosting,Estándar
+Aranjuez,Resto de criminalidad convencional,2026,Q1,1,421.37728519971904,Gradient Boosting,Estándar
+Aranjuez,Resto de criminalidad convencional,2026,Q2,2,437.83946144238763,Gradient Boosting,Estándar
+Aranjuez,Resto de criminalidad convencional,2026,Q3,3,444.6674259730366,Gradient Boosting,Estándar
+Aranjuez,Resto de delitos contra la libertad sexual,2026,Q1,1,7.060702542919079,Gradient Boosting,Estándar
+Aranjuez,Resto de delitos contra la libertad sexual,2026,Q2,2,6.430862175197474,Gradient Boosting,Estándar
+Aranjuez,Resto de delitos contra la libertad sexual,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Aranjuez,Robos con fuerza en domicilios,2026,Q1,1,16.827538140762023,Gradient Boosting,Estándar
+Aranjuez,Robos con fuerza en domicilios,2026,Q2,2,15.094257839160258,Gradient Boosting,Estándar
+Aranjuez,Robos con fuerza en domicilios,2026,Q3,3,13.309505336191526,Gradient Boosting,Estándar
+Aranjuez,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,28.060856809763486,Gradient Boosting,Estándar
+Aranjuez,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,25.685222993642622,Gradient Boosting,Estándar
+Aranjuez,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,24.982052554879825,Gradient Boosting,Estándar
+Aranjuez,Robos con violencia e intimidación,2026,Q1,1,13.852270968338681,Gradient Boosting,Estándar
+Aranjuez,Robos con violencia e intimidación,2026,Q2,2,13.852270968338681,Gradient Boosting,Estándar
+Aranjuez,Robos con violencia e intimidación,2026,Q3,3,13.246598551742201,Gradient Boosting,Estándar
+Aranjuez,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Aranjuez,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Aranjuez,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Aranjuez,Sustracciones de vehículos,2026,Q1,1,16.84773945306936,Gradient Boosting,Estándar
+Aranjuez,Sustracciones de vehículos,2026,Q2,2,19.394703718310332,Gradient Boosting,Estándar
+Aranjuez,Sustracciones de vehículos,2026,Q3,3,21.505702396662787,Gradient Boosting,Estándar
+Aranjuez,Tráfico de drogas,2026,Q1,1,2.8057761853138805,Gradient Boosting,Estándar
+Aranjuez,Tráfico de drogas,2026,Q2,2,2.7458041343984534,Gradient Boosting,Estándar
+Aranjuez,Tráfico de drogas,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Arganda del Rey,Agresión sexual con penetración,2026,Q1,1,0.9351298991881416,Gradient Boosting,Estándar
+Arganda del Rey,Agresión sexual con penetración,2026,Q2,2,1.2787774837069321,Gradient Boosting,Estándar
+Arganda del Rey,Agresión sexual con penetración,2026,Q3,3,0.9670588290504774,Gradient Boosting,Estándar
+Arganda del Rey,Delitos contra la libertad sexual,2026,Q1,1,5.021387880765338,Gradient Boosting,Estándar
+Arganda del Rey,Delitos contra la libertad sexual,2026,Q2,2,4.59433106965061,Gradient Boosting,Estándar
+Arganda del Rey,Delitos contra la libertad sexual,2026,Q3,3,4.59433106965061,Gradient Boosting,Estándar
+Arganda del Rey,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,9.598822514268532,Gradient Boosting,Estándar
+Arganda del Rey,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,11.626204420619878,Gradient Boosting,Estándar
+Arganda del Rey,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,9.463030362595235,Gradient Boosting,Estándar
+Arganda del Rey,Estafas informáticas,2026,Q1,1,154.3500214349224,Gradient Boosting,Estándar
+Arganda del Rey,Estafas informáticas,2026,Q2,2,154.3500214349224,Gradient Boosting,Estándar
+Arganda del Rey,Estafas informáticas,2026,Q3,3,163.92831157983485,Gradient Boosting,Estándar
+Arganda del Rey,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Arganda del Rey,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Arganda del Rey,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Arganda del Rey,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Arganda del Rey,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Arganda del Rey,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Arganda del Rey,Hurtos,2026,Q1,1,164.59215083403637,Gradient Boosting,Estándar
+Arganda del Rey,Hurtos,2026,Q2,2,212.4297381279621,Gradient Boosting,Estándar
+Arganda del Rey,Hurtos,2026,Q3,3,164.92360362168412,Gradient Boosting,Estándar
+Arganda del Rey,Otros ciberdelitos,2026,Q1,1,17.91802437923629,Gradient Boosting,Estándar
+Arganda del Rey,Otros ciberdelitos,2026,Q2,2,19.97459918519196,Gradient Boosting,Estándar
+Arganda del Rey,Otros ciberdelitos,2026,Q3,3,15.088222020817478,Gradient Boosting,Estándar
+Arganda del Rey,Resto de criminalidad convencional,2026,Q1,1,362.0911200751215,Gradient Boosting,Estándar
+Arganda del Rey,Resto de criminalidad convencional,2026,Q2,2,350.7450197913188,Gradient Boosting,Estándar
+Arganda del Rey,Resto de criminalidad convencional,2026,Q3,3,368.2959977129441,Gradient Boosting,Estándar
+Arganda del Rey,Resto de delitos contra la libertad sexual,2026,Q1,1,4.59433106965061,Gradient Boosting,Estándar
+Arganda del Rey,Resto de delitos contra la libertad sexual,2026,Q2,2,4.139805198636741,Gradient Boosting,Estándar
+Arganda del Rey,Resto de delitos contra la libertad sexual,2026,Q3,3,2.680777200421621,Gradient Boosting,Estándar
+Arganda del Rey,Robos con fuerza en domicilios,2026,Q1,1,11.413354698785389,Gradient Boosting,Estándar
+Arganda del Rey,Robos con fuerza en domicilios,2026,Q2,2,11.277562547112092,Gradient Boosting,Estándar
+Arganda del Rey,Robos con fuerza en domicilios,2026,Q3,3,9.463030362595235,Gradient Boosting,Estándar
+Arganda del Rey,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,23.698605216811387,Gradient Boosting,Estándar
+Arganda del Rey,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,22.99543477804859,Gradient Boosting,Estándar
+Arganda del Rey,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,19.519084619831553,Gradient Boosting,Estándar
+Arganda del Rey,Robos con violencia e intimidación,2026,Q1,1,13.166836312694516,Gradient Boosting,Estándar
+Arganda del Rey,Robos con violencia e intimidación,2026,Q2,2,15.065461033223492,Gradient Boosting,Estándar
+Arganda del Rey,Robos con violencia e intimidación,2026,Q3,3,11.294358625162905,Gradient Boosting,Estándar
+Arganda del Rey,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Arganda del Rey,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Arganda del Rey,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Arganda del Rey,Sustracciones de vehículos,2026,Q1,1,8.68358380398257,Gradient Boosting,Estándar
+Arganda del Rey,Sustracciones de vehículos,2026,Q2,2,8.819375955655866,Gradient Boosting,Estándar
+Arganda del Rey,Sustracciones de vehículos,2026,Q3,3,9.463030362595235,Gradient Boosting,Estándar
+Arganda del Rey,Tráfico de drogas,2026,Q1,1,2.680777200421621,Gradient Boosting,Estándar
+Arganda del Rey,Tráfico de drogas,2026,Q2,2,2.571645333454972,Gradient Boosting,Estándar
+Arganda del Rey,Tráfico de drogas,2026,Q3,3,2.1979002831726584,Gradient Boosting,Estándar
+Arroyomolinos,Agresión sexual con penetración,2026,Q1,1,0.9531217926561786,Gradient Boosting,Estándar
+Arroyomolinos,Agresión sexual con penetración,2026,Q2,2,1.6404621137562916,Gradient Boosting,Estándar
+Arroyomolinos,Agresión sexual con penetración,2026,Q3,3,1.391523759367301,Gradient Boosting,Estándar
+Arroyomolinos,Delitos contra la libertad sexual,2026,Q1,1,3.08316467096922,Gradient Boosting,Estándar
+Arroyomolinos,Delitos contra la libertad sexual,2026,Q2,2,2.6735047264621072,Gradient Boosting,Estándar
+Arroyomolinos,Delitos contra la libertad sexual,2026,Q3,3,2.8852742968201985,Gradient Boosting,Estándar
+Arroyomolinos,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,3.2949342413273115,Gradient Boosting,Estándar
+Arroyomolinos,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,2.946856013396205,Gradient Boosting,Estándar
+Arroyomolinos,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,2.6735047264621072,Gradient Boosting,Estándar
+Arroyomolinos,Estafas informáticas,2026,Q1,1,101.32526047827287,Gradient Boosting,Estándar
+Arroyomolinos,Estafas informáticas,2026,Q2,2,113.52397172122402,Gradient Boosting,Estándar
+Arroyomolinos,Estafas informáticas,2026,Q3,3,95.21145851833224,Gradient Boosting,Estándar
+Arroyomolinos,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Arroyomolinos,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Arroyomolinos,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Arroyomolinos,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Arroyomolinos,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Arroyomolinos,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Arroyomolinos,Hurtos,2026,Q1,1,272.42453886454064,Gradient Boosting,Estándar
+Arroyomolinos,Hurtos,2026,Q2,2,268.90142932339324,Gradient Boosting,Estándar
+Arroyomolinos,Hurtos,2026,Q3,3,239.20889213129283,Gradient Boosting,Estándar
+Arroyomolinos,Otros ciberdelitos,2026,Q1,1,19.576582655585508,Gradient Boosting,Estándar
+Arroyomolinos,Otros ciberdelitos,2026,Q2,2,21.148220936047334,Gradient Boosting,Estándar
+Arroyomolinos,Otros ciberdelitos,2026,Q3,3,16.752754520884974,Gradient Boosting,Estándar
+Arroyomolinos,Resto de criminalidad convencional,2026,Q1,1,173.22513708337243,Gradient Boosting,Estándar
+Arroyomolinos,Resto de criminalidad convencional,2026,Q2,2,172.214070670381,Gradient Boosting,Estándar
+Arroyomolinos,Resto de criminalidad convencional,2026,Q3,3,176.0127929878014,Gradient Boosting,Estándar
+Arroyomolinos,Resto de delitos contra la libertad sexual,2026,Q1,1,2.6735047264621072,Gradient Boosting,Estándar
+Arroyomolinos,Resto de delitos contra la libertad sexual,2026,Q2,2,2.6735047264621072,Gradient Boosting,Estándar
+Arroyomolinos,Resto de delitos contra la libertad sexual,2026,Q3,3,2.477224017973665,Gradient Boosting,Estándar
+Arroyomolinos,Robos con fuerza en domicilios,2026,Q1,1,13.330520352078533,Gradient Boosting,Estándar
+Arroyomolinos,Robos con fuerza en domicilios,2026,Q2,2,10.51502319641192,Gradient Boosting,Estándar
+Arroyomolinos,Robos con fuerza en domicilios,2026,Q3,3,12.872321013075933,Gradient Boosting,Estándar
+Arroyomolinos,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,14.194010746397648,Gradient Boosting,Estándar
+Arroyomolinos,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,12.34635145897959,Gradient Boosting,Estándar
+Arroyomolinos,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,12.872321013075933,Gradient Boosting,Estándar
+Arroyomolinos,Robos con violencia e intimidación,2026,Q1,1,2.8852742968201985,Gradient Boosting,Estándar
+Arroyomolinos,Robos con violencia e intimidación,2026,Q2,2,2.537196068889092,Gradient Boosting,Estándar
+Arroyomolinos,Robos con violencia e intimidación,2026,Q3,3,2.477224017973665,Gradient Boosting,Estándar
+Arroyomolinos,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Arroyomolinos,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Arroyomolinos,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Arroyomolinos,Sustracciones de vehículos,2026,Q1,1,12.34635145897959,Gradient Boosting,Estándar
+Arroyomolinos,Sustracciones de vehículos,2026,Q2,2,12.872321013075933,Gradient Boosting,Estándar
+Arroyomolinos,Sustracciones de vehículos,2026,Q3,3,12.872321013075933,Gradient Boosting,Estándar
+Arroyomolinos,Tráfico de drogas,2026,Q1,1,1.5278324169403157,Gradient Boosting,Estándar
+Arroyomolinos,Tráfico de drogas,2026,Q2,2,1.8339861822562604,Gradient Boosting,Estándar
+Arroyomolinos,Tráfico de drogas,2026,Q3,3,1.672391043618627,Gradient Boosting,Estándar
+Boadilla del Monte,Agresión sexual con penetración,2026,Q1,1,1.9409711600434152,Gradient Boosting,Estándar
+Boadilla del Monte,Agresión sexual con penetración,2026,Q2,2,2.4965566062033844,Gradient Boosting,Estándar
+Boadilla del Monte,Agresión sexual con penetración,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Boadilla del Monte,Delitos contra la libertad sexual,2026,Q1,1,7.12401843771893,Gradient Boosting,Estándar
+Boadilla del Monte,Delitos contra la libertad sexual,2026,Q2,2,5.19008747102456,Gradient Boosting,Estándar
+Boadilla del Monte,Delitos contra la libertad sexual,2026,Q3,3,5.82650682196214,Gradient Boosting,Estándar
+Boadilla del Monte,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,6.003805364082746,Gradient Boosting,Estándar
+Boadilla del Monte,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,6.430862175197474,Gradient Boosting,Estándar
+Boadilla del Monte,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,6.003805364082746,Gradient Boosting,Estándar
+Boadilla del Monte,Estafas informáticas,2026,Q1,1,205.38240640310732,Gradient Boosting,Estándar
+Boadilla del Monte,Estafas informáticas,2026,Q2,2,219.63343731916154,Gradient Boosting,Estándar
+Boadilla del Monte,Estafas informáticas,2026,Q3,3,239.178121527617,Gradient Boosting,Estándar
+Boadilla del Monte,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Boadilla del Monte,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Boadilla del Monte,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Boadilla del Monte,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Boadilla del Monte,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Boadilla del Monte,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Boadilla del Monte,Hurtos,2026,Q1,1,107.99587732271996,Gradient Boosting,Estándar
+Boadilla del Monte,Hurtos,2026,Q2,2,104.83705371600792,Gradient Boosting,Estándar
+Boadilla del Monte,Hurtos,2026,Q3,3,104.31836786552577,Gradient Boosting,Estándar
+Boadilla del Monte,Otros ciberdelitos,2026,Q1,1,25.194902276714316,Gradient Boosting,Estándar
+Boadilla del Monte,Otros ciberdelitos,2026,Q2,2,25.194902276714316,Gradient Boosting,Estándar
+Boadilla del Monte,Otros ciberdelitos,2026,Q3,3,21.541098580514507,Gradient Boosting,Estándar
+Boadilla del Monte,Resto de criminalidad convencional,2026,Q1,1,217.78826490820052,Gradient Boosting,Estándar
+Boadilla del Monte,Resto de criminalidad convencional,2026,Q2,2,217.73502708593753,Gradient Boosting,Estándar
+Boadilla del Monte,Resto de criminalidad convencional,2026,Q3,3,217.73502708593753,Gradient Boosting,Estándar
+Boadilla del Monte,Resto de delitos contra la libertad sexual,2026,Q1,1,5.316574650946152,Gradient Boosting,Estándar
+Boadilla del Monte,Resto de delitos contra la libertad sexual,2026,Q2,2,2.768298227476903,Gradient Boosting,Estándar
+Boadilla del Monte,Resto de delitos contra la libertad sexual,2026,Q3,3,3.2154361298209935,Gradient Boosting,Estándar
+Boadilla del Monte,Robos con fuerza en domicilios,2026,Q1,1,28.337845178192897,Gradient Boosting,Estándar
+Boadilla del Monte,Robos con fuerza en domicilios,2026,Q2,2,22.660938965150404,Gradient Boosting,Estándar
+Boadilla del Monte,Robos con fuerza en domicilios,2026,Q3,3,22.87105387652737,Gradient Boosting,Estándar
+Boadilla del Monte,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,28.337845178192897,Gradient Boosting,Estándar
+Boadilla del Monte,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,25.685222993642622,Gradient Boosting,Estándar
+Boadilla del Monte,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,24.982052554879825,Gradient Boosting,Estándar
+Boadilla del Monte,Robos con violencia e intimidación,2026,Q1,1,2.773847255451545,Gradient Boosting,Estándar
+Boadilla del Monte,Robos con violencia e intimidación,2026,Q2,2,2.8057761853138805,Gradient Boosting,Estándar
+Boadilla del Monte,Robos con violencia e intimidación,2026,Q3,3,3.652415701942766,Gradient Boosting,Estándar
+Boadilla del Monte,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Boadilla del Monte,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Boadilla del Monte,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Boadilla del Monte,Sustracciones de vehículos,2026,Q1,1,3.1779581719840166,Gradient Boosting,Estándar
+Boadilla del Monte,Sustracciones de vehículos,2026,Q2,2,2.773847255451545,Gradient Boosting,Estándar
+Boadilla del Monte,Sustracciones de vehículos,2026,Q3,3,3.242755757435653,Gradient Boosting,Estándar
+Boadilla del Monte,Tráfico de drogas,2026,Q1,1,1.4456203787034672,Gradient Boosting,Estándar
+Boadilla del Monte,Tráfico de drogas,2026,Q2,2,1.466513630084666,Gradient Boosting,Estándar
+Boadilla del Monte,Tráfico de drogas,2026,Q3,3,1.4345847002223302,Gradient Boosting,Estándar
+Ciempozuelos,Agresión sexual con penetración,2026,Q1,1,1.466513630084666,Gradient Boosting,Estándar
+Ciempozuelos,Agresión sexual con penetración,2026,Q2,2,1.9090422301810799,Gradient Boosting,Estándar
+Ciempozuelos,Agresión sexual con penetración,2026,Q3,3,2.1661149845996412,Gradient Boosting,Estándar
+Ciempozuelos,Delitos contra la libertad sexual,2026,Q1,1,3.652415701942766,Gradient Boosting,Estándar
+Ciempozuelos,Delitos contra la libertad sexual,2026,Q2,2,3.440646131584675,Gradient Boosting,Estándar
+Ciempozuelos,Delitos contra la libertad sexual,2026,Q3,3,3.652415701942766,Gradient Boosting,Estándar
+Ciempozuelos,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,6.003805364082746,Gradient Boosting,Estándar
+Ciempozuelos,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,7.060702542919079,Gradient Boosting,Estándar
+Ciempozuelos,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Ciempozuelos,Estafas informáticas,2026,Q1,1,60.39363155482228,Gradient Boosting,Estándar
+Ciempozuelos,Estafas informáticas,2026,Q2,2,60.39363155482228,Gradient Boosting,Estándar
+Ciempozuelos,Estafas informáticas,2026,Q3,3,60.39363155482228,Gradient Boosting,Estándar
+Ciempozuelos,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Ciempozuelos,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Ciempozuelos,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Ciempozuelos,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Ciempozuelos,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Ciempozuelos,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Ciempozuelos,Hurtos,2026,Q1,1,41.64393046721367,Gradient Boosting,Estándar
+Ciempozuelos,Hurtos,2026,Q2,2,41.64393046721367,Gradient Boosting,Estándar
+Ciempozuelos,Hurtos,2026,Q3,3,37.98330853096722,Gradient Boosting,Estándar
+Ciempozuelos,Otros ciberdelitos,2026,Q1,1,15.528618709209422,Gradient Boosting,Estándar
+Ciempozuelos,Otros ciberdelitos,2026,Q2,2,17.846325117960887,Gradient Boosting,Estándar
+Ciempozuelos,Otros ciberdelitos,2026,Q3,3,14.81398873544417,Gradient Boosting,Estándar
+Ciempozuelos,Resto de criminalidad convencional,2026,Q1,1,173.58261854398793,Gradient Boosting,Estándar
+Ciempozuelos,Resto de criminalidad convencional,2026,Q2,2,176.0474973578025,Gradient Boosting,Estándar
+Ciempozuelos,Resto de criminalidad convencional,2026,Q3,3,176.3702744484169,Gradient Boosting,Estándar
+Ciempozuelos,Resto de delitos contra la libertad sexual,2026,Q1,1,2.9710141361621347,Gradient Boosting,Estándar
+Ciempozuelos,Resto de delitos contra la libertad sexual,2026,Q2,2,3.030986187077562,Gradient Boosting,Estándar
+Ciempozuelos,Resto de delitos contra la libertad sexual,2026,Q3,3,2.8057761853138805,Gradient Boosting,Estándar
+Ciempozuelos,Robos con fuerza en domicilios,2026,Q1,1,5.674042735011178,Gradient Boosting,Estándar
+Ciempozuelos,Robos con fuerza en domicilios,2026,Q2,2,5.19008747102456,Gradient Boosting,Estándar
+Ciempozuelos,Robos con fuerza en domicilios,2026,Q3,3,6.003805364082746,Gradient Boosting,Estándar
+Ciempozuelos,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,8.783338157728457,Gradient Boosting,Estándar
+Ciempozuelos,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,8.696263422154008,Gradient Boosting,Estándar
+Ciempozuelos,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,8.783338157728457,Gradient Boosting,Estándar
+Ciempozuelos,Robos con violencia e intimidación,2026,Q1,1,5.549279493068877,Gradient Boosting,Estándar
+Ciempozuelos,Robos con violencia e intimidación,2026,Q2,2,6.003805364082746,Gradient Boosting,Estándar
+Ciempozuelos,Robos con violencia e intimidación,2026,Q3,3,6.003805364082746,Gradient Boosting,Estándar
+Ciempozuelos,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Ciempozuelos,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Ciempozuelos,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Ciempozuelos,Sustracciones de vehículos,2026,Q1,1,5.314850712966863,Gradient Boosting,Estándar
+Ciempozuelos,Sustracciones de vehículos,2026,Q2,2,5.549279493068877,Gradient Boosting,Estándar
+Ciempozuelos,Sustracciones de vehículos,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Ciempozuelos,Tráfico de drogas,2026,Q1,1,1.9200779086622168,Gradient Boosting,Estándar
+Ciempozuelos,Tráfico de drogas,2026,Q2,2,1.9409049828359604,Gradient Boosting,Estándar
+Ciempozuelos,Tráfico de drogas,2026,Q3,3,2.383433582932375,Gradient Boosting,Estándar
+Collado Villalba,Agresión sexual con penetración,2026,Q1,1,0.8986275799892991,Gradient Boosting,Estándar
+Collado Villalba,Agresión sexual con penetración,2026,Q2,2,0.9195208313704974,Gradient Boosting,Estándar
+Collado Villalba,Agresión sexual con penetración,2026,Q3,3,1.0546300735565841,Gradient Boosting,Estándar
+Collado Villalba,Delitos contra la libertad sexual,2026,Q1,1,8.180016200189893,Gradient Boosting,Estándar
+Collado Villalba,Delitos contra la libertad sexual,2026,Q2,2,7.087220953102119,Gradient Boosting,Estándar
+Collado Villalba,Delitos contra la libertad sexual,2026,Q3,3,7.087220953102119,Gradient Boosting,Estándar
+Collado Villalba,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,14.578010617196144,Gradient Boosting,Estándar
+Collado Villalba,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,13.878789378521722,Gradient Boosting,Estándar
+Collado Villalba,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,15.026598575834369,Gradient Boosting,Estándar
+Collado Villalba,Estafas informáticas,2026,Q1,1,121.27292056565183,Gradient Boosting,Estándar
+Collado Villalba,Estafas informáticas,2026,Q2,2,118.26646640359132,Gradient Boosting,Estándar
+Collado Villalba,Estafas informáticas,2026,Q3,3,127.77355125130026,Gradient Boosting,Estándar
+Collado Villalba,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Collado Villalba,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Collado Villalba,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Collado Villalba,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.5,Mediana móvil 4,Alta incertidumbre
+Collado Villalba,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.75,Mediana móvil 4,Alta incertidumbre
+Collado Villalba,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.625,Mediana móvil 4,Alta incertidumbre
+Collado Villalba,Hurtos,2026,Q1,1,156.3631576219367,Gradient Boosting,Estándar
+Collado Villalba,Hurtos,2026,Q2,2,166.14977245569025,Gradient Boosting,Estándar
+Collado Villalba,Hurtos,2026,Q3,3,156.3631576219367,Gradient Boosting,Estándar
+Collado Villalba,Otros ciberdelitos,2026,Q1,1,32.56010099504249,Gradient Boosting,Estándar
+Collado Villalba,Otros ciberdelitos,2026,Q2,2,33.537442969891764,Gradient Boosting,Estándar
+Collado Villalba,Otros ciberdelitos,2026,Q3,3,28.364363588375937,Gradient Boosting,Estándar
+Collado Villalba,Resto de criminalidad convencional,2026,Q1,1,386.32570310720047,Gradient Boosting,Estándar
+Collado Villalba,Resto de criminalidad convencional,2026,Q2,2,410.62609299870473,Gradient Boosting,Estándar
+Collado Villalba,Resto de criminalidad convencional,2026,Q3,3,395.67539840943726,Gradient Boosting,Estándar
+Collado Villalba,Resto de delitos contra la libertad sexual,2026,Q1,1,8.180016200189893,Gradient Boosting,Estándar
+Collado Villalba,Resto de delitos contra la libertad sexual,2026,Q2,2,7.087220953102119,Gradient Boosting,Estándar
+Collado Villalba,Resto de delitos contra la libertad sexual,2026,Q3,3,7.087220953102119,Gradient Boosting,Estándar
+Collado Villalba,Robos con fuerza en domicilios,2026,Q1,1,19.421222128493373,Gradient Boosting,Estándar
+Collado Villalba,Robos con fuerza en domicilios,2026,Q2,2,16.8742578632524,Gradient Boosting,Estándar
+Collado Villalba,Robos con fuerza en domicilios,2026,Q3,3,18.985256541604855,Gradient Boosting,Estándar
+Collado Villalba,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,25.527256815545012,Gradient Boosting,Estándar
+Collado Villalba,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,24.83840096313763,Gradient Boosting,Estándar
+Collado Villalba,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,25.008570965062866,Gradient Boosting,Estándar
+Collado Villalba,Robos con violencia e intimidación,2026,Q1,1,16.8742578632524,Gradient Boosting,Estándar
+Collado Villalba,Robos con violencia e intimidación,2026,Q2,2,16.8742578632524,Gradient Boosting,Estándar
+Collado Villalba,Robos con violencia e intimidación,2026,Q3,3,16.8742578632524,Gradient Boosting,Estándar
+Collado Villalba,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Collado Villalba,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Collado Villalba,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Collado Villalba,Sustracciones de vehículos,2026,Q1,1,2.8003656656345854,Gradient Boosting,Estándar
+Collado Villalba,Sustracciones de vehículos,2026,Q2,2,2.7723225445814936,Gradient Boosting,Estándar
+Collado Villalba,Sustracciones de vehículos,2026,Q3,3,3.057504597260602,Gradient Boosting,Estándar
+Collado Villalba,Tráfico de drogas,2026,Q1,1,2.8322945954969208,Gradient Boosting,Estándar
+Collado Villalba,Tráfico de drogas,2026,Q2,2,3.057504597260602,Gradient Boosting,Estándar
+Collado Villalba,Tráfico de drogas,2026,Q3,3,3.2692741676186934,Gradient Boosting,Estándar
+Colmenar Viejo,Agresión sexual con penetración,2026,Q1,1,1.466513630084666,Gradient Boosting,Estándar
+Colmenar Viejo,Agresión sexual con penetración,2026,Q2,2,1.466513630084666,Gradient Boosting,Estándar
+Colmenar Viejo,Agresión sexual con penetración,2026,Q3,3,1.466513630084666,Gradient Boosting,Estándar
+Colmenar Viejo,Delitos contra la libertad sexual,2026,Q1,1,7.060702542919079,Gradient Boosting,Estándar
+Colmenar Viejo,Delitos contra la libertad sexual,2026,Q2,2,8.153497790006853,Gradient Boosting,Estándar
+Colmenar Viejo,Delitos contra la libertad sexual,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Colmenar Viejo,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,13.688001812693988,Gradient Boosting,Estándar
+Colmenar Viejo,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,13.246598551742201,Gradient Boosting,Estándar
+Colmenar Viejo,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Colmenar Viejo,Estafas informáticas,2026,Q1,1,133.45626385123583,Gradient Boosting,Estándar
+Colmenar Viejo,Estafas informáticas,2026,Q2,2,156.33663921175366,Gradient Boosting,Estándar
+Colmenar Viejo,Estafas informáticas,2026,Q3,3,164.42585428098047,Gradient Boosting,Estándar
+Colmenar Viejo,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Colmenar Viejo,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Colmenar Viejo,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Colmenar Viejo,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.5,Mediana móvil 4,Alta incertidumbre
+Colmenar Viejo,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.75,Mediana móvil 4,Alta incertidumbre
+Colmenar Viejo,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.875,Mediana móvil 4,Alta incertidumbre
+Colmenar Viejo,Hurtos,2026,Q1,1,121.64595063343107,Gradient Boosting,Estándar
+Colmenar Viejo,Hurtos,2026,Q2,2,111.4962067085042,Gradient Boosting,Estándar
+Colmenar Viejo,Hurtos,2026,Q3,3,125.00739448136576,Gradient Boosting,Estándar
+Colmenar Viejo,Otros ciberdelitos,2026,Q1,1,14.380809511896775,Gradient Boosting,Estándar
+Colmenar Viejo,Otros ciberdelitos,2026,Q2,2,13.791933173351108,Gradient Boosting,Estándar
+Colmenar Viejo,Otros ciberdelitos,2026,Q3,3,12.966329448026112,Gradient Boosting,Estándar
+Colmenar Viejo,Resto de criminalidad convencional,2026,Q1,1,312.3938178434619,Gradient Boosting,Estándar
+Colmenar Viejo,Resto de criminalidad convencional,2026,Q2,2,303.76515990485285,Gradient Boosting,Estándar
+Colmenar Viejo,Resto de criminalidad convencional,2026,Q3,3,315.52522216651204,Gradient Boosting,Estándar
+Colmenar Viejo,Resto de delitos contra la libertad sexual,2026,Q1,1,6.633645731804352,Gradient Boosting,Estándar
+Colmenar Viejo,Resto de delitos contra la libertad sexual,2026,Q2,2,6.430862175197474,Gradient Boosting,Estándar
+Colmenar Viejo,Resto de delitos contra la libertad sexual,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Colmenar Viejo,Robos con fuerza en domicilios,2026,Q1,1,16.604683676491334,Gradient Boosting,Estándar
+Colmenar Viejo,Robos con fuerza en domicilios,2026,Q2,2,15.094257839160258,Gradient Boosting,Estándar
+Colmenar Viejo,Robos con fuerza en domicilios,2026,Q3,3,13.246598551742201,Gradient Boosting,Estándar
+Colmenar Viejo,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,35.37068935769038,Gradient Boosting,Estándar
+Colmenar Viejo,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,30.50062927247927,Gradient Boosting,Estándar
+Colmenar Viejo,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,30.50062927247927,Gradient Boosting,Estándar
+Colmenar Viejo,Robos con violencia e intimidación,2026,Q1,1,6.643711897031962,Gradient Boosting,Estándar
+Colmenar Viejo,Robos con violencia e intimidación,2026,Q2,2,4.978317900666469,Gradient Boosting,Estándar
+Colmenar Viejo,Robos con violencia e intimidación,2026,Q3,3,4.09025149485376,Gradient Boosting,Estándar
+Colmenar Viejo,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Colmenar Viejo,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Colmenar Viejo,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Colmenar Viejo,Sustracciones de vehículos,2026,Q1,1,3.440646131584675,Gradient Boosting,Estándar
+Colmenar Viejo,Sustracciones de vehículos,2026,Q2,2,2.8057761853138805,Gradient Boosting,Estándar
+Colmenar Viejo,Sustracciones de vehículos,2026,Q3,3,3.242755757435653,Gradient Boosting,Estándar
+Colmenar Viejo,Tráfico de drogas,2026,Q1,1,2.7458041343984534,Gradient Boosting,Estándar
+Colmenar Viejo,Tráfico de drogas,2026,Q2,2,2.7458041343984534,Gradient Boosting,Estándar
+Colmenar Viejo,Tráfico de drogas,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Coslada,Agresión sexual con penetración,2026,Q1,1,3.008143035576506,Gradient Boosting,Estándar
+Coslada,Agresión sexual con penetración,2026,Q2,2,2.531052530034288,Gradient Boosting,Estándar
+Coslada,Agresión sexual con penetración,2026,Q3,3,3.005510059993038,Gradient Boosting,Estándar
+Coslada,Delitos contra la libertad sexual,2026,Q1,1,5.5576579920426745,Gradient Boosting,Estándar
+Coslada,Delitos contra la libertad sexual,2026,Q2,2,6.371375885100861,Gradient Boosting,Estándar
+Coslada,Delitos contra la libertad sexual,2026,Q3,3,6.371375885100861,Gradient Boosting,Estándar
+Coslada,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,9.150908678746571,Gradient Boosting,Estándar
+Coslada,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,8.521068311024967,Gradient Boosting,Estándar
+Coslada,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,9.150908678746571,Gradient Boosting,Estándar
+Coslada,Estafas informáticas,2026,Q1,1,113.24956368430418,Gradient Boosting,Estándar
+Coslada,Estafas informáticas,2026,Q2,2,126.6574102115781,Gradient Boosting,Estándar
+Coslada,Estafas informáticas,2026,Q3,3,123.17891242616703,Gradient Boosting,Estándar
+Coslada,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Coslada,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Coslada,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Coslada,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Coslada,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Coslada,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Coslada,Hurtos,2026,Q1,1,235.4782741078005,Gradient Boosting,Estándar
+Coslada,Hurtos,2026,Q2,2,247.89118177228497,Gradient Boosting,Estándar
+Coslada,Hurtos,2026,Q3,3,224.6189764758702,Gradient Boosting,Estándar
+Coslada,Otros ciberdelitos,2026,Q1,1,14.355557338152899,Gradient Boosting,Estándar
+Coslada,Otros ciberdelitos,2026,Q2,2,13.830394938496324,Gradient Boosting,Estándar
+Coslada,Otros ciberdelitos,2026,Q3,3,12.684066450999369,Gradient Boosting,Estándar
+Coslada,Resto de criminalidad convencional,2026,Q1,1,428.2442253935693,Gradient Boosting,Estándar
+Coslada,Resto de criminalidad convencional,2026,Q2,2,404.2456824866565,Gradient Boosting,Estándar
+Coslada,Resto de criminalidad convencional,2026,Q3,3,411.45395778061356,Gradient Boosting,Estándar
+Coslada,Resto de delitos contra la libertad sexual,2026,Q1,1,3.8082166526027894,Gradient Boosting,Estándar
+Coslada,Resto de delitos contra la libertad sexual,2026,Q2,2,3.8082166526027894,Gradient Boosting,Estándar
+Coslada,Resto de delitos contra la libertad sexual,2026,Q3,3,4.019986222960881,Gradient Boosting,Estándar
+Coslada,Robos con fuerza en domicilios,2026,Q1,1,20.24199384152765,Gradient Boosting,Estándar
+Coslada,Robos con fuerza en domicilios,2026,Q2,2,17.42896685036173,Gradient Boosting,Estándar
+Coslada,Robos con fuerza en domicilios,2026,Q3,3,19.9759311156027,Gradient Boosting,Estándar
+Coslada,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,40.31259631254901,Gradient Boosting,Estándar
+Coslada,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,30.911686667846404,Gradient Boosting,Estándar
+Coslada,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,28.05757264127942,Gradient Boosting,Estándar
+Coslada,Robos con violencia e intimidación,2026,Q1,1,13.597372994709502,Gradient Boosting,Estándar
+Coslada,Robos con violencia e intimidación,2026,Q2,2,13.827825949034573,Gradient Boosting,Estándar
+Coslada,Robos con violencia e intimidación,2026,Q3,3,13.285060316887417,Gradient Boosting,Estándar
+Coslada,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Coslada,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Coslada,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Coslada,Sustracciones de vehículos,2026,Q1,1,30.577450189638395,Gradient Boosting,Estándar
+Coslada,Sustracciones de vehículos,2026,Q2,2,34.0354270199624,Gradient Boosting,Estándar
+Coslada,Sustracciones de vehículos,2026,Q3,3,31.54381758321509,Gradient Boosting,Estándar
+Coslada,Tráfico de drogas,2026,Q1,1,3.005510059993038,Gradient Boosting,Estándar
+Coslada,Tráfico de drogas,2026,Q2,2,3.005510059993038,Gradient Boosting,Estándar
+Coslada,Tráfico de drogas,2026,Q3,3,3.3985567080956764,Gradient Boosting,Estándar
+Fuenlabrada,Agresión sexual con penetración,2026,Q1,1,3.652415701942766,Gradient Boosting,Estándar
+Fuenlabrada,Agresión sexual con penetración,2026,Q2,2,3.1779581719840166,Gradient Boosting,Estándar
+Fuenlabrada,Agresión sexual con penetración,2026,Q3,3,2.773847255451545,Gradient Boosting,Estándar
+Fuenlabrada,Delitos contra la libertad sexual,2026,Q1,1,13.229802473691388,Gradient Boosting,Estándar
+Fuenlabrada,Delitos contra la libertad sexual,2026,Q2,2,12.687036841544233,Gradient Boosting,Estándar
+Fuenlabrada,Delitos contra la libertad sexual,2026,Q3,3,11.823546447225118,Gradient Boosting,Estándar
+Fuenlabrada,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,7.060702542919079,Gradient Boosting,Estándar
+Fuenlabrada,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,6.430862175197474,Gradient Boosting,Estándar
+Fuenlabrada,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,5.724826579278338,Gradient Boosting,Estándar
+Fuenlabrada,Estafas informáticas,2026,Q1,1,307.52149199173033,Gradient Boosting,Estándar
+Fuenlabrada,Estafas informáticas,2026,Q2,2,304.4513961514913,Gradient Boosting,Estándar
+Fuenlabrada,Estafas informáticas,2026,Q3,3,303.7681675225278,Gradient Boosting,Estándar
+Fuenlabrada,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Fuenlabrada,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Fuenlabrada,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Fuenlabrada,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Fuenlabrada,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Fuenlabrada,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Fuenlabrada,Hurtos,2026,Q1,1,344.05590708436006,Gradient Boosting,Estándar
+Fuenlabrada,Hurtos,2026,Q2,2,340.43288232318844,Gradient Boosting,Estándar
+Fuenlabrada,Hurtos,2026,Q3,3,312.7017030815023,Gradient Boosting,Estándar
+Fuenlabrada,Otros ciberdelitos,2026,Q1,1,38.28813784390061,Gradient Boosting,Estándar
+Fuenlabrada,Otros ciberdelitos,2026,Q2,2,47.04300523933946,Gradient Boosting,Estándar
+Fuenlabrada,Otros ciberdelitos,2026,Q3,3,29.489973314083002,Gradient Boosting,Estándar
+Fuenlabrada,Resto de criminalidad convencional,2026,Q1,1,572.4128716161673,Gradient Boosting,Estándar
+Fuenlabrada,Resto de criminalidad convencional,2026,Q2,2,579.0499515916639,Gradient Boosting,Estándar
+Fuenlabrada,Resto de criminalidad convencional,2026,Q3,3,567.5925952728245,Gradient Boosting,Estándar
+Fuenlabrada,Resto de delitos contra la libertad sexual,2026,Q1,1,9.463217730693106,Gradient Boosting,Estándar
+Fuenlabrada,Resto de delitos contra la libertad sexual,2026,Q2,2,8.783338157728457,Gradient Boosting,Estándar
+Fuenlabrada,Resto de delitos contra la libertad sexual,2026,Q3,3,8.783338157728457,Gradient Boosting,Estándar
+Fuenlabrada,Robos con fuerza en domicilios,2026,Q1,1,32.879079920943084,Gradient Boosting,Estándar
+Fuenlabrada,Robos con fuerza en domicilios,2026,Q2,2,35.37068935769038,Gradient Boosting,Estándar
+Fuenlabrada,Robos con fuerza en domicilios,2026,Q3,3,35.37068935769038,Gradient Boosting,Estándar
+Fuenlabrada,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,60.39363155482228,Gradient Boosting,Estándar
+Fuenlabrada,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,60.39363155482228,Gradient Boosting,Estándar
+Fuenlabrada,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,60.39363155482228,Gradient Boosting,Estándar
+Fuenlabrada,Robos con violencia e intimidación,2026,Q1,1,41.125244616731536,Gradient Boosting,Estándar
+Fuenlabrada,Robos con violencia e intimidación,2026,Q2,2,41.125244616731536,Gradient Boosting,Estándar
+Fuenlabrada,Robos con violencia e intimidación,2026,Q3,3,41.64393046721367,Gradient Boosting,Estándar
+Fuenlabrada,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Fuenlabrada,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Fuenlabrada,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Fuenlabrada,Sustracciones de vehículos,2026,Q1,1,44.125874902543,Gradient Boosting,Estándar
+Fuenlabrada,Sustracciones de vehículos,2026,Q2,2,41.125244616731536,Gradient Boosting,Estándar
+Fuenlabrada,Sustracciones de vehículos,2026,Q3,3,41.125244616731536,Gradient Boosting,Estándar
+Fuenlabrada,Tráfico de drogas,2026,Q1,1,13.229802473691388,Gradient Boosting,Estándar
+Fuenlabrada,Tráfico de drogas,2026,Q2,2,12.687036841544233,Gradient Boosting,Estándar
+Fuenlabrada,Tráfico de drogas,2026,Q3,3,12.687036841544233,Gradient Boosting,Estándar
+Galapagar,Agresión sexual con penetración,2026,Q1,1,1.9090422301810799,Gradient Boosting,Estándar
+Galapagar,Agresión sexual con penetración,2026,Q2,2,1.466513630084666,Gradient Boosting,Estándar
+Galapagar,Agresión sexual con penetración,2026,Q3,3,2.4153625127947103,Gradient Boosting,Estándar
+Galapagar,Delitos contra la libertad sexual,2026,Q1,1,2.8057761853138805,Gradient Boosting,Estándar
+Galapagar,Delitos contra la libertad sexual,2026,Q2,2,3.242755757435653,Gradient Boosting,Estándar
+Galapagar,Delitos contra la libertad sexual,2026,Q3,3,2.8057761853138805,Gradient Boosting,Estándar
+Galapagar,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,7.060702542919079,Gradient Boosting,Estándar
+Galapagar,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,7.060702542919079,Gradient Boosting,Estándar
+Galapagar,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Galapagar,Estafas informáticas,2026,Q1,1,130.23476536070217,Gradient Boosting,Estándar
+Galapagar,Estafas informáticas,2026,Q2,2,114.46811179045264,Gradient Boosting,Estándar
+Galapagar,Estafas informáticas,2026,Q3,3,104.31836786552577,Gradient Boosting,Estándar
+Galapagar,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Galapagar,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Galapagar,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Galapagar,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Galapagar,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Galapagar,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Galapagar,Hurtos,2026,Q1,1,41.125244616731536,Gradient Boosting,Estándar
+Galapagar,Hurtos,2026,Q2,2,41.125244616731536,Gradient Boosting,Estándar
+Galapagar,Hurtos,2026,Q3,3,41.125244616731536,Gradient Boosting,Estándar
+Galapagar,Otros ciberdelitos,2026,Q1,1,25.50073840536197,Gradient Boosting,Estándar
+Galapagar,Otros ciberdelitos,2026,Q2,2,24.982052554879825,Gradient Boosting,Estándar
+Galapagar,Otros ciberdelitos,2026,Q3,3,24.982052554879825,Gradient Boosting,Estándar
+Galapagar,Resto de criminalidad convencional,2026,Q1,1,201.28678082999133,Gradient Boosting,Estándar
+Galapagar,Resto de criminalidad convencional,2026,Q2,2,195.71490790505385,Gradient Boosting,Estándar
+Galapagar,Resto de criminalidad convencional,2026,Q3,3,181.83968868151936,Gradient Boosting,Estándar
+Galapagar,Resto de delitos contra la libertad sexual,2026,Q1,1,2.7458041343984534,Gradient Boosting,Estándar
+Galapagar,Resto de delitos contra la libertad sexual,2026,Q2,2,2.4965566062033844,Gradient Boosting,Estándar
+Galapagar,Resto de delitos contra la libertad sexual,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Galapagar,Robos con fuerza en domicilios,2026,Q1,1,30.50062927247927,Gradient Boosting,Estándar
+Galapagar,Robos con fuerza en domicilios,2026,Q2,2,30.50062927247927,Gradient Boosting,Estándar
+Galapagar,Robos con fuerza en domicilios,2026,Q3,3,32.879079920943084,Gradient Boosting,Estándar
+Galapagar,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,35.87971020675457,Gradient Boosting,Estándar
+Galapagar,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,32.879079920943084,Gradient Boosting,Estándar
+Galapagar,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,32.879079920943084,Gradient Boosting,Estándar
+Galapagar,Robos con violencia e intimidación,2026,Q1,1,6.253563633076868,Gradient Boosting,Estándar
+Galapagar,Robos con violencia e intimidación,2026,Q2,2,5.549279493068877,Gradient Boosting,Estándar
+Galapagar,Robos con violencia e intimidación,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Galapagar,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Galapagar,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Galapagar,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Galapagar,Sustracciones de vehículos,2026,Q1,1,1.9090422301810799,Gradient Boosting,Estándar
+Galapagar,Sustracciones de vehículos,2026,Q2,2,1.466513630084666,Gradient Boosting,Estándar
+Galapagar,Sustracciones de vehículos,2026,Q3,3,2.4153625127947103,Gradient Boosting,Estándar
+Galapagar,Tráfico de drogas,2026,Q1,1,2.9710141361621347,Gradient Boosting,Estándar
+Galapagar,Tráfico de drogas,2026,Q2,2,2.271346604439703,Gradient Boosting,Estándar
+Galapagar,Tráfico de drogas,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Getafe,Agresión sexual con penetración,2026,Q1,1,3.2154361298209935,Gradient Boosting,Estándar
+Getafe,Agresión sexual con penetración,2026,Q2,2,3.652415701942766,Gradient Boosting,Estándar
+Getafe,Agresión sexual con penetración,2026,Q3,3,4.09025149485376,Gradient Boosting,Estándar
+Getafe,Delitos contra la libertad sexual,2026,Q1,1,15.094257839160258,Gradient Boosting,Estándar
+Getafe,Delitos contra la libertad sexual,2026,Q2,2,13.852270968338681,Gradient Boosting,Estándar
+Getafe,Delitos contra la libertad sexual,2026,Q3,3,13.852270968338681,Gradient Boosting,Estándar
+Getafe,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,12.703832919595046,Gradient Boosting,Estándar
+Getafe,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,13.229802473691388,Gradient Boosting,Estándar
+Getafe,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Getafe,Estafas informáticas,2026,Q1,1,353.02712485685663,Gradient Boosting,Estándar
+Getafe,Estafas informáticas,2026,Q2,2,342.26115930329667,Gradient Boosting,Estándar
+Getafe,Estafas informáticas,2026,Q3,3,339.2843297398407,Gradient Boosting,Estándar
+Getafe,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Getafe,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Getafe,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Getafe,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.5,Mediana móvil 4,Alta incertidumbre
+Getafe,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.75,Mediana móvil 4,Alta incertidumbre
+Getafe,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.625,Mediana móvil 4,Alta incertidumbre
+Getafe,Hurtos,2026,Q1,1,681.3619064872458,Gradient Boosting,Estándar
+Getafe,Hurtos,2026,Q2,2,736.5106331639872,Gradient Boosting,Estándar
+Getafe,Hurtos,2026,Q3,3,666.9806359287192,Gradient Boosting,Estándar
+Getafe,Otros ciberdelitos,2026,Q1,1,35.491699094219925,Gradient Boosting,Estándar
+Getafe,Otros ciberdelitos,2026,Q2,2,38.50199438144936,Gradient Boosting,Estándar
+Getafe,Otros ciberdelitos,2026,Q3,3,37.98330853096722,Gradient Boosting,Estándar
+Getafe,Resto de criminalidad convencional,2026,Q1,1,1091.0048394556839,Gradient Boosting,Estándar
+Getafe,Resto de criminalidad convencional,2026,Q2,2,1101.9320892136557,Gradient Boosting,Estándar
+Getafe,Resto de criminalidad convencional,2026,Q3,3,1092.468251470517,Gradient Boosting,Estándar
+Getafe,Resto de delitos contra la libertad sexual,2026,Q1,1,12.73696002249624,Gradient Boosting,Estándar
+Getafe,Resto de delitos contra la libertad sexual,2026,Q2,2,12.687036841544233,Gradient Boosting,Estándar
+Getafe,Resto de delitos contra la libertad sexual,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Getafe,Robos con fuerza en domicilios,2026,Q1,1,19.07401502035663,Gradient Boosting,Estándar
+Getafe,Robos con fuerza en domicilios,2026,Q2,2,19.394703718310332,Gradient Boosting,Estándar
+Getafe,Robos con fuerza en domicilios,2026,Q3,3,23.641612821243633,Gradient Boosting,Estándar
+Getafe,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,49.31291576327766,Gradient Boosting,Estándar
+Getafe,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,47.769359449894495,Gradient Boosting,Estándar
+Getafe,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,44.33872462437749,Gradient Boosting,Estándar
+Getafe,Robos con violencia e intimidación,2026,Q1,1,44.125874902543,Gradient Boosting,Estándar
+Getafe,Robos con violencia e intimidación,2026,Q2,2,41.125244616731536,Gradient Boosting,Estándar
+Getafe,Robos con violencia e intimidación,2026,Q3,3,41.64393046721367,Gradient Boosting,Estándar
+Getafe,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Getafe,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Getafe,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Getafe,Sustracciones de vehículos,2026,Q1,1,47.769359449894495,Gradient Boosting,Estándar
+Getafe,Sustracciones de vehículos,2026,Q2,2,44.33872462437749,Gradient Boosting,Estándar
+Getafe,Sustracciones de vehículos,2026,Q3,3,41.33809433856602,Gradient Boosting,Estándar
+Getafe,Tráfico de drogas,2026,Q1,1,8.80013423577927,Gradient Boosting,Estándar
+Getafe,Tráfico de drogas,2026,Q2,2,10.09305809841471,Gradient Boosting,Estándar
+Getafe,Tráfico de drogas,2026,Q3,3,11.415270289174531,Gradient Boosting,Estándar
+Humanes de Madrid,Agresión sexual con penetración,2026,Q1,1,2.3778845549577325,Gradient Boosting,Estándar
+Humanes de Madrid,Agresión sexual con penetración,2026,Q2,2,1.9089760529736253,Gradient Boosting,Estándar
+Humanes de Madrid,Agresión sexual con penetración,2026,Q3,3,1.9090422301810799,Gradient Boosting,Estándar
+Humanes de Madrid,Delitos contra la libertad sexual,2026,Q1,1,4.802066462047375,Gradient Boosting,Estándar
+Humanes de Madrid,Delitos contra la libertad sexual,2026,Q2,2,4.879179756357816,Gradient Boosting,Estándar
+Humanes de Madrid,Delitos contra la libertad sexual,2026,Q3,3,3.7769571165240783,Gradient Boosting,Estándar
+Humanes de Madrid,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,3.242755757435653,Gradient Boosting,Estándar
+Humanes de Madrid,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,3.242755757435653,Gradient Boosting,Estándar
+Humanes de Madrid,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,2.8057761853138805,Gradient Boosting,Estándar
+Humanes de Madrid,Estafas informáticas,2026,Q1,1,47.769359449894495,Gradient Boosting,Estándar
+Humanes de Madrid,Estafas informáticas,2026,Q2,2,44.125874902543,Gradient Boosting,Estándar
+Humanes de Madrid,Estafas informáticas,2026,Q3,3,40.91691992789041,Gradient Boosting,Estándar
+Humanes de Madrid,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Humanes de Madrid,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Humanes de Madrid,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Humanes de Madrid,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Humanes de Madrid,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Humanes de Madrid,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Humanes de Madrid,Hurtos,2026,Q1,1,253.50507486161055,Gradient Boosting,Estándar
+Humanes de Madrid,Hurtos,2026,Q2,2,150.42854814769248,Gradient Boosting,Estándar
+Humanes de Madrid,Hurtos,2026,Q3,3,143.72591484408284,Gradient Boosting,Estándar
+Humanes de Madrid,Otros ciberdelitos,2026,Q1,1,6.549139985691656,Gradient Boosting,Estándar
+Humanes de Madrid,Otros ciberdelitos,2026,Q2,2,6.549139985691656,Gradient Boosting,Estándar
+Humanes de Madrid,Otros ciberdelitos,2026,Q3,3,6.0545323221557235,Gradient Boosting,Estándar
+Humanes de Madrid,Resto de criminalidad convencional,2026,Q1,1,174.33558513823039,Gradient Boosting,Estándar
+Humanes de Madrid,Resto de criminalidad convencional,2026,Q2,2,176.3702744484169,Gradient Boosting,Estándar
+Humanes de Madrid,Resto de criminalidad convencional,2026,Q3,3,166.58365961466333,Gradient Boosting,Estándar
+Humanes de Madrid,Resto de delitos contra la libertad sexual,2026,Q1,1,3.2643946929655816,Gradient Boosting,Estándar
+Humanes de Madrid,Resto de delitos contra la libertad sexual,2026,Q2,2,3.2911204740706483,Gradient Boosting,Estándar
+Humanes de Madrid,Resto de delitos contra la libertad sexual,2026,Q3,3,3.652415701942766,Gradient Boosting,Estándar
+Humanes de Madrid,Robos con fuerza en domicilios,2026,Q1,1,6.430862175197474,Gradient Boosting,Estándar
+Humanes de Madrid,Robos con fuerza en domicilios,2026,Q2,2,5.893716036408457,Gradient Boosting,Estándar
+Humanes de Madrid,Robos con fuerza en domicilios,2026,Q3,3,5.549279493068877,Gradient Boosting,Estándar
+Humanes de Madrid,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,13.229802473691388,Gradient Boosting,Estándar
+Humanes de Madrid,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,12.687036841544233,Gradient Boosting,Estándar
+Humanes de Madrid,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,10.872504657027376,Gradient Boosting,Estándar
+Humanes de Madrid,Robos con violencia e intimidación,2026,Q1,1,14.731928113545749,Gradient Boosting,Estándar
+Humanes de Madrid,Robos con violencia e intimidación,2026,Q2,2,9.48001380874392,Gradient Boosting,Estándar
+Humanes de Madrid,Robos con violencia e intimidación,2026,Q3,3,8.783338157728457,Gradient Boosting,Estándar
+Humanes de Madrid,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Humanes de Madrid,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Humanes de Madrid,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Humanes de Madrid,Sustracciones de vehículos,2026,Q1,1,14.551492207013103,Gradient Boosting,Estándar
+Humanes de Madrid,Sustracciones de vehículos,2026,Q2,2,13.246598551742201,Gradient Boosting,Estándar
+Humanes de Madrid,Sustracciones de vehículos,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Humanes de Madrid,Tráfico de drogas,2026,Q1,1,3.6157939648950075,Gradient Boosting,Estándar
+Humanes de Madrid,Tráfico de drogas,2026,Q2,2,3.7793437801870153,Gradient Boosting,Estándar
+Humanes de Madrid,Tráfico de drogas,2026,Q3,3,3.242755757435653,Gradient Boosting,Estándar
+Las Rozas de Madrid,Agresión sexual con penetración,2026,Q1,1,2.7458041343984534,Gradient Boosting,Estándar
+Las Rozas de Madrid,Agresión sexual con penetración,2026,Q2,2,2.7458041343984534,Gradient Boosting,Estándar
+Las Rozas de Madrid,Agresión sexual con penetración,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Las Rozas de Madrid,Delitos contra la libertad sexual,2026,Q1,1,6.430862175197474,Gradient Boosting,Estándar
+Las Rozas de Madrid,Delitos contra la libertad sexual,2026,Q2,2,7.060702542919079,Gradient Boosting,Estándar
+Las Rozas de Madrid,Delitos contra la libertad sexual,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Las Rozas de Madrid,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,12.687036841544233,Gradient Boosting,Estándar
+Las Rozas de Madrid,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,13.229802473691388,Gradient Boosting,Estándar
+Las Rozas de Madrid,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,12.687036841544233,Gradient Boosting,Estándar
+Las Rozas de Madrid,Estafas informáticas,2026,Q1,1,361.782508881444,Gradient Boosting,Estándar
+Las Rozas de Madrid,Estafas informáticas,2026,Q2,2,345.63268324743814,Gradient Boosting,Estándar
+Las Rozas de Madrid,Estafas informáticas,2026,Q3,3,361.782508881444,Gradient Boosting,Estándar
+Las Rozas de Madrid,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Las Rozas de Madrid,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Las Rozas de Madrid,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Las Rozas de Madrid,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Las Rozas de Madrid,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Las Rozas de Madrid,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Las Rozas de Madrid,Hurtos,2026,Q1,1,299.9815341262208,Gradient Boosting,Estándar
+Las Rozas de Madrid,Hurtos,2026,Q2,2,275.19913924449384,Gradient Boosting,Estándar
+Las Rozas de Madrid,Hurtos,2026,Q3,3,251.6726210900416,Gradient Boosting,Estándar
+Las Rozas de Madrid,Otros ciberdelitos,2026,Q1,1,37.53562698787266,Gradient Boosting,Estándar
+Las Rozas de Madrid,Otros ciberdelitos,2026,Q2,2,38.50199438144936,Gradient Boosting,Estándar
+Las Rozas de Madrid,Otros ciberdelitos,2026,Q3,3,32.879079920943084,Gradient Boosting,Estándar
+Las Rozas de Madrid,Resto de criminalidad convencional,2026,Q1,1,381.9121233019773,Gradient Boosting,Estándar
+Las Rozas de Madrid,Resto de criminalidad convencional,2026,Q2,2,389.5533762882597,Gradient Boosting,Estándar
+Las Rozas de Madrid,Resto de criminalidad convencional,2026,Q3,3,386.7417307216691,Gradient Boosting,Estándar
+Las Rozas de Madrid,Resto de delitos contra la libertad sexual,2026,Q1,1,6.003805364082746,Gradient Boosting,Estándar
+Las Rozas de Madrid,Resto de delitos contra la libertad sexual,2026,Q2,2,6.555625417139778,Gradient Boosting,Estándar
+Las Rozas de Madrid,Resto de delitos contra la libertad sexual,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Las Rozas de Madrid,Robos con fuerza en domicilios,2026,Q1,1,47.397731829498454,Gradient Boosting,Estándar
+Las Rozas de Madrid,Robos con fuerza en domicilios,2026,Q2,2,31.89136391363403,Gradient Boosting,Estándar
+Las Rozas de Madrid,Robos con fuerza en domicilios,2026,Q3,3,35.491699094219925,Gradient Boosting,Estándar
+Las Rozas de Madrid,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,51.991813863394015,Gradient Boosting,Estándar
+Las Rozas de Madrid,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,45.2777500131472,Gradient Boosting,Estándar
+Las Rozas de Madrid,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,41.63426546579571,Gradient Boosting,Estándar
+Las Rozas de Madrid,Robos con violencia e intimidación,2026,Q1,1,8.153497790006853,Gradient Boosting,Estándar
+Las Rozas de Madrid,Robos con violencia e intimidación,2026,Q2,2,8.783338157728457,Gradient Boosting,Estándar
+Las Rozas de Madrid,Robos con violencia e intimidación,2026,Q3,3,8.783338157728457,Gradient Boosting,Estándar
+Las Rozas de Madrid,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Las Rozas de Madrid,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Las Rozas de Madrid,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Las Rozas de Madrid,Sustracciones de vehículos,2026,Q1,1,11.957513463883577,Gradient Boosting,Estándar
+Las Rozas de Madrid,Sustracciones de vehículos,2026,Q2,2,10.872504657027376,Gradient Boosting,Estándar
+Las Rozas de Madrid,Sustracciones de vehículos,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Las Rozas de Madrid,Tráfico de drogas,2026,Q1,1,3.242755757435653,Gradient Boosting,Estándar
+Las Rozas de Madrid,Tráfico de drogas,2026,Q2,2,2.8057761853138805,Gradient Boosting,Estándar
+Las Rozas de Madrid,Tráfico de drogas,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Leganés,Agresión sexual con penetración,2026,Q1,1,3.565187546165987,Gradient Boosting,Estándar
+Leganés,Agresión sexual con penetración,2026,Q2,2,3.652415701942766,Gradient Boosting,Estándar
+Leganés,Agresión sexual con penetración,2026,Q3,3,3.652415701942766,Gradient Boosting,Estándar
+Leganés,Delitos contra la libertad sexual,2026,Q1,1,13.246598551742201,Gradient Boosting,Estándar
+Leganés,Delitos contra la libertad sexual,2026,Q2,2,13.229802473691388,Gradient Boosting,Estándar
+Leganés,Delitos contra la libertad sexual,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Leganés,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,16.84773945306936,Gradient Boosting,Estándar
+Leganés,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,16.84773945306936,Gradient Boosting,Estándar
+Leganés,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,16.84773945306936,Gradient Boosting,Estándar
+Leganés,Estafas informáticas,2026,Q1,1,239.29467574886604,Gradient Boosting,Estándar
+Leganés,Estafas informáticas,2026,Q2,2,226.9600160363147,Gradient Boosting,Estándar
+Leganés,Estafas informáticas,2026,Q3,3,219.25953531353278,Gradient Boosting,Estándar
+Leganés,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Leganés,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Leganés,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Leganés,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.5,Mediana móvil 4,Alta incertidumbre
+Leganés,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.75,Mediana móvil 4,Alta incertidumbre
+Leganés,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.875,Mediana móvil 4,Alta incertidumbre
+Leganés,Hurtos,2026,Q1,1,818.8923010636157,Gradient Boosting,Estándar
+Leganés,Hurtos,2026,Q2,2,857.6879196504572,Gradient Boosting,Estándar
+Leganés,Hurtos,2026,Q3,3,856.1565289426816,Gradient Boosting,Estándar
+Leganés,Otros ciberdelitos,2026,Q1,1,44.567968194832794,Gradient Boosting,Estándar
+Leganés,Otros ciberdelitos,2026,Q2,2,47.802643972270126,Gradient Boosting,Estándar
+Leganés,Otros ciberdelitos,2026,Q3,3,38.49232938003141,Gradient Boosting,Estándar
+Leganés,Resto de criminalidad convencional,2026,Q1,1,951.3745532668366,Gradient Boosting,Estándar
+Leganés,Resto de criminalidad convencional,2026,Q2,2,940.5645509394864,Gradient Boosting,Estándar
+Leganés,Resto de criminalidad convencional,2026,Q3,3,947.1243802732752,Gradient Boosting,Estándar
+Leganés,Resto de delitos contra la libertad sexual,2026,Q1,1,11.415270289174531,Gradient Boosting,Estándar
+Leganés,Resto de delitos contra la libertad sexual,2026,Q2,2,10.872504657027376,Gradient Boosting,Estándar
+Leganés,Resto de delitos contra la libertad sexual,2026,Q3,3,10.09305809841471,Gradient Boosting,Estándar
+Leganés,Robos con fuerza en domicilios,2026,Q1,1,34.52533170064323,Gradient Boosting,Estándar
+Leganés,Robos con fuerza en domicilios,2026,Q2,2,38.19615825280171,Gradient Boosting,Estándar
+Leganés,Robos con fuerza en domicilios,2026,Q3,3,35.37068935769038,Gradient Boosting,Estándar
+Leganés,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,53.23366710782245,Gradient Boosting,Estándar
+Leganés,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,47.769359449894495,Gradient Boosting,Estándar
+Leganés,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,44.64456075302514,Gradient Boosting,Estándar
+Leganés,Robos con violencia e intimidación,2026,Q1,1,35.491699094219925,Gradient Boosting,Estándar
+Leganés,Robos con violencia e intimidación,2026,Q2,2,41.125244616731536,Gradient Boosting,Estándar
+Leganés,Robos con violencia e intimidación,2026,Q3,3,41.125244616731536,Gradient Boosting,Estándar
+Leganés,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Leganés,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Leganés,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Leganés,Sustracciones de vehículos,2026,Q1,1,77.86135034645581,Gradient Boosting,Estándar
+Leganés,Sustracciones de vehículos,2026,Q2,2,76.77868693705972,Gradient Boosting,Estándar
+Leganés,Sustracciones de vehículos,2026,Q3,3,75.86053488196266,Gradient Boosting,Estándar
+Leganés,Tráfico de drogas,2026,Q1,1,15.157164623609585,Gradient Boosting,Estándar
+Leganés,Tráfico de drogas,2026,Q2,2,13.852270968338681,Gradient Boosting,Estándar
+Leganés,Tráfico de drogas,2026,Q3,3,15.000080165651328,Gradient Boosting,Estándar
+Madrid,Agresión sexual con penetración,2026,Q1,1,89.29513466219286,Gradient Boosting,Estándar
+Madrid,Agresión sexual con penetración,2026,Q2,2,88.37698260709581,Gradient Boosting,Estándar
+Madrid,Agresión sexual con penetración,2026,Q3,3,88.37698260709581,Gradient Boosting,Estándar
+Madrid,Delitos contra la libertad sexual,2026,Q1,1,406.5844029286727,Gradient Boosting,Estándar
+Madrid,Delitos contra la libertad sexual,2026,Q2,2,436.57593398614597,Gradient Boosting,Estándar
+Madrid,Delitos contra la libertad sexual,2026,Q3,3,446.0018011049511,Gradient Boosting,Estándar
+Madrid,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,572.8483788925613,Gradient Boosting,Estándar
+Madrid,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,579.5563095302091,Gradient Boosting,Estándar
+Madrid,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,572.4615391422786,Gradient Boosting,Estándar
+Madrid,Estafas informáticas,2026,Q1,1,7815.786070540009,Gradient Boosting,Estándar
+Madrid,Estafas informáticas,2026,Q2,2,7814.892145467023,Gradient Boosting,Estándar
+Madrid,Estafas informáticas,2026,Q3,3,7759.171166543976,Gradient Boosting,Estándar
+Madrid,Homicidios dolosos y asesinatos consumados,2026,Q1,1,4.0,Mediana móvil 4,Alta incertidumbre
+Madrid,Homicidios dolosos y asesinatos consumados,2026,Q2,2,5.5,Mediana móvil 4,Alta incertidumbre
+Madrid,Homicidios dolosos y asesinatos consumados,2026,Q3,3,4.75,Mediana móvil 4,Alta incertidumbre
+Madrid,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,22.0,Mediana móvil 4,Alta incertidumbre
+Madrid,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,23.0,Mediana móvil 4,Alta incertidumbre
+Madrid,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,23.5,Mediana móvil 4,Alta incertidumbre
+Madrid,Hurtos,2026,Q1,1,19060.309783583903,Gradient Boosting,Estándar
+Madrid,Hurtos,2026,Q2,2,18992.469527969253,Gradient Boosting,Estándar
+Madrid,Hurtos,2026,Q3,3,18915.594910644573,Gradient Boosting,Estándar
+Madrid,Otros ciberdelitos,2026,Q1,1,994.443445290331,Gradient Boosting,Estándar
+Madrid,Otros ciberdelitos,2026,Q2,2,1000.7077788952919,Gradient Boosting,Estándar
+Madrid,Otros ciberdelitos,2026,Q3,3,966.5160627791948,Gradient Boosting,Estándar
+Madrid,Resto de criminalidad convencional,2026,Q1,1,23731.205323654736,Gradient Boosting,Estándar
+Madrid,Resto de criminalidad convencional,2026,Q2,2,24001.58802206305,Gradient Boosting,Estándar
+Madrid,Resto de criminalidad convencional,2026,Q3,3,23632.750992618705,Gradient Boosting,Estándar
+Madrid,Resto de delitos contra la libertad sexual,2026,Q1,1,324.56327223090875,Gradient Boosting,Estándar
+Madrid,Resto de delitos contra la libertad sexual,2026,Q2,2,328.10770452461736,Gradient Boosting,Estándar
+Madrid,Resto de delitos contra la libertad sexual,2026,Q3,3,335.47518401954954,Gradient Boosting,Estándar
+Madrid,Robos con fuerza en domicilios,2026,Q1,1,1067.3414731940345,Gradient Boosting,Estándar
+Madrid,Robos con fuerza en domicilios,2026,Q2,2,950.1942901115852,Gradient Boosting,Estándar
+Madrid,Robos con fuerza en domicilios,2026,Q3,3,1469.178871844349,Gradient Boosting,Estándar
+Madrid,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,1589.1194367433015,Gradient Boosting,Estándar
+Madrid,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,1472.969459123473,Gradient Boosting,Estándar
+Madrid,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,1611.0194885190044,Gradient Boosting,Estándar
+Madrid,Robos con violencia e intimidación,2026,Q1,1,1709.8777924235037,Gradient Boosting,Estándar
+Madrid,Robos con violencia e intimidación,2026,Q2,2,1584.7748070844623,Gradient Boosting,Estándar
+Madrid,Robos con violencia e intimidación,2026,Q3,3,1624.8477677794735,Gradient Boosting,Estándar
+Madrid,Secuestro,2026,Q1,1,3.0,Mediana móvil 4,Alta incertidumbre
+Madrid,Secuestro,2026,Q2,2,3.0,Mediana móvil 4,Alta incertidumbre
+Madrid,Secuestro,2026,Q3,3,3.0,Mediana móvil 4,Alta incertidumbre
+Madrid,Sustracciones de vehículos,2026,Q1,1,982.119942603072,Gradient Boosting,Estándar
+Madrid,Sustracciones de vehículos,2026,Q2,2,930.5017642232974,Gradient Boosting,Estándar
+Madrid,Sustracciones de vehículos,2026,Q3,3,1001.2128649272762,Gradient Boosting,Estándar
+Madrid,Tráfico de drogas,2026,Q1,1,1083.5107489563113,Gradient Boosting,Estándar
+Madrid,Tráfico de drogas,2026,Q2,2,1102.5812482465033,Gradient Boosting,Estándar
+Madrid,Tráfico de drogas,2026,Q3,3,1097.895175882399,Gradient Boosting,Estándar
+Majadahonda,Agresión sexual con penetración,2026,Q1,1,1.466513630084666,Gradient Boosting,Estándar
+Majadahonda,Agresión sexual con penetración,2026,Q2,2,1.4345847002223302,Gradient Boosting,Estándar
+Majadahonda,Agresión sexual con penetración,2026,Q3,3,1.466513630084666,Gradient Boosting,Estándar
+Majadahonda,Delitos contra la libertad sexual,2026,Q1,1,5.549279493068877,Gradient Boosting,Estándar
+Majadahonda,Delitos contra la libertad sexual,2026,Q2,2,4.09025149485376,Gradient Boosting,Estándar
+Majadahonda,Delitos contra la libertad sexual,2026,Q3,3,4.09025149485376,Gradient Boosting,Estándar
+Majadahonda,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,7.060702542919079,Gradient Boosting,Estándar
+Majadahonda,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,8.783338157728457,Gradient Boosting,Estándar
+Majadahonda,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,9.463217730693106,Gradient Boosting,Estándar
+Majadahonda,Estafas informáticas,2026,Q1,1,272.76250535517664,Gradient Boosting,Estándar
+Majadahonda,Estafas informáticas,2026,Q2,2,272.92194582564844,Gradient Boosting,Estándar
+Majadahonda,Estafas informáticas,2026,Q3,3,251.6726210900416,Gradient Boosting,Estándar
+Majadahonda,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Majadahonda,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Majadahonda,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Majadahonda,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Majadahonda,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Majadahonda,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Majadahonda,Hurtos,2026,Q1,1,330.53301020520087,Gradient Boosting,Estándar
+Majadahonda,Hurtos,2026,Q2,2,326.8339062215407,Gradient Boosting,Estándar
+Majadahonda,Hurtos,2026,Q3,3,326.74227366263284,Gradient Boosting,Estándar
+Majadahonda,Otros ciberdelitos,2026,Q1,1,30.50062927247927,Gradient Boosting,Estándar
+Majadahonda,Otros ciberdelitos,2026,Q2,2,32.992238709226584,Gradient Boosting,Estándar
+Majadahonda,Otros ciberdelitos,2026,Q3,3,28.337845178192897,Gradient Boosting,Estándar
+Majadahonda,Resto de criminalidad convencional,2026,Q1,1,435.888656783992,Gradient Boosting,Estándar
+Majadahonda,Resto de criminalidad convencional,2026,Q2,2,428.84460464063665,Gradient Boosting,Estándar
+Majadahonda,Resto de criminalidad convencional,2026,Q3,3,443.9846011698171,Gradient Boosting,Estándar
+Majadahonda,Resto de delitos contra la libertad sexual,2026,Q1,1,4.249674747427015,Gradient Boosting,Estándar
+Majadahonda,Resto de delitos contra la libertad sexual,2026,Q2,2,3.652415701942766,Gradient Boosting,Estándar
+Majadahonda,Resto de delitos contra la libertad sexual,2026,Q3,3,3.440646131584675,Gradient Boosting,Estándar
+Majadahonda,Robos con fuerza en domicilios,2026,Q1,1,20.480621378668218,Gradient Boosting,Estándar
+Majadahonda,Robos con fuerza en domicilios,2026,Q2,2,16.84773945306936,Gradient Boosting,Estándar
+Majadahonda,Robos con fuerza en domicilios,2026,Q3,3,21.33553239473755,Gradient Boosting,Estándar
+Majadahonda,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,28.337845178192897,Gradient Boosting,Estándar
+Majadahonda,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,23.574224315290166,Gradient Boosting,Estándar
+Majadahonda,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,24.982052554879825,Gradient Boosting,Estándar
+Majadahonda,Robos con violencia e intimidación,2026,Q1,1,12.73696002249624,Gradient Boosting,Estándar
+Majadahonda,Robos con violencia e intimidación,2026,Q2,2,12.687036841544233,Gradient Boosting,Estándar
+Majadahonda,Robos con violencia e intimidación,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Majadahonda,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Majadahonda,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Majadahonda,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Majadahonda,Sustracciones de vehículos,2026,Q1,1,13.309505336191526,Gradient Boosting,Estándar
+Majadahonda,Sustracciones de vehículos,2026,Q2,2,13.229802473691388,Gradient Boosting,Estándar
+Majadahonda,Sustracciones de vehículos,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Majadahonda,Tráfico de drogas,2026,Q1,1,2.9710141361621347,Gradient Boosting,Estándar
+Majadahonda,Tráfico de drogas,2026,Q2,2,2.7458041343984534,Gradient Boosting,Estándar
+Majadahonda,Tráfico de drogas,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Mejorada del Campo,Agresión sexual con penetración,2026,Q1,1,1.9090422301810799,Gradient Boosting,Estándar
+Mejorada del Campo,Agresión sexual con penetración,2026,Q2,2,1.466513630084666,Gradient Boosting,Estándar
+Mejorada del Campo,Agresión sexual con penetración,2026,Q3,3,2.4153625127947103,Gradient Boosting,Estándar
+Mejorada del Campo,Delitos contra la libertad sexual,2026,Q1,1,2.7458041343984534,Gradient Boosting,Estándar
+Mejorada del Campo,Delitos contra la libertad sexual,2026,Q2,2,2.7083261765614757,Gradient Boosting,Estándar
+Mejorada del Campo,Delitos contra la libertad sexual,2026,Q3,3,2.8057761853138805,Gradient Boosting,Estándar
+Mejorada del Campo,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,3.98016216717947,Gradient Boosting,Estándar
+Mejorada del Campo,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,2.8057761853138805,Gradient Boosting,Estándar
+Mejorada del Campo,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,3.030986187077562,Gradient Boosting,Estándar
+Mejorada del Campo,Estafas informáticas,2026,Q1,1,71.97012976076684,Gradient Boosting,Estándar
+Mejorada del Campo,Estafas informáticas,2026,Q2,2,73.85649225476006,Gradient Boosting,Estándar
+Mejorada del Campo,Estafas informáticas,2026,Q3,3,69.96608713356423,Gradient Boosting,Estándar
+Mejorada del Campo,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Mejorada del Campo,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Mejorada del Campo,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Mejorada del Campo,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.5,Mediana móvil 4,Alta incertidumbre
+Mejorada del Campo,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.75,Mediana móvil 4,Alta incertidumbre
+Mejorada del Campo,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.625,Mediana móvil 4,Alta incertidumbre
+Mejorada del Campo,Hurtos,2026,Q1,1,51.804525200024955,Gradient Boosting,Estándar
+Mejorada del Campo,Hurtos,2026,Q2,2,47.769359449894495,Gradient Boosting,Estándar
+Mejorada del Campo,Hurtos,2026,Q3,3,44.125874902543,Gradient Boosting,Estándar
+Mejorada del Campo,Otros ciberdelitos,2026,Q1,1,11.330764543061834,Gradient Boosting,Estándar
+Mejorada del Campo,Otros ciberdelitos,2026,Q2,2,10.638392720023617,Gradient Boosting,Estándar
+Mejorada del Campo,Otros ciberdelitos,2026,Q3,3,9.045834686159523,Gradient Boosting,Estándar
+Mejorada del Campo,Resto de criminalidad convencional,2026,Q1,1,178.0874420381761,Gradient Boosting,Estándar
+Mejorada del Campo,Resto de criminalidad convencional,2026,Q2,2,166.58365961466333,Gradient Boosting,Estándar
+Mejorada del Campo,Resto de criminalidad convencional,2026,Q3,3,173.27678241534028,Gradient Boosting,Estándar
+Mejorada del Campo,Resto de delitos contra la libertad sexual,2026,Q1,1,1.9200779086622168,Gradient Boosting,Estándar
+Mejorada del Campo,Resto de delitos contra la libertad sexual,2026,Q2,2,2.1661149845996412,Gradient Boosting,Estándar
+Mejorada del Campo,Resto de delitos contra la libertad sexual,2026,Q3,3,2.8214884786481083,Gradient Boosting,Estándar
+Mejorada del Campo,Robos con fuerza en domicilios,2026,Q1,1,3.2154361298209935,Gradient Boosting,Estándar
+Mejorada del Campo,Robos con fuerza en domicilios,2026,Q2,2,3.652415701942766,Gradient Boosting,Estándar
+Mejorada del Campo,Robos con fuerza en domicilios,2026,Q3,3,3.7769571165240783,Gradient Boosting,Estándar
+Mejorada del Campo,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,8.783338157728457,Gradient Boosting,Estándar
+Mejorada del Campo,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,10.09305809841471,Gradient Boosting,Estándar
+Mejorada del Campo,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,10.09305809841471,Gradient Boosting,Estándar
+Mejorada del Campo,Robos con violencia e intimidación,2026,Q1,1,2.7083261765614757,Gradient Boosting,Estándar
+Mejorada del Campo,Robos con violencia e intimidación,2026,Q2,2,2.2394176745773677,Gradient Boosting,Estándar
+Mejorada del Campo,Robos con violencia e intimidación,2026,Q3,3,2.4153625127947103,Gradient Boosting,Estándar
+Mejorada del Campo,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Mejorada del Campo,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Mejorada del Campo,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Mejorada del Campo,Sustracciones de vehículos,2026,Q1,1,6.003805364082746,Gradient Boosting,Estándar
+Mejorada del Campo,Sustracciones de vehículos,2026,Q2,2,5.549279493068877,Gradient Boosting,Estándar
+Mejorada del Campo,Sustracciones de vehículos,2026,Q3,3,6.003805364082746,Gradient Boosting,Estándar
+Mejorada del Campo,Tráfico de drogas,2026,Q1,1,2.271346604439703,Gradient Boosting,Estándar
+Mejorada del Campo,Tráfico de drogas,2026,Q2,2,2.713875204536118,Gradient Boosting,Estándar
+Mejorada del Campo,Tráfico de drogas,2026,Q3,3,3.182783706520226,Gradient Boosting,Estándar
+Móstoles,Agresión sexual con penetración,2026,Q1,1,9.463217730693106,Gradient Boosting,Estándar
+Móstoles,Agresión sexual con penetración,2026,Q2,2,7.060702542919079,Gradient Boosting,Estándar
+Móstoles,Agresión sexual con penetración,2026,Q3,3,7.060702542919079,Gradient Boosting,Estándar
+Móstoles,Delitos contra la libertad sexual,2026,Q1,1,18.245802497349427,Gradient Boosting,Estándar
+Móstoles,Delitos contra la libertad sexual,2026,Q2,2,15.69993025575674,Gradient Boosting,Estándar
+Móstoles,Delitos contra la libertad sexual,2026,Q3,3,16.84773945306936,Gradient Boosting,Estándar
+Móstoles,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,13.229802473691388,Gradient Boosting,Estándar
+Móstoles,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,13.229802473691388,Gradient Boosting,Estándar
+Móstoles,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,12.687036841544233,Gradient Boosting,Estándar
+Móstoles,Estafas informáticas,2026,Q1,1,457.1989663766383,Gradient Boosting,Estándar
+Móstoles,Estafas informáticas,2026,Q2,2,460.9894559186574,Gradient Boosting,Estándar
+Móstoles,Estafas informáticas,2026,Q3,3,439.97889785901845,Gradient Boosting,Estándar
+Móstoles,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Móstoles,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Móstoles,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Móstoles,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Móstoles,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Móstoles,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Móstoles,Hurtos,2026,Q1,1,445.253318826427,Gradient Boosting,Estándar
+Móstoles,Hurtos,2026,Q2,2,428.9479781359935,Gradient Boosting,Estándar
+Móstoles,Hurtos,2026,Q3,3,437.72674732503805,Gradient Boosting,Estándar
+Móstoles,Otros ciberdelitos,2026,Q1,1,75.62417352158576,Gradient Boosting,Estándar
+Móstoles,Otros ciberdelitos,2026,Q2,2,77.62821614878837,Gradient Boosting,Estándar
+Móstoles,Otros ciberdelitos,2026,Q3,3,71.97012976076684,Gradient Boosting,Estándar
+Móstoles,Resto de criminalidad convencional,2026,Q1,1,943.9481146897294,Gradient Boosting,Estándar
+Móstoles,Resto de criminalidad convencional,2026,Q2,2,965.1140241553073,Gradient Boosting,Estándar
+Móstoles,Resto de criminalidad convencional,2026,Q3,3,949.6030292027024,Gradient Boosting,Estándar
+Móstoles,Resto de delitos contra la libertad sexual,2026,Q1,1,8.383897546784684,Gradient Boosting,Estándar
+Móstoles,Resto de delitos contra la libertad sexual,2026,Q2,2,8.783338157728457,Gradient Boosting,Estándar
+Móstoles,Resto de delitos contra la libertad sexual,2026,Q3,3,10.09305809841471,Gradient Boosting,Estándar
+Móstoles,Robos con fuerza en domicilios,2026,Q1,1,49.31291576327766,Gradient Boosting,Estándar
+Móstoles,Robos con fuerza en domicilios,2026,Q2,2,45.2777500131472,Gradient Boosting,Estándar
+Móstoles,Robos con fuerza en domicilios,2026,Q3,3,53.23366710782245,Gradient Boosting,Estándar
+Móstoles,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,74.70326712721081,Gradient Boosting,Estándar
+Móstoles,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,70.3966723791166,Gradient Boosting,Estándar
+Móstoles,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,74.3751781052422,Gradient Boosting,Estándar
+Móstoles,Robos con violencia e intimidación,2026,Q1,1,30.226457736392792,Gradient Boosting,Estándar
+Móstoles,Robos con violencia e intimidación,2026,Q2,2,31.912712527366384,Gradient Boosting,Estándar
+Móstoles,Robos con violencia e intimidación,2026,Q3,3,35.88937520817252,Gradient Boosting,Estándar
+Móstoles,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Móstoles,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Móstoles,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Móstoles,Sustracciones de vehículos,2026,Q1,1,56.89169189453875,Gradient Boosting,Estándar
+Móstoles,Sustracciones de vehículos,2026,Q2,2,47.769359449894495,Gradient Boosting,Estándar
+Móstoles,Sustracciones de vehículos,2026,Q3,3,41.63426546579571,Gradient Boosting,Estándar
+Móstoles,Tráfico de drogas,2026,Q1,1,19.394703718310332,Gradient Boosting,Estándar
+Móstoles,Tráfico de drogas,2026,Q2,2,19.394703718310332,Gradient Boosting,Estándar
+Móstoles,Tráfico de drogas,2026,Q3,3,28.395205215205973,Gradient Boosting,Estándar
+Navalcarnero,Agresión sexual con penetración,2026,Q1,1,0.9040380996685944,Gradient Boosting,Estándar
+Navalcarnero,Agresión sexual con penetración,2026,Q2,2,1.0281116633735434,Gradient Boosting,Estándar
+Navalcarnero,Agresión sexual con penetración,2026,Q3,3,1.0281116633735434,Gradient Boosting,Estándar
+Navalcarnero,Delitos contra la libertad sexual,2026,Q1,1,3.440646131584675,Gradient Boosting,Estándar
+Navalcarnero,Delitos contra la libertad sexual,2026,Q2,2,3.652415701942766,Gradient Boosting,Estándar
+Navalcarnero,Delitos contra la libertad sexual,2026,Q3,3,3.7769571165240783,Gradient Boosting,Estándar
+Navalcarnero,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,2.9710141361621347,Gradient Boosting,Estándar
+Navalcarnero,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,3.242755757435653,Gradient Boosting,Estándar
+Navalcarnero,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,3.030986187077562,Gradient Boosting,Estándar
+Navalcarnero,Estafas informáticas,2026,Q1,1,87.68924238390565,Gradient Boosting,Estándar
+Navalcarnero,Estafas informáticas,2026,Q2,2,84.95610501746168,Gradient Boosting,Estándar
+Navalcarnero,Estafas informáticas,2026,Q3,3,84.13546440217115,Gradient Boosting,Estándar
+Navalcarnero,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Navalcarnero,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Navalcarnero,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Navalcarnero,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Navalcarnero,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Navalcarnero,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Navalcarnero,Hurtos,2026,Q1,1,75.62417352158576,Gradient Boosting,Estándar
+Navalcarnero,Hurtos,2026,Q2,2,71.97012976076684,Gradient Boosting,Estándar
+Navalcarnero,Hurtos,2026,Q3,3,73.12417035280923,Gradient Boosting,Estándar
+Navalcarnero,Otros ciberdelitos,2026,Q1,1,19.66221436041744,Gradient Boosting,Estándar
+Navalcarnero,Otros ciberdelitos,2026,Q2,2,18.958738131421814,Gradient Boosting,Estándar
+Navalcarnero,Otros ciberdelitos,2026,Q3,3,14.81398873544417,Gradient Boosting,Estándar
+Navalcarnero,Resto de criminalidad convencional,2026,Q1,1,163.27731785975223,Gradient Boosting,Estándar
+Navalcarnero,Resto de criminalidad convencional,2026,Q2,2,163.27731785975223,Gradient Boosting,Estándar
+Navalcarnero,Resto de criminalidad convencional,2026,Q3,3,173.0639326935058,Gradient Boosting,Estándar
+Navalcarnero,Resto de delitos contra la libertad sexual,2026,Q1,1,3.2154361298209935,Gradient Boosting,Estándar
+Navalcarnero,Resto de delitos contra la libertad sexual,2026,Q2,2,3.652415701942766,Gradient Boosting,Estándar
+Navalcarnero,Resto de delitos contra la libertad sexual,2026,Q3,3,3.7769571165240783,Gradient Boosting,Estándar
+Navalcarnero,Robos con fuerza en domicilios,2026,Q1,1,8.783338157728457,Gradient Boosting,Estándar
+Navalcarnero,Robos con fuerza en domicilios,2026,Q2,2,8.153497790006853,Gradient Boosting,Estándar
+Navalcarnero,Robos con fuerza en domicilios,2026,Q3,3,8.783338157728457,Gradient Boosting,Estándar
+Navalcarnero,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,13.442652195525877,Gradient Boosting,Estándar
+Navalcarnero,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,13.229802473691388,Gradient Boosting,Estándar
+Navalcarnero,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,12.687036841544233,Gradient Boosting,Estándar
+Navalcarnero,Robos con violencia e intimidación,2026,Q1,1,3.242755757435653,Gradient Boosting,Estándar
+Navalcarnero,Robos con violencia e intimidación,2026,Q2,2,3.652415701942766,Gradient Boosting,Estándar
+Navalcarnero,Robos con violencia e intimidación,2026,Q3,3,3.440646131584675,Gradient Boosting,Estándar
+Navalcarnero,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Navalcarnero,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Navalcarnero,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Navalcarnero,Sustracciones de vehículos,2026,Q1,1,11.823546447225118,Gradient Boosting,Estándar
+Navalcarnero,Sustracciones de vehículos,2026,Q2,2,10.872504657027376,Gradient Boosting,Estándar
+Navalcarnero,Sustracciones de vehículos,2026,Q3,3,11.823546447225118,Gradient Boosting,Estándar
+Navalcarnero,Tráfico de drogas,2026,Q1,1,3.242755757435653,Gradient Boosting,Estándar
+Navalcarnero,Tráfico de drogas,2026,Q2,2,3.2154361298209935,Gradient Boosting,Estándar
+Navalcarnero,Tráfico de drogas,2026,Q3,3,3.652415701942766,Gradient Boosting,Estándar
+Paracuellos de Jarama,Agresión sexual con penetración,2026,Q1,1,2.713875204536118,Gradient Boosting,Estándar
+Paracuellos de Jarama,Agresión sexual con penetración,2026,Q2,2,1.9409049828359604,Gradient Boosting,Estándar
+Paracuellos de Jarama,Agresión sexual con penetración,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Paracuellos de Jarama,Delitos contra la libertad sexual,2026,Q1,1,3.440646131584675,Gradient Boosting,Estándar
+Paracuellos de Jarama,Delitos contra la libertad sexual,2026,Q2,2,3.030986187077562,Gradient Boosting,Estándar
+Paracuellos de Jarama,Delitos contra la libertad sexual,2026,Q3,3,2.8057761853138805,Gradient Boosting,Estándar
+Paracuellos de Jarama,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,1.466513630084666,Gradient Boosting,Estándar
+Paracuellos de Jarama,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,1.4345847002223302,Gradient Boosting,Estándar
+Paracuellos de Jarama,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,1.466513630084666,Gradient Boosting,Estándar
+Paracuellos de Jarama,Estafas informáticas,2026,Q1,1,80.76081971984725,Gradient Boosting,Estándar
+Paracuellos de Jarama,Estafas informáticas,2026,Q2,2,76.04636503510889,Gradient Boosting,Estándar
+Paracuellos de Jarama,Estafas informáticas,2026,Q3,3,77.20704173811275,Gradient Boosting,Estándar
+Paracuellos de Jarama,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Paracuellos de Jarama,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Paracuellos de Jarama,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Paracuellos de Jarama,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Paracuellos de Jarama,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Paracuellos de Jarama,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Paracuellos de Jarama,Hurtos,2026,Q1,1,29.534261878902573,Gradient Boosting,Estándar
+Paracuellos de Jarama,Hurtos,2026,Q2,2,29.534261878902573,Gradient Boosting,Estándar
+Paracuellos de Jarama,Hurtos,2026,Q3,3,29.534261878902573,Gradient Boosting,Estándar
+Paracuellos de Jarama,Otros ciberdelitos,2026,Q1,1,13.987986817134784,Gradient Boosting,Estándar
+Paracuellos de Jarama,Otros ciberdelitos,2026,Q2,2,13.249167541203953,Gradient Boosting,Estándar
+Paracuellos de Jarama,Otros ciberdelitos,2026,Q3,3,12.949533369975299,Gradient Boosting,Estándar
+Paracuellos de Jarama,Resto de criminalidad convencional,2026,Q1,1,95.14860688238629,Gradient Boosting,Estándar
+Paracuellos de Jarama,Resto de criminalidad convencional,2026,Q2,2,93.7117689768071,Gradient Boosting,Estándar
+Paracuellos de Jarama,Resto de criminalidad convencional,2026,Q3,3,94.62992103190415,Gradient Boosting,Estándar
+Paracuellos de Jarama,Resto de delitos contra la libertad sexual,2026,Q1,1,2.4965566062033844,Gradient Boosting,Estándar
+Paracuellos de Jarama,Resto de delitos contra la libertad sexual,2026,Q2,2,2.271346604439703,Gradient Boosting,Estándar
+Paracuellos de Jarama,Resto de delitos contra la libertad sexual,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Paracuellos de Jarama,Robos con fuerza en domicilios,2026,Q1,1,11.085354378861865,Gradient Boosting,Estándar
+Paracuellos de Jarama,Robos con fuerza en domicilios,2026,Q2,2,10.09305809841471,Gradient Boosting,Estándar
+Paracuellos de Jarama,Robos con fuerza en domicilios,2026,Q3,3,10.09305809841471,Gradient Boosting,Estándar
+Paracuellos de Jarama,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,12.899886563378722,Gradient Boosting,Estándar
+Paracuellos de Jarama,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,11.823546447225118,Gradient Boosting,Estándar
+Paracuellos de Jarama,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,11.823546447225118,Gradient Boosting,Estándar
+Paracuellos de Jarama,Robos con violencia e intimidación,2026,Q1,1,2.7458041343984534,Gradient Boosting,Estándar
+Paracuellos de Jarama,Robos con violencia e intimidación,2026,Q2,2,2.7083261765614757,Gradient Boosting,Estándar
+Paracuellos de Jarama,Robos con violencia e intimidación,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Paracuellos de Jarama,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Paracuellos de Jarama,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Paracuellos de Jarama,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Paracuellos de Jarama,Sustracciones de vehículos,2026,Q1,1,6.003805364082746,Gradient Boosting,Estándar
+Paracuellos de Jarama,Sustracciones de vehículos,2026,Q2,2,6.430862175197474,Gradient Boosting,Estándar
+Paracuellos de Jarama,Sustracciones de vehículos,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Paracuellos de Jarama,Tráfico de drogas,2026,Q1,1,0.7710119219335279,Gradient Boosting,Estándar
+Paracuellos de Jarama,Tráfico de drogas,2026,Q2,2,0.7919051733147264,Gradient Boosting,Estándar
+Paracuellos de Jarama,Tráfico de drogas,2026,Q3,3,0.9270144155008124,Gradient Boosting,Estándar
+Parla,Agresión sexual con penetración,2026,Q1,1,5.28251983597436,Gradient Boosting,Estándar
+Parla,Agresión sexual con penetración,2026,Q2,2,4.6132480532432645,Gradient Boosting,Estándar
+Parla,Agresión sexual con penetración,2026,Q3,3,4.480299118448462,Gradient Boosting,Estándar
+Parla,Delitos contra la libertad sexual,2026,Q1,1,16.86320604700753,Gradient Boosting,Estándar
+Parla,Delitos contra la libertad sexual,2026,Q2,2,17.63600893132257,Gradient Boosting,Estándar
+Parla,Delitos contra la libertad sexual,2026,Q3,3,16.929224744927744,Gradient Boosting,Estándar
+Parla,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,16.695345444724687,Gradient Boosting,Estándar
+Parla,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,16.929224744927744,Gradient Boosting,Estándar
+Parla,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,18.543004732142744,Gradient Boosting,Estándar
+Parla,Estafas informáticas,2026,Q1,1,227.71420881252152,Gradient Boosting,Estándar
+Parla,Estafas informáticas,2026,Q2,2,232.89940547524552,Gradient Boosting,Estándar
+Parla,Estafas informáticas,2026,Q3,3,218.9429423369235,Gradient Boosting,Estándar
+Parla,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.5,Mediana móvil 4,Alta incertidumbre
+Parla,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.75,Mediana móvil 4,Alta incertidumbre
+Parla,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.625,Mediana móvil 4,Alta incertidumbre
+Parla,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,1.5,Mediana móvil 4,Alta incertidumbre
+Parla,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,1.75,Mediana móvil 4,Alta incertidumbre
+Parla,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,1.625,Mediana móvil 4,Alta incertidumbre
+Parla,Hurtos,2026,Q1,1,438.7235354025915,Gradient Boosting,Estándar
+Parla,Hurtos,2026,Q2,2,450.0239526198104,Gradient Boosting,Estándar
+Parla,Hurtos,2026,Q3,3,447.86219132165536,Gradient Boosting,Estándar
+Parla,Otros ciberdelitos,2026,Q1,1,17.408540668616443,Gradient Boosting,Estándar
+Parla,Otros ciberdelitos,2026,Q2,2,15.704073171397372,Gradient Boosting,Estándar
+Parla,Otros ciberdelitos,2026,Q3,3,15.50011130469893,Gradient Boosting,Estándar
+Parla,Resto de criminalidad convencional,2026,Q1,1,975.83379161442,Gradient Boosting,Estándar
+Parla,Resto de criminalidad convencional,2026,Q2,2,938.8668810539813,Gradient Boosting,Estándar
+Parla,Resto de criminalidad convencional,2026,Q3,3,929.737473719712,Gradient Boosting,Estándar
+Parla,Resto de delitos contra la libertad sexual,2026,Q1,1,12.13676146618087,Gradient Boosting,Estándar
+Parla,Resto de delitos contra la libertad sexual,2026,Q2,2,11.229765665360697,Gradient Boosting,Estándar
+Parla,Resto de delitos contra la libertad sexual,2026,Q3,3,11.785972407683769,Gradient Boosting,Estándar
+Parla,Robos con fuerza en domicilios,2026,Q1,1,20.999656784814654,Gradient Boosting,Estándar
+Parla,Robos con fuerza en domicilios,2026,Q2,2,20.747355238230416,Gradient Boosting,Estándar
+Parla,Robos con fuerza en domicilios,2026,Q3,3,22.84345061129283,Gradient Boosting,Estándar
+Parla,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,69.91064291456185,Gradient Boosting,Estándar
+Parla,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,84.43066555652456,Gradient Boosting,Estándar
+Parla,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,70.49303025874647,Gradient Boosting,Estándar
+Parla,Robos con violencia e intimidación,2026,Q1,1,94.3420508333585,Gradient Boosting,Estándar
+Parla,Robos con violencia e intimidación,2026,Q2,2,96.55650234932033,Gradient Boosting,Estándar
+Parla,Robos con violencia e intimidación,2026,Q3,3,95.7845984606272,Gradient Boosting,Estándar
+Parla,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Parla,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Parla,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Parla,Sustracciones de vehículos,2026,Q1,1,22.522761913339128,Gradient Boosting,Estándar
+Parla,Sustracciones de vehículos,2026,Q2,2,24.46067518539153,Gradient Boosting,Estándar
+Parla,Sustracciones de vehículos,2026,Q3,3,33.596094482083515,Gradient Boosting,Estándar
+Parla,Tráfico de drogas,2026,Q1,1,11.58059091356,Gradient Boosting,Estándar
+Parla,Tráfico de drogas,2026,Q2,2,12.13676146618087,Gradient Boosting,Estándar
+Parla,Tráfico de drogas,2026,Q3,3,14.529988012008536,Gradient Boosting,Estándar
+Pinto,Agresión sexual con penetración,2026,Q1,1,1.888148978799881,Gradient Boosting,Estándar
+Pinto,Agresión sexual con penetración,2026,Q2,2,1.466513630084666,Gradient Boosting,Estándar
+Pinto,Agresión sexual con penetración,2026,Q3,3,1.9090422301810799,Gradient Boosting,Estándar
+Pinto,Delitos contra la libertad sexual,2026,Q1,1,5.549279493068877,Gradient Boosting,Estándar
+Pinto,Delitos contra la libertad sexual,2026,Q2,2,4.09025149485376,Gradient Boosting,Estándar
+Pinto,Delitos contra la libertad sexual,2026,Q3,3,3.585174369074457,Gradient Boosting,Estándar
+Pinto,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,6.430862175197474,Gradient Boosting,Estándar
+Pinto,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,6.430862175197474,Gradient Boosting,Estándar
+Pinto,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Pinto,Estafas informáticas,2026,Q1,1,166.12325404550722,Gradient Boosting,Estándar
+Pinto,Estafas informáticas,2026,Q2,2,156.33663921175366,Gradient Boosting,Estándar
+Pinto,Estafas informáticas,2026,Q3,3,165.9149293566661,Gradient Boosting,Estándar
+Pinto,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Pinto,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Pinto,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Pinto,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Pinto,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Pinto,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Pinto,Hurtos,2026,Q1,1,155.4975948203581,Gradient Boosting,Estándar
+Pinto,Hurtos,2026,Q2,2,156.33663921175366,Gradient Boosting,Estándar
+Pinto,Hurtos,2026,Q3,3,156.33663921175366,Gradient Boosting,Estándar
+Pinto,Otros ciberdelitos,2026,Q1,1,30.15513193639564,Gradient Boosting,Estándar
+Pinto,Otros ciberdelitos,2026,Q2,2,30.381773071845643,Gradient Boosting,Estándar
+Pinto,Otros ciberdelitos,2026,Q3,3,27.3714777846162,Gradient Boosting,Estándar
+Pinto,Resto de criminalidad convencional,2026,Q1,1,308.58153590083856,Gradient Boosting,Estándar
+Pinto,Resto de criminalidad convencional,2026,Q2,2,312.40269449210194,Gradient Boosting,Estándar
+Pinto,Resto de criminalidad convencional,2026,Q3,3,315.00653631602995,Gradient Boosting,Estándar
+Pinto,Resto de delitos contra la libertad sexual,2026,Q1,1,4.09025149485376,Gradient Boosting,Estándar
+Pinto,Resto de delitos contra la libertad sexual,2026,Q2,2,3.652415701942766,Gradient Boosting,Estándar
+Pinto,Resto de delitos contra la libertad sexual,2026,Q3,3,3.2154361298209935,Gradient Boosting,Estándar
+Pinto,Robos con fuerza en domicilios,2026,Q1,1,10.09305809841471,Gradient Boosting,Estándar
+Pinto,Robos con fuerza en domicilios,2026,Q2,2,10.09305809841471,Gradient Boosting,Estándar
+Pinto,Robos con fuerza en domicilios,2026,Q3,3,10.872504657027376,Gradient Boosting,Estándar
+Pinto,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,15.157164623609585,Gradient Boosting,Estándar
+Pinto,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,13.852270968338681,Gradient Boosting,Estándar
+Pinto,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,15.000080165651328,Gradient Boosting,Estándar
+Pinto,Robos con violencia e intimidación,2026,Q1,1,9.463217730693106,Gradient Boosting,Estándar
+Pinto,Robos con violencia e intimidación,2026,Q2,2,8.783338157728457,Gradient Boosting,Estándar
+Pinto,Robos con violencia e intimidación,2026,Q3,3,10.09305809841471,Gradient Boosting,Estándar
+Pinto,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Pinto,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Pinto,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Pinto,Sustracciones de vehículos,2026,Q1,1,7.060702542919079,Gradient Boosting,Estándar
+Pinto,Sustracciones de vehículos,2026,Q2,2,6.430862175197474,Gradient Boosting,Estándar
+Pinto,Sustracciones de vehículos,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Pinto,Tráfico de drogas,2026,Q1,1,5.893716036408457,Gradient Boosting,Estándar
+Pinto,Tráfico de drogas,2026,Q2,2,5.19008747102456,Gradient Boosting,Estándar
+Pinto,Tráfico de drogas,2026,Q3,3,6.003805364082746,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Agresión sexual con penetración,2026,Q1,1,1.0281116633735434,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Agresión sexual con penetración,2026,Q2,2,1.466513630084666,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Agresión sexual con penetración,2026,Q3,3,1.466513630084666,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Delitos contra la libertad sexual,2026,Q1,1,3.2718799907447744,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Delitos contra la libertad sexual,2026,Q2,2,3.652415701942766,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Delitos contra la libertad sexual,2026,Q3,3,4.09025149485376,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,3.030986187077562,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,3.242755757435653,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,3.030986187077562,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Estafas informáticas,2026,Q1,1,114.79960523693653,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Estafas informáticas,2026,Q2,2,104.17321446180638,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Estafas informáticas,2026,Q3,3,104.4158793053323,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Pozuelo de Alarcón,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Pozuelo de Alarcón,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Pozuelo de Alarcón,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Pozuelo de Alarcón,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Pozuelo de Alarcón,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Pozuelo de Alarcón,Hurtos,2026,Q1,1,169.42959580041833,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Hurtos,2026,Q2,2,166.12325404550722,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Hurtos,2026,Q3,3,166.12325404550722,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Otros ciberdelitos,2026,Q1,1,23.641612821243633,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Otros ciberdelitos,2026,Q2,2,21.505702396662787,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Otros ciberdelitos,2026,Q3,3,19.6572002467414,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Resto de criminalidad convencional,2026,Q1,1,239.7237601635759,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Resto de criminalidad convencional,2026,Q2,2,246.59321240855417,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Resto de criminalidad convencional,2026,Q3,3,235.38391572183042,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Resto de delitos contra la libertad sexual,2026,Q1,1,3.2154361298209935,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Resto de delitos contra la libertad sexual,2026,Q2,2,3.652415701942766,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Resto de delitos contra la libertad sexual,2026,Q3,3,3.7769571165240783,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Robos con fuerza en domicilios,2026,Q1,1,14.551492207013103,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Robos con fuerza en domicilios,2026,Q2,2,12.703832919595046,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Robos con fuerza en domicilios,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Pozuelo de Alarcón,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,19.394703718310332,Gradient Boosting,Estándar
+Pozuelo de Alarcón,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,19.394703718310332,Gradient Boosting,Estándar
+Pozuelo de Alarcón,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,19.394703718310332,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Robos con violencia e intimidación,2026,Q1,1,4.09025149485376,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Robos con violencia e intimidación,2026,Q2,2,5.19008747102456,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Robos con violencia e intimidación,2026,Q3,3,4.09025149485376,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Pozuelo de Alarcón,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Pozuelo de Alarcón,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Pozuelo de Alarcón,Sustracciones de vehículos,2026,Q1,1,15.094257839160258,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Sustracciones de vehículos,2026,Q2,2,12.703832919595046,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Sustracciones de vehículos,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Tráfico de drogas,2026,Q1,1,0.8029408517958632,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Tráfico de drogas,2026,Q2,2,0.9270144155008124,Gradient Boosting,Estándar
+Pozuelo de Alarcón,Tráfico de drogas,2026,Q3,3,0.9270144155008124,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Agresión sexual con penetración,2026,Q1,1,0.8721091698062586,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Agresión sexual con penetración,2026,Q2,2,0.893002421187457,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Agresión sexual con penetración,2026,Q3,3,1.0281116633735434,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Delitos contra la libertad sexual,2026,Q1,1,6.003805364082746,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Delitos contra la libertad sexual,2026,Q2,2,7.060702542919079,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Delitos contra la libertad sexual,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,13.246598551742201,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,13.229802473691388,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Estafas informáticas,2026,Q1,1,376.4752750996179,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Estafas informáticas,2026,Q2,2,371.39295657414135,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Estafas informáticas,2026,Q3,3,364.9389636876164,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Rivas-Vaciamadrid,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Rivas-Vaciamadrid,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Rivas-Vaciamadrid,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Rivas-Vaciamadrid,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Rivas-Vaciamadrid,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Rivas-Vaciamadrid,Hurtos,2026,Q1,1,421.9039259926381,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Hurtos,2026,Q2,2,485.40837146533823,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Hurtos,2026,Q3,3,445.77696689922766,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Otros ciberdelitos,2026,Q1,1,38.50199438144936,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Otros ciberdelitos,2026,Q2,2,32.879079920943084,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Otros ciberdelitos,2026,Q3,3,32.879079920943084,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Resto de criminalidad convencional,2026,Q1,1,504.46444849027716,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Resto de criminalidad convencional,2026,Q2,2,504.60223745838084,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Resto de criminalidad convencional,2026,Q3,3,504.60223745838084,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Resto de delitos contra la libertad sexual,2026,Q1,1,6.003805364082746,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Resto de delitos contra la libertad sexual,2026,Q2,2,7.060702542919079,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Resto de delitos contra la libertad sexual,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Robos con fuerza en domicilios,2026,Q1,1,46.783331004753045,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Robos con fuerza en domicilios,2026,Q2,2,41.50262466726084,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Robos con fuerza en domicilios,2026,Q3,3,29.85479589245087,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,71.5890077714553,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,81.00710116023087,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,62.39767418202489,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Robos con violencia e intimidación,2026,Q1,1,19.394703718310332,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Robos con violencia e intimidación,2026,Q2,2,22.024388247144934,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Robos con violencia e intimidación,2026,Q3,3,19.394703718310332,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Rivas-Vaciamadrid,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Rivas-Vaciamadrid,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Rivas-Vaciamadrid,Sustracciones de vehículos,2026,Q1,1,16.84773945306936,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Sustracciones de vehículos,2026,Q2,2,16.84773945306936,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Sustracciones de vehículos,2026,Q3,3,18.78856812949658,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Tráfico de drogas,2026,Q1,1,3.7769571165240783,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Tráfico de drogas,2026,Q2,2,4.09025149485376,Gradient Boosting,Estándar
+Rivas-Vaciamadrid,Tráfico de drogas,2026,Q3,3,3.2154361298209935,Gradient Boosting,Estándar
+San Fernando de Henares,Agresión sexual con penetración,2026,Q1,1,0.8721091698062586,Gradient Boosting,Estándar
+San Fernando de Henares,Agresión sexual con penetración,2026,Q2,2,0.893002421187457,Gradient Boosting,Estándar
+San Fernando de Henares,Agresión sexual con penetración,2026,Q3,3,1.0281116633735434,Gradient Boosting,Estándar
+San Fernando de Henares,Delitos contra la libertad sexual,2026,Q1,1,2.9710141361621347,Gradient Boosting,Estándar
+San Fernando de Henares,Delitos contra la libertad sexual,2026,Q2,2,3.030986187077562,Gradient Boosting,Estándar
+San Fernando de Henares,Delitos contra la libertad sexual,2026,Q3,3,3.030986187077562,Gradient Boosting,Estándar
+San Fernando de Henares,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,3.652415701942766,Gradient Boosting,Estándar
+San Fernando de Henares,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,3.7769571165240783,Gradient Boosting,Estándar
+San Fernando de Henares,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,2.8057761853138805,Gradient Boosting,Estándar
+San Fernando de Henares,Estafas informáticas,2026,Q1,1,73.22168179261575,Gradient Boosting,Estándar
+San Fernando de Henares,Estafas informáticas,2026,Q2,2,69.96608713356423,Gradient Boosting,Estándar
+San Fernando de Henares,Estafas informáticas,2026,Q3,3,69.96608713356423,Gradient Boosting,Estándar
+San Fernando de Henares,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+San Fernando de Henares,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+San Fernando de Henares,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+San Fernando de Henares,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+San Fernando de Henares,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+San Fernando de Henares,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+San Fernando de Henares,Hurtos,2026,Q1,1,95.5689399789477,Gradient Boosting,Estándar
+San Fernando de Henares,Hurtos,2026,Q2,2,95.84496098590392,Gradient Boosting,Estándar
+San Fernando de Henares,Hurtos,2026,Q3,3,87.68924238390565,Gradient Boosting,Estándar
+San Fernando de Henares,Otros ciberdelitos,2026,Q1,1,11.960604910783438,Gradient Boosting,Estándar
+San Fernando de Henares,Otros ciberdelitos,2026,Q2,2,13.23237146315314,Gradient Boosting,Estándar
+San Fernando de Henares,Otros ciberdelitos,2026,Q3,3,11.135001185458442,Gradient Boosting,Estándar
+San Fernando de Henares,Resto de criminalidad convencional,2026,Q1,1,177.21900187759334,Gradient Boosting,Estándar
+San Fernando de Henares,Resto de criminalidad convencional,2026,Q2,2,209.01182158159307,Gradient Boosting,Estándar
+San Fernando de Henares,Resto de criminalidad convencional,2026,Q3,3,181.92695688892928,Gradient Boosting,Estándar
+San Fernando de Henares,Resto de delitos contra la libertad sexual,2026,Q1,1,2.9710141361621347,Gradient Boosting,Estándar
+San Fernando de Henares,Resto de delitos contra la libertad sexual,2026,Q2,2,3.030986187077562,Gradient Boosting,Estándar
+San Fernando de Henares,Resto de delitos contra la libertad sexual,2026,Q3,3,3.030986187077562,Gradient Boosting,Estándar
+San Fernando de Henares,Robos con fuerza en domicilios,2026,Q1,1,8.80013423577927,Gradient Boosting,Estándar
+San Fernando de Henares,Robos con fuerza en domicilios,2026,Q2,2,10.09305809841471,Gradient Boosting,Estándar
+San Fernando de Henares,Robos con fuerza en domicilios,2026,Q3,3,11.415270289174531,Gradient Boosting,Estándar
+San Fernando de Henares,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,14.551492207013103,Gradient Boosting,Estándar
+San Fernando de Henares,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,13.246598551742201,Gradient Boosting,Estándar
+San Fernando de Henares,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,13.835474890287868,Gradient Boosting,Estándar
+San Fernando de Henares,Robos con violencia e intimidación,2026,Q1,1,7.060702542919079,Gradient Boosting,Estándar
+San Fernando de Henares,Robos con violencia e intimidación,2026,Q2,2,6.430862175197474,Gradient Boosting,Estándar
+San Fernando de Henares,Robos con violencia e intimidación,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+San Fernando de Henares,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+San Fernando de Henares,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+San Fernando de Henares,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+San Fernando de Henares,Sustracciones de vehículos,2026,Q1,1,15.094257839160258,Gradient Boosting,Estándar
+San Fernando de Henares,Sustracciones de vehículos,2026,Q2,2,13.309505336191526,Gradient Boosting,Estándar
+San Fernando de Henares,Sustracciones de vehículos,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+San Fernando de Henares,Tráfico de drogas,2026,Q1,1,1.9409049828359604,Gradient Boosting,Estándar
+San Fernando de Henares,Tráfico de drogas,2026,Q2,2,2.4153625127947103,Gradient Boosting,Estándar
+San Fernando de Henares,Tráfico de drogas,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+San Martín de la Vega,Agresión sexual con penetración,2026,Q1,1,1.888148978799881,Gradient Boosting,Estándar
+San Martín de la Vega,Agresión sexual con penetración,2026,Q2,2,1.6917236318483468,Gradient Boosting,Estándar
+San Martín de la Vega,Agresión sexual con penetración,2026,Q3,3,2.713875204536118,Gradient Boosting,Estándar
+San Martín de la Vega,Delitos contra la libertad sexual,2026,Q1,1,2.8057761853138805,Gradient Boosting,Estándar
+San Martín de la Vega,Delitos contra la libertad sexual,2026,Q2,2,3.242755757435653,Gradient Boosting,Estándar
+San Martín de la Vega,Delitos contra la libertad sexual,2026,Q3,3,3.440646131584675,Gradient Boosting,Estándar
+San Martín de la Vega,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,3.182783706520226,Gradient Boosting,Estándar
+San Martín de la Vega,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,2.33131865535513,Gradient Boosting,Estándar
+San Martín de la Vega,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+San Martín de la Vega,Estafas informáticas,2026,Q1,1,29.413268827766323,Gradient Boosting,Estándar
+San Martín de la Vega,Estafas informáticas,2026,Q2,2,27.3714777846162,Gradient Boosting,Estándar
+San Martín de la Vega,Estafas informáticas,2026,Q3,3,28.27434387019645,Gradient Boosting,Estándar
+San Martín de la Vega,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+San Martín de la Vega,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+San Martín de la Vega,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+San Martín de la Vega,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+San Martín de la Vega,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+San Martín de la Vega,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+San Martín de la Vega,Hurtos,2026,Q1,1,41.63426546579571,Gradient Boosting,Estándar
+San Martín de la Vega,Hurtos,2026,Q2,2,41.125244616731536,Gradient Boosting,Estándar
+San Martín de la Vega,Hurtos,2026,Q3,3,41.125244616731536,Gradient Boosting,Estándar
+San Martín de la Vega,Otros ciberdelitos,2026,Q1,1,6.976196796806383,Gradient Boosting,Estándar
+San Martín de la Vega,Otros ciberdelitos,2026,Q2,2,6.976196796806383,Gradient Boosting,Estándar
+San Martín de la Vega,Otros ciberdelitos,2026,Q3,3,6.693358703628542,Gradient Boosting,Estándar
+San Martín de la Vega,Resto de criminalidad convencional,2026,Q1,1,94.62992103190415,Gradient Boosting,Estándar
+San Martín de la Vega,Resto de criminalidad convencional,2026,Q2,2,94.62992103190415,Gradient Boosting,Estándar
+San Martín de la Vega,Resto de criminalidad convencional,2026,Q3,3,95.14860688238629,Gradient Boosting,Estándar
+San Martín de la Vega,Resto de delitos contra la libertad sexual,2026,Q1,1,2.7458041343984534,Gradient Boosting,Estándar
+San Martín de la Vega,Resto de delitos contra la libertad sexual,2026,Q2,2,2.9710141361621347,Gradient Boosting,Estándar
+San Martín de la Vega,Resto de delitos contra la libertad sexual,2026,Q3,3,3.030986187077562,Gradient Boosting,Estándar
+San Martín de la Vega,Robos con fuerza en domicilios,2026,Q1,1,5.371980950948271,Gradient Boosting,Estándar
+San Martín de la Vega,Robos con fuerza en domicilios,2026,Q2,2,3.7769571165240783,Gradient Boosting,Estándar
+San Martín de la Vega,Robos con fuerza en domicilios,2026,Q3,3,4.09025149485376,Gradient Boosting,Estándar
+San Martín de la Vega,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,8.003963962972211,Gradient Boosting,Estándar
+San Martín de la Vega,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,7.060702542919079,Gradient Boosting,Estándar
+San Martín de la Vega,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,7.060702542919079,Gradient Boosting,Estándar
+San Martín de la Vega,Robos con violencia e intimidación,2026,Q1,1,1.4345847002223302,Gradient Boosting,Estándar
+San Martín de la Vega,Robos con violencia e intimidación,2026,Q2,2,1.466513630084666,Gradient Boosting,Estándar
+San Martín de la Vega,Robos con violencia e intimidación,2026,Q3,3,1.466513630084666,Gradient Boosting,Estándar
+San Martín de la Vega,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+San Martín de la Vega,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+San Martín de la Vega,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+San Martín de la Vega,Sustracciones de vehículos,2026,Q1,1,2.8057761853138805,Gradient Boosting,Estándar
+San Martín de la Vega,Sustracciones de vehículos,2026,Q2,2,2.8057761853138805,Gradient Boosting,Estándar
+San Martín de la Vega,Sustracciones de vehículos,2026,Q3,3,3.242755757435653,Gradient Boosting,Estándar
+San Martín de la Vega,Tráfico de drogas,2026,Q1,1,1.3805786940783642,Gradient Boosting,Estándar
+San Martín de la Vega,Tráfico de drogas,2026,Q2,2,1.466513630084666,Gradient Boosting,Estándar
+San Martín de la Vega,Tráfico de drogas,2026,Q3,3,1.4345847002223302,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Agresión sexual con penetración,2026,Q1,1,1.9409049828359604,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Agresión sexual con penetración,2026,Q2,2,1.9090422301810799,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Agresión sexual con penetración,2026,Q3,3,2.4153625127947103,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Delitos contra la libertad sexual,2026,Q1,1,5.792035793724655,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Delitos contra la libertad sexual,2026,Q2,2,6.128568606025051,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Delitos contra la libertad sexual,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,8.783338157728457,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,9.463217730693106,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,8.783338157728457,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Estafas informáticas,2026,Q1,1,182.6060026172277,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Estafas informáticas,2026,Q2,2,159.51259162094578,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Estafas informáticas,2026,Q3,3,163.8627812485884,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+San Sebastián de los Reyes,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+San Sebastián de los Reyes,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+San Sebastián de los Reyes,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.5,Mediana móvil 4,Alta incertidumbre
+San Sebastián de los Reyes,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.75,Mediana móvil 4,Alta incertidumbre
+San Sebastián de los Reyes,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.625,Mediana móvil 4,Alta incertidumbre
+San Sebastián de los Reyes,Hurtos,2026,Q1,1,355.3356041745225,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Hurtos,2026,Q2,2,421.28899067753304,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Hurtos,2026,Q3,3,423.78355772313523,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Otros ciberdelitos,2026,Q1,1,17.39307407467827,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Otros ciberdelitos,2026,Q2,2,18.994134315273534,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Otros ciberdelitos,2026,Q3,3,17.110235981500427,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Resto de criminalidad convencional,2026,Q1,1,486.03117314866506,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Resto de criminalidad convencional,2026,Q2,2,480.6567831366319,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Resto de criminalidad convencional,2026,Q3,3,484.8986508600546,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Resto de delitos contra la libertad sexual,2026,Q1,1,3.2718799907447744,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Resto de delitos contra la libertad sexual,2026,Q2,2,3.7771789438850716,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Resto de delitos contra la libertad sexual,2026,Q3,3,4.09025149485376,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Robos con fuerza en domicilios,2026,Q1,1,12.687036841544233,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Robos con fuerza en domicilios,2026,Q2,2,13.229802473691388,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Robos con fuerza en domicilios,2026,Q3,3,13.564409550249922,Gradient Boosting,Estándar
+San Sebastián de los Reyes,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,19.394703718310332,Gradient Boosting,Estándar
+San Sebastián de los Reyes,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,19.394703718310332,Gradient Boosting,Estándar
+San Sebastián de los Reyes,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,19.666404010419548,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Robos con violencia e intimidación,2026,Q1,1,14.119829757499655,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Robos con violencia e intimidación,2026,Q2,2,15.000080165651328,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Robos con violencia e intimidación,2026,Q3,3,14.246699439765948,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+San Sebastián de los Reyes,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+San Sebastián de los Reyes,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+San Sebastián de los Reyes,Sustracciones de vehículos,2026,Q1,1,42.135813927382884,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Sustracciones de vehículos,2026,Q2,2,38.63363517998424,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Sustracciones de vehículos,2026,Q3,3,41.40126562368776,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Tráfico de drogas,2026,Q1,1,6.430862175197474,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Tráfico de drogas,2026,Q2,2,7.060702542919079,Gradient Boosting,Estándar
+San Sebastián de los Reyes,Tráfico de drogas,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Torrejón de Ardoz,Agresión sexual con penetración,2026,Q1,1,3.030986187077562,Gradient Boosting,Estándar
+Torrejón de Ardoz,Agresión sexual con penetración,2026,Q2,2,3.652415701942766,Gradient Boosting,Estándar
+Torrejón de Ardoz,Agresión sexual con penetración,2026,Q3,3,3.2154361298209935,Gradient Boosting,Estándar
+Torrejón de Ardoz,Delitos contra la libertad sexual,2026,Q1,1,16.84773945306936,Gradient Boosting,Estándar
+Torrejón de Ardoz,Delitos contra la libertad sexual,2026,Q2,2,16.84773945306936,Gradient Boosting,Estándar
+Torrejón de Ardoz,Delitos contra la libertad sexual,2026,Q3,3,16.84773945306936,Gradient Boosting,Estándar
+Torrejón de Ardoz,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,14.551492207013103,Gradient Boosting,Estándar
+Torrejón de Ardoz,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,12.703832919595046,Gradient Boosting,Estándar
+Torrejón de Ardoz,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Torrejón de Ardoz,Estafas informáticas,2026,Q1,1,198.2389694539337,Gradient Boosting,Estándar
+Torrejón de Ardoz,Estafas informáticas,2026,Q2,2,212.59650040489723,Gradient Boosting,Estándar
+Torrejón de Ardoz,Estafas informáticas,2026,Q3,3,215.17425250692426,Gradient Boosting,Estándar
+Torrejón de Ardoz,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Torrejón de Ardoz,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Torrejón de Ardoz,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Torrejón de Ardoz,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Torrejón de Ardoz,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Torrejón de Ardoz,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Torrejón de Ardoz,Hurtos,2026,Q1,1,404.3263869166414,Gradient Boosting,Estándar
+Torrejón de Ardoz,Hurtos,2026,Q2,2,427.1215339802871,Gradient Boosting,Estándar
+Torrejón de Ardoz,Hurtos,2026,Q3,3,379.3383727548167,Gradient Boosting,Estándar
+Torrejón de Ardoz,Otros ciberdelitos,2026,Q1,1,38.28813784390061,Gradient Boosting,Estándar
+Torrejón de Ardoz,Otros ciberdelitos,2026,Q2,2,35.88937520817252,Gradient Boosting,Estándar
+Torrejón de Ardoz,Otros ciberdelitos,2026,Q3,3,30.50062927247927,Gradient Boosting,Estándar
+Torrejón de Ardoz,Resto de criminalidad convencional,2026,Q1,1,590.6636413985032,Gradient Boosting,Estándar
+Torrejón de Ardoz,Resto de criminalidad convencional,2026,Q2,2,576.5271871265668,Gradient Boosting,Estándar
+Torrejón de Ardoz,Resto de criminalidad convencional,2026,Q3,3,585.261901738434,Gradient Boosting,Estándar
+Torrejón de Ardoz,Resto de delitos contra la libertad sexual,2026,Q1,1,14.551492207013103,Gradient Boosting,Estándar
+Torrejón de Ardoz,Resto de delitos contra la libertad sexual,2026,Q2,2,13.246598551742201,Gradient Boosting,Estándar
+Torrejón de Ardoz,Resto de delitos contra la libertad sexual,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Torrejón de Ardoz,Robos con fuerza en domicilios,2026,Q1,1,16.84773945306936,Gradient Boosting,Estándar
+Torrejón de Ardoz,Robos con fuerza en domicilios,2026,Q2,2,15.69993025575674,Gradient Boosting,Estándar
+Torrejón de Ardoz,Robos con fuerza en domicilios,2026,Q3,3,15.69993025575674,Gradient Boosting,Estándar
+Torrejón de Ardoz,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,28.695518280872065,Gradient Boosting,Estándar
+Torrejón de Ardoz,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,27.3714777846162,Gradient Boosting,Estándar
+Torrejón de Ardoz,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,23.574224315290166,Gradient Boosting,Estándar
+Torrejón de Ardoz,Robos con violencia e intimidación,2026,Q1,1,22.87105387652737,Gradient Boosting,Estándar
+Torrejón de Ardoz,Robos con violencia e intimidación,2026,Q2,2,27.992347842109268,Gradient Boosting,Estándar
+Torrejón de Ardoz,Robos con violencia e intimidación,2026,Q3,3,20.09787415707313,Gradient Boosting,Estándar
+Torrejón de Ardoz,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Torrejón de Ardoz,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Torrejón de Ardoz,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Torrejón de Ardoz,Sustracciones de vehículos,2026,Q1,1,19.394703718310332,Gradient Boosting,Estándar
+Torrejón de Ardoz,Sustracciones de vehículos,2026,Q2,2,19.394703718310332,Gradient Boosting,Estándar
+Torrejón de Ardoz,Sustracciones de vehículos,2026,Q3,3,22.024388247144934,Gradient Boosting,Estándar
+Torrejón de Ardoz,Tráfico de drogas,2026,Q1,1,16.84773945306936,Gradient Boosting,Estándar
+Torrejón de Ardoz,Tráfico de drogas,2026,Q2,2,16.84773945306936,Gradient Boosting,Estándar
+Torrejón de Ardoz,Tráfico de drogas,2026,Q3,3,16.84773945306936,Gradient Boosting,Estándar
+Torrelodones,Agresión sexual con penetración,2026,Q1,1,0.8721091698062586,Gradient Boosting,Estándar
+Torrelodones,Agresión sexual con penetración,2026,Q2,2,0.893002421187457,Gradient Boosting,Estándar
+Torrelodones,Agresión sexual con penetración,2026,Q3,3,1.0281116633735434,Gradient Boosting,Estándar
+Torrelodones,Delitos contra la libertad sexual,2026,Q1,1,2.2394176745773677,Gradient Boosting,Estándar
+Torrelodones,Delitos contra la libertad sexual,2026,Q2,2,2.7458041343984534,Gradient Boosting,Estándar
+Torrelodones,Delitos contra la libertad sexual,2026,Q3,3,3.242755757435653,Gradient Boosting,Estándar
+Torrelodones,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,4.09025149485376,Gradient Boosting,Estándar
+Torrelodones,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,5.549279493068877,Gradient Boosting,Estándar
+Torrelodones,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,6.003805364082746,Gradient Boosting,Estándar
+Torrelodones,Estafas informáticas,2026,Q1,1,78.02768235340328,Gradient Boosting,Estándar
+Torrelodones,Estafas informáticas,2026,Q2,2,77.10953029830623,Gradient Boosting,Estándar
+Torrelodones,Estafas informáticas,2026,Q3,3,77.20704173811275,Gradient Boosting,Estándar
+Torrelodones,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Torrelodones,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Torrelodones,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Torrelodones,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Torrelodones,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Torrelodones,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Torrelodones,Hurtos,2026,Q1,1,47.769359449894495,Gradient Boosting,Estándar
+Torrelodones,Hurtos,2026,Q2,2,44.40189590949923,Gradient Boosting,Estándar
+Torrelodones,Hurtos,2026,Q3,3,41.40126562368776,Gradient Boosting,Estándar
+Torrelodones,Otros ciberdelitos,2026,Q1,1,13.23237146315314,Gradient Boosting,Estándar
+Torrelodones,Otros ciberdelitos,2026,Q2,2,13.775137095300295,Gradient Boosting,Estándar
+Torrelodones,Otros ciberdelitos,2026,Q3,3,12.966329448026112,Gradient Boosting,Estándar
+Torrelodones,Resto de criminalidad convencional,2026,Q1,1,102.50961862694619,Gradient Boosting,Estándar
+Torrelodones,Resto de criminalidad convencional,2026,Q2,2,94.62992103190415,Gradient Boosting,Estándar
+Torrelodones,Resto de criminalidad convencional,2026,Q3,3,94.62992103190415,Gradient Boosting,Estándar
+Torrelodones,Resto de delitos contra la libertad sexual,2026,Q1,1,2.347030948689358,Gradient Boosting,Estándar
+Torrelodones,Resto de delitos contra la libertad sexual,2026,Q2,2,2.7458041343984534,Gradient Boosting,Estándar
+Torrelodones,Resto de delitos contra la libertad sexual,2026,Q3,3,3.242755757435653,Gradient Boosting,Estándar
+Torrelodones,Robos con fuerza en domicilios,2026,Q1,1,19.394703718310332,Gradient Boosting,Estándar
+Torrelodones,Robos con fuerza en domicilios,2026,Q2,2,19.394703718310332,Gradient Boosting,Estándar
+Torrelodones,Robos con fuerza en domicilios,2026,Q3,3,19.394703718310332,Gradient Boosting,Estándar
+Torrelodones,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,22.750496341623403,Gradient Boosting,Estándar
+Torrelodones,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,22.87105387652737,Gradient Boosting,Estándar
+Torrelodones,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,24.982052554879825,Gradient Boosting,Estándar
+Torrelodones,Robos con violencia e intimidación,2026,Q1,1,1.6917236318483468,Gradient Boosting,Estándar
+Torrelodones,Robos con violencia e intimidación,2026,Q2,2,1.4345847002223302,Gradient Boosting,Estándar
+Torrelodones,Robos con violencia e intimidación,2026,Q3,3,1.9090422301810799,Gradient Boosting,Estándar
+Torrelodones,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Torrelodones,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Torrelodones,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Torrelodones,Sustracciones de vehículos,2026,Q1,1,1.466513630084666,Gradient Boosting,Estándar
+Torrelodones,Sustracciones de vehículos,2026,Q2,2,1.9409711600434152,Gradient Boosting,Estándar
+Torrelodones,Sustracciones de vehículos,2026,Q3,3,1.9409049828359604,Gradient Boosting,Estándar
+Torrelodones,Tráfico de drogas,2026,Q1,1,1.4136914488411314,Gradient Boosting,Estándar
+Torrelodones,Tráfico de drogas,2026,Q2,2,0.9589433453631477,Gradient Boosting,Estándar
+Torrelodones,Tráfico de drogas,2026,Q3,3,1.4345847002223302,Gradient Boosting,Estándar
+Tres Cantos,Agresión sexual con penetración,2026,Q1,1,0.8721091698062586,Gradient Boosting,Estándar
+Tres Cantos,Agresión sexual con penetración,2026,Q2,2,0.893002421187457,Gradient Boosting,Estándar
+Tres Cantos,Agresión sexual con penetración,2026,Q3,3,1.0281116633735434,Gradient Boosting,Estándar
+Tres Cantos,Delitos contra la libertad sexual,2026,Q1,1,1.9409049828359604,Gradient Boosting,Estándar
+Tres Cantos,Delitos contra la libertad sexual,2026,Q2,2,2.7458041343984534,Gradient Boosting,Estándar
+Tres Cantos,Delitos contra la libertad sexual,2026,Q3,3,2.9710141361621347,Gradient Boosting,Estándar
+Tres Cantos,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,3.652415701942766,Gradient Boosting,Estándar
+Tres Cantos,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,4.215014736796064,Gradient Boosting,Estándar
+Tres Cantos,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,4.09025149485376,Gradient Boosting,Estándar
+Tres Cantos,Estafas informáticas,2026,Q1,1,156.33663921175366,Gradient Boosting,Estándar
+Tres Cantos,Estafas informáticas,2026,Q2,2,156.33663921175366,Gradient Boosting,Estándar
+Tres Cantos,Estafas informáticas,2026,Q3,3,166.22076548531376,Gradient Boosting,Estándar
+Tres Cantos,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Tres Cantos,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Tres Cantos,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Tres Cantos,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Tres Cantos,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Tres Cantos,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Tres Cantos,Hurtos,2026,Q1,1,111.6637875376007,Gradient Boosting,Estándar
+Tres Cantos,Hurtos,2026,Q2,2,111.4962067085042,Gradient Boosting,Estándar
+Tres Cantos,Hurtos,2026,Q3,3,104.31836786552577,Gradient Boosting,Estándar
+Tres Cantos,Otros ciberdelitos,2026,Q1,1,19.66221436041744,Gradient Boosting,Estándar
+Tres Cantos,Otros ciberdelitos,2026,Q2,2,18.415972499274663,Gradient Boosting,Estándar
+Tres Cantos,Otros ciberdelitos,2026,Q3,3,15.419661152040652,Gradient Boosting,Estándar
+Tres Cantos,Resto de criminalidad convencional,2026,Q1,1,173.58261854398793,Gradient Boosting,Estándar
+Tres Cantos,Resto de criminalidad convencional,2026,Q2,2,176.88896029889904,Gradient Boosting,Estándar
+Tres Cantos,Resto de criminalidad convencional,2026,Q3,3,176.88896029889904,Gradient Boosting,Estándar
+Tres Cantos,Resto de delitos contra la libertad sexual,2026,Q1,1,1.9409049828359604,Gradient Boosting,Estándar
+Tres Cantos,Resto de delitos contra la libertad sexual,2026,Q2,2,2.7458041343984534,Gradient Boosting,Estándar
+Tres Cantos,Resto de delitos contra la libertad sexual,2026,Q3,3,2.9710141361621347,Gradient Boosting,Estándar
+Tres Cantos,Robos con fuerza en domicilios,2026,Q1,1,13.229802473691388,Gradient Boosting,Estándar
+Tres Cantos,Robos con fuerza en domicilios,2026,Q2,2,12.687036841544233,Gradient Boosting,Estándar
+Tres Cantos,Robos con fuerza en domicilios,2026,Q3,3,11.823546447225118,Gradient Boosting,Estándar
+Tres Cantos,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,13.229802473691388,Gradient Boosting,Estándar
+Tres Cantos,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,13.229802473691388,Gradient Boosting,Estándar
+Tres Cantos,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,12.687036841544233,Gradient Boosting,Estándar
+Tres Cantos,Robos con violencia e intimidación,2026,Q1,1,2.768298227476903,Gradient Boosting,Estándar
+Tres Cantos,Robos con violencia e intimidación,2026,Q2,2,2.8057761853138805,Gradient Boosting,Estándar
+Tres Cantos,Robos con violencia e intimidación,2026,Q3,3,2.9710141361621347,Gradient Boosting,Estándar
+Tres Cantos,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Tres Cantos,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Tres Cantos,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Tres Cantos,Sustracciones de vehículos,2026,Q1,1,2.7458041343984534,Gradient Boosting,Estándar
+Tres Cantos,Sustracciones de vehículos,2026,Q2,2,2.7458041343984534,Gradient Boosting,Estándar
+Tres Cantos,Sustracciones de vehículos,2026,Q3,3,2.9710141361621347,Gradient Boosting,Estándar
+Tres Cantos,Tráfico de drogas,2026,Q1,1,1.4456203787034672,Gradient Boosting,Estándar
+Tres Cantos,Tráfico de drogas,2026,Q2,2,1.4345847002223302,Gradient Boosting,Estándar
+Tres Cantos,Tráfico de drogas,2026,Q3,3,1.4345847002223302,Gradient Boosting,Estándar
+Valdemoro,Agresión sexual con penetración,2026,Q1,1,1.9409049828359604,Gradient Boosting,Estándar
+Valdemoro,Agresión sexual con penetración,2026,Q2,2,2.383433582932375,Gradient Boosting,Estándar
+Valdemoro,Agresión sexual con penetración,2026,Q3,3,2.4153625127947103,Gradient Boosting,Estándar
+Valdemoro,Delitos contra la libertad sexual,2026,Q1,1,8.696263422154008,Gradient Boosting,Estándar
+Valdemoro,Delitos contra la libertad sexual,2026,Q2,2,10.09305809841471,Gradient Boosting,Estándar
+Valdemoro,Delitos contra la libertad sexual,2026,Q3,3,8.783338157728457,Gradient Boosting,Estándar
+Valdemoro,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,24.81188255295459,Gradient Boosting,Estándar
+Valdemoro,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,24.982052554879825,Gradient Boosting,Estándar
+Valdemoro,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,24.982052554879825,Gradient Boosting,Estándar
+Valdemoro,Estafas informáticas,2026,Q1,1,174.8990100335208,Gradient Boosting,Estándar
+Valdemoro,Estafas informáticas,2026,Q2,2,174.75385662980142,Gradient Boosting,Estándar
+Valdemoro,Estafas informáticas,2026,Q3,3,191.6355419080354,Gradient Boosting,Estándar
+Valdemoro,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Valdemoro,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Valdemoro,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Valdemoro,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Valdemoro,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Valdemoro,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Valdemoro,Hurtos,2026,Q1,1,169.42959580041833,Gradient Boosting,Estándar
+Valdemoro,Hurtos,2026,Q2,2,166.12325404550722,Gradient Boosting,Estándar
+Valdemoro,Hurtos,2026,Q3,3,166.64193989598937,Gradient Boosting,Estándar
+Valdemoro,Otros ciberdelitos,2026,Q1,1,37.9674491459469,Gradient Boosting,Estándar
+Valdemoro,Otros ciberdelitos,2026,Q2,2,37.98330853096722,Gradient Boosting,Estándar
+Valdemoro,Otros ciberdelitos,2026,Q3,3,35.37068935769038,Gradient Boosting,Estándar
+Valdemoro,Resto de criminalidad convencional,2026,Q1,1,413.99629576280824,Gradient Boosting,Estándar
+Valdemoro,Resto de criminalidad convencional,2026,Q2,2,387.47969073941147,Gradient Boosting,Estándar
+Valdemoro,Resto de criminalidad convencional,2026,Q3,3,408.78904781195496,Gradient Boosting,Estándar
+Valdemoro,Resto de delitos contra la libertad sexual,2026,Q1,1,6.430862175197474,Gradient Boosting,Estándar
+Valdemoro,Resto de delitos contra la libertad sexual,2026,Q2,2,6.430862175197474,Gradient Boosting,Estándar
+Valdemoro,Resto de delitos contra la libertad sexual,2026,Q3,3,6.430862175197474,Gradient Boosting,Estándar
+Valdemoro,Robos con fuerza en domicilios,2026,Q1,1,13.246598551742201,Gradient Boosting,Estándar
+Valdemoro,Robos con fuerza en domicilios,2026,Q2,2,12.687036841544233,Gradient Boosting,Estándar
+Valdemoro,Robos con fuerza en domicilios,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Valdemoro,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,25.685222993642622,Gradient Boosting,Estándar
+Valdemoro,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,24.81188255295459,Gradient Boosting,Estándar
+Valdemoro,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,24.982052554879825,Gradient Boosting,Estándar
+Valdemoro,Robos con violencia e intimidación,2026,Q1,1,10.785429921452927,Gradient Boosting,Estándar
+Valdemoro,Robos con violencia e intimidación,2026,Q2,2,15.316721370378822,Gradient Boosting,Estándar
+Valdemoro,Robos con violencia e intimidación,2026,Q3,3,10.109854176465523,Gradient Boosting,Estándar
+Valdemoro,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Valdemoro,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Valdemoro,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Valdemoro,Sustracciones de vehículos,2026,Q1,1,10.872504657027376,Gradient Boosting,Estándar
+Valdemoro,Sustracciones de vehículos,2026,Q2,2,11.415270289174531,Gradient Boosting,Estándar
+Valdemoro,Sustracciones de vehículos,2026,Q3,3,12.687036841544233,Gradient Boosting,Estándar
+Valdemoro,Tráfico de drogas,2026,Q1,1,4.09025149485376,Gradient Boosting,Estándar
+Valdemoro,Tráfico de drogas,2026,Q2,2,4.09025149485376,Gradient Boosting,Estándar
+Valdemoro,Tráfico de drogas,2026,Q3,3,3.440646131584675,Gradient Boosting,Estándar
+Villanueva de la Cañada,Agresión sexual con penetración,2026,Q1,1,0.8721091698062586,Gradient Boosting,Estándar
+Villanueva de la Cañada,Agresión sexual con penetración,2026,Q2,2,1.0600405932358792,Gradient Boosting,Estándar
+Villanueva de la Cañada,Agresión sexual con penetración,2026,Q3,3,1.4345847002223302,Gradient Boosting,Estándar
+Villanueva de la Cañada,Delitos contra la libertad sexual,2026,Q1,1,2.713875204536118,Gradient Boosting,Estándar
+Villanueva de la Cañada,Delitos contra la libertad sexual,2026,Q2,2,2.9710141361621347,Gradient Boosting,Estándar
+Villanueva de la Cañada,Delitos contra la libertad sexual,2026,Q3,3,3.242755757435653,Gradient Boosting,Estándar
+Villanueva de la Cañada,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,2.2394176745773677,Gradient Boosting,Estándar
+Villanueva de la Cañada,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,2.7458041343984534,Gradient Boosting,Estándar
+Villanueva de la Cañada,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,3.242755757435653,Gradient Boosting,Estándar
+Villanueva de la Cañada,Estafas informáticas,2026,Q1,1,51.804525200024955,Gradient Boosting,Estándar
+Villanueva de la Cañada,Estafas informáticas,2026,Q2,2,47.769359449894495,Gradient Boosting,Estándar
+Villanueva de la Cañada,Estafas informáticas,2026,Q3,3,44.125874902543,Gradient Boosting,Estándar
+Villanueva de la Cañada,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Villanueva de la Cañada,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Villanueva de la Cañada,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Villanueva de la Cañada,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Villanueva de la Cañada,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Villanueva de la Cañada,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Villanueva de la Cañada,Hurtos,2026,Q1,1,66.44960723391591,Gradient Boosting,Estándar
+Villanueva de la Cañada,Hurtos,2026,Q2,2,74.3751781052422,Gradient Boosting,Estándar
+Villanueva de la Cañada,Hurtos,2026,Q3,3,73.12417035280923,Gradient Boosting,Estándar
+Villanueva de la Cañada,Otros ciberdelitos,2026,Q1,1,6.976196796806383,Gradient Boosting,Estándar
+Villanueva de la Cañada,Otros ciberdelitos,2026,Q2,2,7.606037164527988,Gradient Boosting,Estándar
+Villanueva de la Cañada,Otros ciberdelitos,2026,Q3,3,6.693358703628542,Gradient Boosting,Estándar
+Villanueva de la Cañada,Resto de criminalidad convencional,2026,Q1,1,85.9837902169548,Gradient Boosting,Estándar
+Villanueva de la Cañada,Resto de criminalidad convencional,2026,Q2,2,84.96836100140177,Gradient Boosting,Estándar
+Villanueva de la Cañada,Resto de criminalidad convencional,2026,Q3,3,78.91080840876533,Gradient Boosting,Estándar
+Villanueva de la Cañada,Resto de delitos contra la libertad sexual,2026,Q1,1,2.8214884786481083,Gradient Boosting,Estándar
+Villanueva de la Cañada,Resto de delitos contra la libertad sexual,2026,Q2,2,2.7458041343984534,Gradient Boosting,Estándar
+Villanueva de la Cañada,Resto de delitos contra la libertad sexual,2026,Q3,3,3.242755757435653,Gradient Boosting,Estándar
+Villanueva de la Cañada,Robos con fuerza en domicilios,2026,Q1,1,14.551492207013103,Gradient Boosting,Estándar
+Villanueva de la Cañada,Robos con fuerza en domicilios,2026,Q2,2,13.246598551742201,Gradient Boosting,Estándar
+Villanueva de la Cañada,Robos con fuerza en domicilios,2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Villanueva de la Cañada,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,15.157164623609585,Gradient Boosting,Estándar
+Villanueva de la Cañada,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,13.246598551742201,Gradient Boosting,Estándar
+Villanueva de la Cañada,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,13.229802473691388,Gradient Boosting,Estándar
+Villanueva de la Cañada,Robos con violencia e intimidación,2026,Q1,1,2.713875204536118,Gradient Boosting,Estándar
+Villanueva de la Cañada,Robos con violencia e intimidación,2026,Q2,2,1.9409049828359604,Gradient Boosting,Estándar
+Villanueva de la Cañada,Robos con violencia e intimidación,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Villanueva de la Cañada,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Villanueva de la Cañada,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Villanueva de la Cañada,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Villanueva de la Cañada,Sustracciones de vehículos,2026,Q1,1,2.7458041343984534,Gradient Boosting,Estándar
+Villanueva de la Cañada,Sustracciones de vehículos,2026,Q2,2,2.768298227476903,Gradient Boosting,Estándar
+Villanueva de la Cañada,Sustracciones de vehículos,2026,Q3,3,2.8057761853138805,Gradient Boosting,Estándar
+Villanueva de la Cañada,Tráfico de drogas,2026,Q1,1,0.7710119219335279,Gradient Boosting,Estándar
+Villanueva de la Cañada,Tráfico de drogas,2026,Q2,2,0.7919051733147264,Gradient Boosting,Estándar
+Villanueva de la Cañada,Tráfico de drogas,2026,Q3,3,0.9270144155008124,Gradient Boosting,Estándar
+Villaviciosa de Odón,Agresión sexual con penetración,2026,Q1,1,1.6917236318483468,Gradient Boosting,Estándar
+Villaviciosa de Odón,Agresión sexual con penetración,2026,Q2,2,2.271346604439703,Gradient Boosting,Estándar
+Villaviciosa de Odón,Agresión sexual con penetración,2026,Q3,3,2.4153625127947103,Gradient Boosting,Estándar
+Villaviciosa de Odón,Delitos contra la libertad sexual,2026,Q1,1,5.19008747102456,Gradient Boosting,Estándar
+Villaviciosa de Odón,Delitos contra la libertad sexual,2026,Q2,2,4.09025149485376,Gradient Boosting,Estándar
+Villaviciosa de Odón,Delitos contra la libertad sexual,2026,Q3,3,3.2154361298209935,Gradient Boosting,Estándar
+Villaviciosa de Odón,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q1,1,2.8057761853138805,Gradient Boosting,Estándar
+Villaviciosa de Odón,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q2,2,2.8057761853138805,Gradient Boosting,Estándar
+Villaviciosa de Odón,Delitos graves y menos graves de lesiones y riña tumultuaria,2026,Q3,3,3.242755757435653,Gradient Boosting,Estándar
+Villaviciosa de Odón,Estafas informáticas,2026,Q1,1,74.87215574966363,Gradient Boosting,Estándar
+Villaviciosa de Odón,Estafas informáticas,2026,Q2,2,75.12821298001184,Gradient Boosting,Estándar
+Villaviciosa de Odón,Estafas informáticas,2026,Q3,3,77.20704173811275,Gradient Boosting,Estándar
+Villaviciosa de Odón,Homicidios dolosos y asesinatos consumados,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Villaviciosa de Odón,Homicidios dolosos y asesinatos consumados,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Villaviciosa de Odón,Homicidios dolosos y asesinatos consumados,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Villaviciosa de Odón,Homicidios dolosos y asesinatos en grado tentativa,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Villaviciosa de Odón,Homicidios dolosos y asesinatos en grado tentativa,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Villaviciosa de Odón,Homicidios dolosos y asesinatos en grado tentativa,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Villaviciosa de Odón,Hurtos,2026,Q1,1,68.56527272206611,Gradient Boosting,Estándar
+Villaviciosa de Odón,Hurtos,2026,Q2,2,60.39363155482228,Gradient Boosting,Estándar
+Villaviciosa de Odón,Hurtos,2026,Q3,3,60.39363155482228,Gradient Boosting,Estándar
+Villaviciosa de Odón,Otros ciberdelitos,2026,Q1,1,10.638392720023617,Gradient Boosting,Estándar
+Villaviciosa de Odón,Otros ciberdelitos,2026,Q2,2,10.638392720023617,Gradient Boosting,Estándar
+Villaviciosa de Odón,Otros ciberdelitos,2026,Q3,3,10.355554626845777,Gradient Boosting,Estándar
+Villaviciosa de Odón,Resto de criminalidad convencional,2026,Q1,1,136.1323608118011,Gradient Boosting,Estándar
+Villaviciosa de Odón,Resto de criminalidad convencional,2026,Q2,2,138.97035521303417,Gradient Boosting,Estándar
+Villaviciosa de Odón,Resto de criminalidad convencional,2026,Q3,3,131.7925163700556,Gradient Boosting,Estándar
+Villaviciosa de Odón,Resto de delitos contra la libertad sexual,2026,Q1,1,3.652415701942766,Gradient Boosting,Estándar
+Villaviciosa de Odón,Resto de delitos contra la libertad sexual,2026,Q2,2,2.5565286571188115,Gradient Boosting,Estándar
+Villaviciosa de Odón,Resto de delitos contra la libertad sexual,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Villaviciosa de Odón,Robos con fuerza en domicilios,2026,Q1,1,20.999307229150364,Gradient Boosting,Estándar
+Villaviciosa de Odón,Robos con fuerza en domicilios,2026,Q2,2,15.69993025575674,Gradient Boosting,Estándar
+Villaviciosa de Odón,Robos con fuerza en domicilios,2026,Q3,3,16.84773945306936,Gradient Boosting,Estándar
+Villaviciosa de Odón,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q1,1,23.49091666589766,Gradient Boosting,Estándar
+Villaviciosa de Odón,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q2,2,16.84773945306936,Gradient Boosting,Estándar
+Villaviciosa de Odón,"Robos con fuerza en domicilios, establecimientos y otras instalaciones",2026,Q3,3,19.394703718310332,Gradient Boosting,Estándar
+Villaviciosa de Odón,Robos con violencia e intimidación,2026,Q1,1,4.09025149485376,Gradient Boosting,Estándar
+Villaviciosa de Odón,Robos con violencia e intimidación,2026,Q2,2,3.565187546165987,Gradient Boosting,Estándar
+Villaviciosa de Odón,Robos con violencia e intimidación,2026,Q3,3,3.7769571165240783,Gradient Boosting,Estándar
+Villaviciosa de Odón,Secuestro,2026,Q1,1,0.0,Mediana móvil 4,Alta incertidumbre
+Villaviciosa de Odón,Secuestro,2026,Q2,2,0.0,Mediana móvil 4,Alta incertidumbre
+Villaviciosa de Odón,Secuestro,2026,Q3,3,0.0,Mediana móvil 4,Alta incertidumbre
+Villaviciosa de Odón,Sustracciones de vehículos,2026,Q1,1,1.9409049828359604,Gradient Boosting,Estándar
+Villaviciosa de Odón,Sustracciones de vehículos,2026,Q2,2,2.4153625127947103,Gradient Boosting,Estándar
+Villaviciosa de Odón,Sustracciones de vehículos,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
+Villaviciosa de Odón,Tráfico de drogas,2026,Q1,1,2.4153625127947103,Gradient Boosting,Estándar
+Villaviciosa de Odón,Tráfico de drogas,2026,Q2,2,2.9710141361621347,Gradient Boosting,Estándar
+Villaviciosa de Odón,Tráfico de drogas,2026,Q3,3,2.7458041343984534,Gradient Boosting,Estándar
