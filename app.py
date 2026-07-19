@@ -32,7 +32,7 @@ from utils.ui import (
 
 st.set_page_config(
     page_title="Crime Pulse Madrid | Centro de mando ejecutivo",
-    page_icon="◉",
+    page_icon="assets/icono.png",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
