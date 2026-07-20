@@ -24,6 +24,39 @@ PREDICTION_KIND = "Predicción"
 REAL_KIND = "Real"
 ALL_MUNICIPALITIES = "TODOS LOS MUNICIPIOS"
 ALL_CRIME_TYPES = "TODOS LOS TIPOS DE CRIMEN"
+ALL_CRIME_GROUPS = "TODAS LAS AGRUPACIONES"
+TYPE_LEVEL = "TIPOS DE DELITO"
+GROUP_LEVEL = "COMPOSICIÓN POR GRUPOS"
+
+# Correspondencia exacta validada contra DIM_Peso_Crimen del libro maestro.
+CRIME_TYPE_TO_GROUP = {
+    "Homicidios dolosos y asesinatos consumados": "Violencia extrema",
+    "Homicidios dolosos y asesinatos en grado tentativa": "Violencia extrema",
+    "Secuestro": "Violencia extrema",
+    "Delitos graves y menos graves de lesiones y riña tumultuaria": "Violencia física",
+    "Delitos contra la libertad sexual": "Delitos sexuales",
+    "Agresión sexual con penetración": "Delitos sexuales",
+    "Resto de delitos contra la libertad sexual": "Delitos sexuales",
+    "Robos con violencia e intimidación": "Delitos patrimoniales violentos",
+    "Robos con fuerza en domicilios, establecimientos y otras instalaciones": "Delitos contra el patrimonio",
+    "Robos con fuerza en domicilios": "Delitos contra el patrimonio",
+    "Hurtos": "Delitos contra el patrimonio",
+    "Sustracciones de vehículos": "Delitos contra el patrimonio",
+    "Tráfico de drogas": "Drogas",
+    "Resto de criminalidad convencional": "Otros delitos convencionales",
+    "Estafas informáticas": "Ciberdelincuencia",
+    "Otros ciberdelitos": "Ciberdelincuencia",
+}
+CRIME_GROUPS = (
+    "Violencia extrema",
+    "Violencia física",
+    "Delitos sexuales",
+    "Delitos patrimoniales violentos",
+    "Delitos contra el patrimonio",
+    "Drogas",
+    "Otros delitos convencionales",
+    "Ciberdelincuencia",
+)
 HYBRID_MODEL = "MODELO HÍBRIDO"
 MIXED_CONFIDENCE = "Mixta"
 STANDARD_CONFIDENCE = "Estándar"
@@ -184,6 +217,19 @@ def load_prediction_model(
         predictions[column] = predictions[column].astype(str).str.strip()
         lab[column] = lab[column].astype(str).str.strip()
     lab["tipo_dato"] = lab["tipo_dato"].astype(str).str.strip()
+
+    known_types = set(CRIME_TYPE_TO_GROUP)
+    prediction_types = set(predictions["tipo de crimen"].unique())
+    lab_types = set(lab["tipo de crimen"].unique())
+    unmapped = sorted((prediction_types | lab_types).difference(known_types))
+    if unmapped:
+        raise ValueError(
+            "Existen tipologías predictivas sin agrupación en DIM_Peso_Crimen: "
+            + ", ".join(unmapped)
+        )
+    predictions["Grupo"] = predictions["tipo de crimen"].map(CRIME_TYPE_TO_GROUP)
+    lab["Grupo"] = lab["tipo de crimen"].map(CRIME_TYPE_TO_GROUP)
+
     for column in ("año", "num_trimestre"):
         predictions[column] = pd.to_numeric(predictions[column], errors="raise").astype(int)
         lab[column] = pd.to_numeric(lab[column], errors="raise").astype(int)
@@ -279,13 +325,72 @@ def load_prediction_model(
     return PredictionModel(predictions, lab, type_trends, threshold, emerging, audit)
 
 
+
+def _selected_crime_types(selection_level: str, selection: str) -> set[str] | None:
+    """Devuelve las tipologías incluidas por una selección de tipo o agrupación."""
+    if selection_level == TYPE_LEVEL:
+        return None if selection == ALL_CRIME_TYPES else {selection}
+    if selection_level == GROUP_LEVEL:
+        if selection == ALL_CRIME_GROUPS:
+            return None
+        return {
+            crime_type
+            for crime_type, group in CRIME_TYPE_TO_GROUP.items()
+            if group == selection
+        }
+    raise ValueError(f"Nivel de análisis no reconocido: {selection_level}.")
+
+
+def _selection_metadata(
+    model: PredictionModel,
+    selection_level: str,
+    selection: str,
+) -> tuple[str, str, int, bool]:
+    """Resume modelo, confianza y cobertura de tipologías de la selección."""
+    selected_types = _selected_crime_types(selection_level, selection)
+    metadata = model.predictions
+    if selected_types is not None:
+        metadata = metadata.loc[metadata["tipo de crimen"].isin(selected_types)]
+    unique_types = sorted(metadata["tipo de crimen"].unique())
+    unique_models = sorted(metadata["modelo"].unique())
+    unique_confidence = sorted(metadata["nivel_confianza"].unique())
+
+    prediction_model = (
+        unique_models[0] if len(unique_models) == 1 else HYBRID_MODEL
+    )
+    prediction_confidence = (
+        unique_confidence[0] if len(unique_confidence) == 1 else MIXED_CONFIDENCE
+    )
+    includes_high_uncertainty = bool(
+        set(unique_types).intersection(RARE_CRIME_TYPES)
+    )
+    return (
+        prediction_model,
+        prediction_confidence,
+        len(unique_types),
+        includes_high_uncertainty,
+    )
+
+
+def _filter_selection(
+    frame: pd.DataFrame,
+    selection_level: str,
+    selection: str,
+) -> pd.DataFrame:
+    selected_types = _selected_crime_types(selection_level, selection)
+    if selected_types is None:
+        return frame
+    return frame.loc[frame["tipo de crimen"].isin(selected_types)]
+
+
 def prediction_snapshot(
     model: PredictionModel,
     municipality: str,
-    crime_type: str,
+    selection: str,
     quarter: str,
+    selection_level: str = TYPE_LEVEL,
 ) -> PredictionSnapshot:
-    series = scope_series(model, municipality, crime_type)
+    series = scope_series(model, municipality, selection, selection_level)
     prediction = series.loc[
         series["tipo_dato"].eq(PREDICTION_KIND)
         & series["año"].eq(2026)
@@ -305,41 +410,42 @@ def prediction_snapshot(
     change_percent = (
         change_absolute / actual_value * 100 if actual_value > 0 else None
     )
+    model_name, confidence, type_count, includes_high_uncertainty = _selection_metadata(
+        model,
+        selection_level,
+        selection,
+    )
     return PredictionSnapshot(
         municipality=municipality,
-        crime_type=crime_type,
+        crime_type=selection,
         quarter=quarter,
         predicted_count=predicted_value,
         actual_2025=actual_value,
         change_absolute=change_absolute,
         change_percent=change_percent,
-        model=str(prediction_row["modelo"]),
-        confidence=str(prediction_row["nivel_confianza"]),
+        model=model_name,
+        confidence=confidence,
         municipality_count=(
             model.audit.municipality_count
             if municipality == ALL_MUNICIPALITIES
             else 1
         ),
-        crime_type_count=(
-            model.audit.crime_type_count if crime_type == ALL_CRIME_TYPES else 1
-        ),
-        includes_high_uncertainty=(
-            crime_type == ALL_CRIME_TYPES or crime_type in RARE_CRIME_TYPES
-        ),
+        crime_type_count=type_count,
+        includes_high_uncertainty=includes_high_uncertainty,
     )
 
 
 def scope_series(
     model: PredictionModel,
     municipality: str,
-    crime_type: str,
+    selection: str,
+    selection_level: str = TYPE_LEVEL,
 ) -> pd.DataFrame:
-    """Suma primero el ámbito seleccionado y conserva una fila por periodo/tipo de dato."""
+    """Agrega histórico y forecast por municipio y por tipo o grupo delictivo."""
     scope = model.lab
     if municipality != ALL_MUNICIPALITIES:
         scope = scope.loc[scope["municipio"].eq(municipality)]
-    if crime_type != ALL_CRIME_TYPES:
-        scope = scope.loc[scope["tipo de crimen"].eq(crime_type)]
+    scope = _filter_selection(scope, selection_level, selection)
     if scope.empty:
         raise ValueError("El ámbito predictivo seleccionado no contiene observaciones.")
 
@@ -356,56 +462,52 @@ def scope_series(
     if output.duplicated(["año", "trimestre", "tipo_dato"]).any():
         raise ValueError("La agregación predictiva ha generado periodos duplicados.")
 
-    if crime_type == ALL_CRIME_TYPES:
-        prediction_model = HYBRID_MODEL
-        prediction_confidence = MIXED_CONFIDENCE
-    else:
-        metadata = model.predictions.loc[
-            model.predictions["tipo de crimen"].eq(crime_type),
-            ["modelo", "nivel_confianza"],
-        ].drop_duplicates()
-        if len(metadata) != 1:
-            raise ValueError("La tipología no tiene un modelo predictivo único.")
-        prediction_model = str(metadata.iloc[0]["modelo"])
-        prediction_confidence = str(metadata.iloc[0]["nivel_confianza"])
-
+    prediction_model, prediction_confidence, _, _ = _selection_metadata(
+        model,
+        selection_level,
+        selection,
+    )
     predicted_mask = output["tipo_dato"].eq(PREDICTION_KIND)
     output["modelo"] = "Dato observado"
     output["nivel_confianza"] = REAL_KIND
     output.loc[predicted_mask, "modelo"] = prediction_model
     output.loc[predicted_mask, "nivel_confianza"] = prediction_confidence
     output["municipio"] = municipality
-    output["tipo de crimen"] = crime_type
+    output["tipo de crimen"] = selection
+    output["nivel_analisis"] = selection_level
     return output.sort_values(["period_index", "tipo_dato"]).reset_index(drop=True)
 
 
 def individual_series(
     model: PredictionModel,
     municipality: str,
-    crime_type: str,
+    selection: str,
+    selection_level: str = TYPE_LEVEL,
 ) -> pd.DataFrame:
-    """Compatibilidad semántica: una serie individual o agregada según los filtros."""
-    return scope_series(model, municipality, crime_type)
+    """Serie individual o agregada según tipo de delito o agrupación."""
+    return scope_series(model, municipality, selection, selection_level)
 
 
-def type_trends_for_scope(
+def entity_trends_for_scope(
     model: PredictionModel,
     municipality: str,
+    selection_level: str = TYPE_LEVEL,
 ) -> pd.DataFrame:
-    """Compara Q1–Q3 por tipología en el ámbito municipal activo."""
-    if municipality == ALL_MUNICIPALITIES:
-        return model.type_trends.copy()
+    """Compara Q1–Q3 por tipología o agrupación en el ámbito municipal activo."""
+    scope = model.lab
+    if municipality != ALL_MUNICIPALITIES:
+        scope = scope.loc[scope["municipio"].eq(municipality)]
 
-    scope = model.lab.loc[model.lab["municipio"].eq(municipality)]
+    entity_column = "tipo de crimen" if selection_level == TYPE_LEVEL else "Grupo"
     actual = (
         scope.loc[
             scope["tipo_dato"].eq(REAL_KIND)
             & scope["año"].eq(2025)
             & scope["trimestre"].isin(FORECAST_QUARTERS)
         ]
-        .groupby("tipo de crimen", as_index=False)["valor"]
+        .groupby(entity_column, as_index=False)["valor"]
         .sum()
-        .rename(columns={"valor": "real_2025"})
+        .rename(columns={"valor": "real_2025", entity_column: "tipo de crimen"})
     )
     predicted = (
         scope.loc[
@@ -413,9 +515,9 @@ def type_trends_for_scope(
             & scope["año"].eq(2026)
             & scope["trimestre"].isin(FORECAST_QUARTERS)
         ]
-        .groupby(["tipo de crimen", "modelo", "nivel_confianza"], as_index=False)["valor"]
+        .groupby(entity_column, as_index=False)["valor"]
         .sum()
-        .rename(columns={"valor": "predicted_2026"})
+        .rename(columns={"valor": "predicted_2026", entity_column: "tipo de crimen"})
     )
     output = actual.merge(predicted, on="tipo de crimen", validate="one_to_one")
     output["change_absolute"] = output["predicted_2026"] - output["real_2025"]
@@ -424,9 +526,45 @@ def type_trends_for_scope(
         output["change_absolute"] / output["real_2025"] * 100,
         np.nan,
     )
-    threshold = max(10.0, float(output["real_2025"].quantile(.25)))
+
+    if selection_level == TYPE_LEVEL:
+        metadata = model.predictions[
+            ["tipo de crimen", "modelo", "nivel_confianza"]
+        ].drop_duplicates()
+        output = output.merge(metadata, on="tipo de crimen", how="left", validate="one_to_one")
+    else:
+        group_metadata = model.predictions.copy()
+        group_metadata["Grupo"] = group_metadata["tipo de crimen"].map(CRIME_TYPE_TO_GROUP)
+        meta_rows = []
+        for group, group_scope in group_metadata.groupby("Grupo"):
+            models = sorted(group_scope["modelo"].unique())
+            confidences = sorted(group_scope["nivel_confianza"].unique())
+            meta_rows.append(
+                {
+                    "tipo de crimen": group,
+                    "modelo": models[0] if len(models) == 1 else HYBRID_MODEL,
+                    "nivel_confianza": (
+                        confidences[0] if len(confidences) == 1 else MIXED_CONFIDENCE
+                    ),
+                }
+            )
+        output = output.merge(pd.DataFrame(meta_rows), on="tipo de crimen", how="left", validate="one_to_one")
+
+    threshold = max(
+        10.0 if municipality != ALL_MUNICIPALITIES else 100.0,
+        float(output["real_2025"].quantile(.25)),
+    )
     output["emerging_eligible"] = output["real_2025"].ge(threshold)
     return output.sort_values("change_percent", ascending=False).reset_index(drop=True)
+
+
+def type_trends_for_scope(
+    model: PredictionModel,
+    municipality: str,
+) -> pd.DataFrame:
+    """Compatibilidad con la API anterior: tendencias por tipología."""
+    return entity_trends_for_scope(model, municipality, TYPE_LEVEL)
+
 
 
 def annual_comparison(series: pd.DataFrame) -> pd.DataFrame:
@@ -455,8 +593,9 @@ def annual_comparison(series: pd.DataFrame) -> pd.DataFrame:
 
 def territorial_summary(
     model: PredictionModel,
-    crime_type: str,
+    selection: str,
     quarter: str,
+    selection_level: str = TYPE_LEVEL,
 ) -> pd.DataFrame:
     predicted_scope = model.predictions.loc[
         model.predictions["trimestre"].eq(quarter)
@@ -466,13 +605,8 @@ def territorial_summary(
         & model.lab["año"].eq(2025)
         & model.lab["trimestre"].eq(quarter)
     ]
-    if crime_type != ALL_CRIME_TYPES:
-        predicted_scope = predicted_scope.loc[
-            predicted_scope["tipo de crimen"].eq(crime_type)
-        ]
-        actual_scope = actual_scope.loc[
-            actual_scope["tipo de crimen"].eq(crime_type)
-        ]
+    predicted_scope = _filter_selection(predicted_scope, selection_level, selection)
+    actual_scope = _filter_selection(actual_scope, selection_level, selection)
 
     predicted = (
         predicted_scope.groupby("municipio", as_index=False)["conteo_predicho"]
@@ -485,18 +619,14 @@ def territorial_summary(
         .rename(columns={"valor": "actual_2025"})
     )
     output = predicted.merge(actual, on="municipio", validate="one_to_one")
-    if crime_type == ALL_CRIME_TYPES:
-        output["modelo"] = HYBRID_MODEL
-        output["nivel_confianza"] = MIXED_CONFIDENCE
-    else:
-        metadata = model.predictions.loc[
-            model.predictions["tipo de crimen"].eq(crime_type),
-            ["modelo", "nivel_confianza"],
-        ].drop_duplicates()
-        if len(metadata) != 1:
-            raise ValueError("La tipología no tiene un modelo predictivo único.")
-        output["modelo"] = str(metadata.iloc[0]["modelo"])
-        output["nivel_confianza"] = str(metadata.iloc[0]["nivel_confianza"])
+
+    model_name, confidence, _, _ = _selection_metadata(
+        model,
+        selection_level,
+        selection,
+    )
+    output["modelo"] = model_name
+    output["nivel_confianza"] = confidence
     output["change_absolute"] = output["predicted_count"] - output["actual_2025"]
     output["change_percent"] = np.where(
         output["actual_2025"].gt(0),
@@ -504,6 +634,7 @@ def territorial_summary(
         np.nan,
     )
     return output.sort_values("predicted_count", ascending=False).reset_index(drop=True)
+
 
 
 def emerging_quarterly_comparison(model: PredictionModel) -> pd.DataFrame:

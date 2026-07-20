@@ -18,16 +18,21 @@ from utils.predictions_charts import (
     build_type_trend_chart,
 )
 from utils.predictions_data import (
+    ALL_CRIME_GROUPS,
     ALL_CRIME_TYPES,
     ALL_MUNICIPALITIES,
+    CRIME_GROUPS,
     FORECAST_QUARTERS,
+    GROUP_LEVEL,
     HIGH_UNCERTAINTY,
     HISTORY_FORECAST_PATH,
     PREDICTIONS_PATH,
     RARE_CRIME_TYPES,
+    TYPE_LEVEL,
     WAPE_BY_HORIZON,
     annual_comparison,
     emerging_quarterly_comparison,
+    entity_trends_for_scope,
     individual_series,
     load_prediction_model,
     prediction_snapshot,
@@ -118,6 +123,7 @@ def _show_territorial_table(frame: pd.DataFrame, key: str) -> None:
 
 
 def _reset_prediction_filters() -> None:
+    st.session_state["prediction_analysis_level"] = TYPE_LEVEL
     st.session_state["prediction_municipality"] = ALL_MUNICIPALITIES
     st.session_state["prediction_crime_type"] = ALL_CRIME_TYPES
     st.session_state["prediction_quarter"] = FORECAST_QUARTERS[0]
@@ -153,11 +159,22 @@ except (FileNotFoundError, ValueError, OSError) as exc:
     st.stop()
 
 municipalities = [ALL_MUNICIPALITIES, *sorted(model.predictions["municipio"].unique())]
-crime_types = [ALL_CRIME_TYPES, *sorted(model.predictions["tipo de crimen"].unique())]
+analysis_levels = (TYPE_LEVEL, GROUP_LEVEL)
+if st.session_state.get("prediction_analysis_level") not in analysis_levels:
+    st.session_state["prediction_analysis_level"] = TYPE_LEVEL
+
+active_analysis_level = st.session_state["prediction_analysis_level"]
+crime_scope_options = (
+    [ALL_CRIME_TYPES, *sorted(model.predictions["tipo de crimen"].unique())]
+    if active_analysis_level == TYPE_LEVEL
+    else [ALL_CRIME_GROUPS, *CRIME_GROUPS]
+)
 if st.session_state.get("prediction_municipality") not in municipalities:
     st.session_state["prediction_municipality"] = ALL_MUNICIPALITIES
-if st.session_state.get("prediction_crime_type") not in crime_types:
-    st.session_state["prediction_crime_type"] = ALL_CRIME_TYPES
+if st.session_state.get("prediction_crime_type") not in crime_scope_options:
+    st.session_state["prediction_crime_type"] = (
+        ALL_CRIME_TYPES if active_analysis_level == TYPE_LEVEL else ALL_CRIME_GROUPS
+    )
 if st.session_state.get("prediction_quarter") not in FORECAST_QUARTERS:
     st.session_state["prediction_quarter"] = FORECAST_QUARTERS[0]
 if "prediction_include_madrid" not in st.session_state:
@@ -180,6 +197,25 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+st.radio(
+    "NIVEL DE ANÁLISIS",
+    options=analysis_levels,
+    horizontal=True,
+    key="prediction_analysis_level",
+)
+
+# Recalcular opciones tras un posible cambio del nivel de análisis.
+active_analysis_level = st.session_state["prediction_analysis_level"]
+crime_scope_options = (
+    [ALL_CRIME_TYPES, *sorted(model.predictions["tipo de crimen"].unique())]
+    if active_analysis_level == TYPE_LEVEL
+    else [ALL_CRIME_GROUPS, *CRIME_GROUPS]
+)
+if st.session_state.get("prediction_crime_type") not in crime_scope_options:
+    st.session_state["prediction_crime_type"] = (
+        ALL_CRIME_TYPES if active_analysis_level == TYPE_LEVEL else ALL_CRIME_GROUPS
+    )
+
 with st.container(key="home_filter_bar"):
     filter_columns = st.columns([1.15, 1.55, .68, .82, .76], gap="small")
     with filter_columns[0]:
@@ -191,8 +227,8 @@ with st.container(key="home_filter_bar"):
         )
     with filter_columns[1]:
         selected_type = st.selectbox(
-            "TIPO DE CRIMEN",
-            options=crime_types,
+            "TIPO DE CRIMEN O AGRUPACIÓN",
+            options=crime_scope_options,
             key="prediction_crime_type",
             label_visibility="collapsed",
         )
@@ -221,16 +257,32 @@ with st.container(key="home_filter_bar"):
             on_click=_reset_prediction_filters,
         )
 
+selection_level = str(st.session_state["prediction_analysis_level"])
 snapshot = prediction_snapshot(
     model,
     selected_municipality,
     selected_type,
     selected_quarter,
+    selection_level,
 )
-series = individual_series(model, selected_municipality, selected_type)
+series = individual_series(
+    model,
+    selected_municipality,
+    selected_type,
+    selection_level,
+)
 comparison = annual_comparison(series)
-territorial = territorial_summary(model, selected_type, selected_quarter)
-type_trends = type_trends_for_scope(model, selected_municipality)
+territorial = territorial_summary(
+    model,
+    selected_type,
+    selected_quarter,
+    selection_level,
+)
+type_trends = entity_trends_for_scope(
+    model,
+    selected_municipality,
+    selection_level,
+)
 
 # "Incluir Madrid" afecta exclusivamente a comparaciones territoriales.
 # Si el usuario selecciona Madrid explícitamente, esa selección tiene prioridad.
@@ -245,13 +297,22 @@ if territorial_view.empty:
     territorial_view = territorial.copy()
 
 all_municipalities = selected_municipality == ALL_MUNICIPALITIES
-all_crime_types = selected_type == ALL_CRIME_TYPES
-if all_municipalities and all_crime_types:
-    scope_label = "Visión global agregada · 37 municipios · 16 tipologías"
+all_crime_scope = (
+    selected_type == ALL_CRIME_TYPES
+    if selection_level == TYPE_LEVEL
+    else selected_type == ALL_CRIME_GROUPS
+)
+scope_unit = "tipologías" if selection_level == TYPE_LEVEL else "agrupaciones"
+if all_municipalities and all_crime_scope:
+    scope_label = (
+        "Visión global agregada · 37 municipios · 16 tipologías"
+        if selection_level == TYPE_LEVEL
+        else "Visión global agregada · 37 municipios · 8 agrupaciones"
+    )
 elif all_municipalities:
     scope_label = f"Agregado de todos los municipios · {selected_type}"
-elif all_crime_types:
-    scope_label = f"{selected_municipality} · agregado de todos los tipos de crimen"
+elif all_crime_scope:
+    scope_label = f"{selected_municipality} · agregado de todas las {scope_unit}"
 else:
     scope_label = f"{selected_municipality} · {selected_type}"
 st.markdown(
@@ -266,7 +327,7 @@ _render_kpi(
     "forecast",
     (
         f"Criminalidad prevista · {selected_quarter} 2026"
-        if all_crime_types
+        if all_crime_scope
         else f"Conteo previsto · {selected_quarter} 2026"
     ),
     _number(snapshot.predicted_count, 1),
@@ -283,19 +344,19 @@ _render_kpi(
     kpi_columns[2],
     "model",
     "Tratamiento predictivo",
-    "13 estándar · 3 alta incertidumbre" if all_crime_types else snapshot.model,
+    "13 estándar · 3 alta incertidumbre" if all_crime_scope else snapshot.model,
     (
         "Modelo híbrido · tratamientos diferenciados"
-        if all_crime_types
+        if all_crime_scope
         else "Asignación metodológica de la tipología"
     ),
 )
-if all_crime_types:
+if all_crime_scope:
     _render_kpi(
         kpi_columns[3],
         "coverage",
         "Cobertura y confianza",
-        f"{snapshot.municipality_count} municipio{'s' if snapshot.municipality_count != 1 else ''} / 16 tipologías",
+        f"{snapshot.municipality_count} municipio{'s' if snapshot.municipality_count != 1 else ''} / {snapshot.crime_type_count} tipologías",
         "Confianza heterogénea · no existe una etiqueta única",
     )
 else:
@@ -307,10 +368,12 @@ else:
         f"Cobertura: {snapshot.municipality_count} municipio{'s' if snapshot.municipality_count != 1 else ''}",
     )
 
-if not all_crime_types and snapshot.confidence == HIGH_UNCERTAINTY:
+if not all_crime_scope and snapshot.includes_high_uncertainty:
     st.markdown(
-        '<aside class="prediction-alert"><span>ALTA INCERTIDUMBRE</span><h3>Evento de muy baja frecuencia</h3>'
-        '<p>Esta serie utiliza la mediana móvil de cuatro trimestres. El resultado debe interpretarse con especial cautela y no como un valor determinista.</p></aside>',
+        '<aside class="prediction-alert"><span>ALTA INCERTIDUMBRE</span>'
+        '<h3>La selección incluye eventos de muy baja frecuencia</h3>'
+        '<p>Las tipologías de baja frecuencia incluidas utilizan mediana móvil de cuatro trimestres. '
+        'La agregación del grupo conserva esa incertidumbre y debe interpretarse con especial cautela.</p></aside>',
         unsafe_allow_html=True,
     )
 
@@ -323,7 +386,7 @@ st.plotly_chart(
     build_history_forecast_chart(series),
     width="stretch",
     config={"displayModeBar": False, "responsive": True},
-    key=f"prediction-history-{selected_municipality}-{selected_type}",
+    key=f"prediction-history-{selection_level}-{selected_municipality}-{selected_type}",
 )
 
 _section(
@@ -335,16 +398,28 @@ st.plotly_chart(
     build_annual_comparison_chart(comparison),
     width="stretch",
     config={"displayModeBar": False, "responsive": True},
-    key=f"prediction-year-comparison-{selected_municipality}-{selected_type}",
+    key=f"prediction-year-comparison-{selection_level}-{selected_municipality}-{selected_type}",
 )
 
 _section(
     "TENDENCIAS PREVISTAS",
-    "Qué tipologías crecen y cuáles descienden",
     (
-        "Ranking por tipología para todos los municipios: Q1–Q3 2025 real frente a Q1–Q3 2026 predicho."
+        "Qué tipologías crecen y cuáles descienden"
+        if selection_level == TYPE_LEVEL
+        else "Qué agrupaciones crecen y cuáles descienden"
+    ),
+    (
+        (
+            "Ranking por tipología para todos los municipios: Q1–Q3 2025 real frente a Q1–Q3 2026 predicho."
+            if selection_level == TYPE_LEVEL
+            else "Ranking por agrupación para todos los municipios: Q1–Q3 2025 real frente a Q1–Q3 2026 predicho."
+        )
         if all_municipalities
-        else f"Ranking por tipología de {selected_municipality}: Q1–Q3 2025 real frente a Q1–Q3 2026 predicho."
+        else (
+            f"Ranking por tipología de {selected_municipality}: Q1–Q3 2025 real frente a Q1–Q3 2026 predicho."
+            if selection_level == TYPE_LEVEL
+            else f"Ranking por agrupación de {selected_municipality}: Q1–Q3 2025 real frente a Q1–Q3 2026 predicho."
+        )
     ),
 )
 comparable_trends = type_trends.dropna(subset=["change_percent"])
@@ -361,15 +436,15 @@ st.plotly_chart(
     build_type_trend_chart(type_trends),
     width="stretch",
     config={"displayModeBar": False, "responsive": True},
-    key=f"prediction-type-trends-{selected_municipality}",
+    key=f"prediction-type-trends-{selection_level}-{selected_municipality}",
 )
 
 _section(
     "MAPA PREDICTIVO",
     (
         "Dónde se concentra la criminalidad total prevista"
-        if all_crime_types
-        else "Dónde se concentra el delito seleccionado"
+        if all_crime_scope
+        else "Dónde se concentra la selección delictiva"
     ),
     (
         f"Conteo previsto por municipio para {selected_type.lower()} en {selected_quarter} 2026. "
@@ -403,7 +478,7 @@ with map_column:
                     "staticPlot": True,
                     "responsive": True,
                 },
-                key=f"prediction-map-{selected_type}-{selected_quarter}-{selected_municipality}",
+                key=f"prediction-map-{selection_level}-{selected_type}-{selected_quarter}-{selected_municipality}",
             )
         else:
             st.warning(
@@ -421,7 +496,7 @@ with ranking_column:
         ),
         width="stretch",
         config={"displayModeBar": False, "responsive": True},
-        key=f"prediction-territorial-ranking-{selected_type}-{selected_quarter}",
+        key=f"prediction-territorial-ranking-{selection_level}-{selected_type}-{selected_quarter}",
     )
 
 with st.expander("Explorar ranking territorial completo"):

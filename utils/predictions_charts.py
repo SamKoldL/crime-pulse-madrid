@@ -311,7 +311,7 @@ def build_prediction_map(
     texts = [
         (
             f"<b>{escape(str(row['municipio']))}</b>"
-            f"<br>Tipo: {escape(crime_type)}"
+            f"<br>Selección: {escape(crime_type)}"
             f"<br>Horizonte: {quarter} 2026"
             f"<br>Conteo previsto: {row['predicted_count']:,.1f}"
             f"<br>Variación vs {quarter} 2025: {variation}"
