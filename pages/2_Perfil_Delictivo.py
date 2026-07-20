@@ -22,7 +22,10 @@ from utils.crime_profile_data import (
     ALL_CRIME_TYPES_LABEL,
     ALL_MUNICIPALITIES_LABEL,
     ALL_YEARS_LABEL,
+    ANNUAL_AVERAGE_VIEW,
+    GROUP_LEVEL,
     IMPACT_VIEW,
+    PERIOD_VARIATION_VIEW,
     PROFILE_DATA_PATH,
     QUARTERLY_VIEW,
     TYPE_LEVEL,
@@ -271,6 +274,7 @@ full_trend_scope, full_cohort_size = build_comparable_scope(
 comparative_type_summary = summarize_crime_types(comparative_scope)
 group_summary = summarize_groups(comparative_scope)
 growth_trends = build_entity_trends(growth_scope, TYPE_LEVEL)
+group_growth_trends = build_entity_trends(growth_scope, GROUP_LEVEL)
 classification_trends = build_entity_trends(full_trend_scope, TYPE_LEVEL)
 relevant_crime_ids, relevance_threshold = build_global_relevance_reference(profile_df)
 kpis = build_profile_kpis(
@@ -394,25 +398,66 @@ st.caption(
     "Los grupos mantienen las categorías exactas de Peso Crimen. Los IDs 5, 5.1, 5.2, 7 y 7.1 permanecen independientes."
 )
 
+trend_metric_state = st.session_state.get(
+    "profile_trend_metric_view",
+    PERIOD_VARIATION_VIEW,
+)
+trend_method_text = (
+    "Tasa media anual (CAGR) sobre una cohorte territorial comparable; no se imputan municipios ausentes."
+    if trend_metric_state == ANNUAL_AVERAGE_VIEW
+    else "Métrica porcentual sobre una cohorte territorial comparable; no se imputan municipios ausentes."
+)
 _section_heading(
     "TENDENCIAS",
     "Qué crece y qué disminuye",
-    "Métrica porcentual sobre una cohorte territorial comparable; no se imputan municipios ausentes.",
+    trend_method_text,
+)
+trend_metric_view = st.radio(
+    "Métrica de tendencias",
+    options=(PERIOD_VARIATION_VIEW, ANNUAL_AVERAGE_VIEW),
+    horizontal=True,
+    key="profile_trend_metric_view",
 )
 if growth_column is None:
     st.info("2023 no dispone de un año anterior dentro de la fuente para construir una variación comparable.")
 else:
-    st.plotly_chart(
-        build_trend_diverging_chart(
-            growth_trends,
-            growth_column,
-            growth_period,
-            selected_crime_id,
-        ),
-        width="stretch",
-        config={"displayModeBar": False, "responsive": True},
-        key=f"profile-trends-{growth_period}-{selected_municipality}-{selected_crime_id}",
+    trend_type_tab, trend_group_tab = st.tabs(
+        ["TIPOS DE DELITO", "COMPOSICIÓN POR GRUPOS"]
     )
+    with trend_type_tab:
+        st.plotly_chart(
+            build_trend_diverging_chart(
+                growth_trends,
+                growth_column,
+                growth_period,
+                selected_crime_id,
+                TYPE_LEVEL,
+                trend_metric_view,
+            ),
+            width="stretch",
+            config={"displayModeBar": False, "responsive": True},
+            key=(
+                f"profile-trends-types-{trend_metric_view}-{growth_period}-"
+                f"{selected_municipality}-{selected_crime_id}"
+            ),
+        )
+    with trend_group_tab:
+        st.plotly_chart(
+            build_trend_diverging_chart(
+                group_growth_trends,
+                growth_column,
+                growth_period,
+                selected_group,
+                GROUP_LEVEL,
+                trend_metric_view,
+            ),
+            width="stretch",
+            config={"displayModeBar": False, "responsive": True},
+            key=(
+                f"profile-trends-groups-{trend_metric_view}-{growth_period}-"
+                f"{selected_municipality}-{selected_group}"
+            ),
+        )
     comparable = relevant_trends(
         growth_trends,
         growth_column,
@@ -712,7 +757,8 @@ with st.expander("METODOLOGÍA Y LÍMITES"):
 - **IDs independientes:** 5, 5.1, 5.2, 7 y 7.1 nunca se colapsan.
 - **Cobertura descriptiva:** {audit.municipalities_by_year[2023]} municipios en 2023, {audit.municipalities_by_year[2024]} en 2024 y {audit.municipalities_by_year[2025]} en 2025. Las ausencias responden al universo elegible y no se imputan.
 - **Comparaciones temporales:** utilizan municipios presentes en todos los años comparados. Para 2023→2025 son {drug_case.comparable_municipality_count} municipios comunes.
-- **Variación descriptiva:** el gráfico muestra para las 16 tipologías el cambio porcentual real del periodo sobre la cohorte territorial comparable, sin sustituir las categorías de baja frecuencia.
+- **Variación descriptiva:** el gráfico muestra el cambio porcentual real del periodo para las 16 tipologías o los 8 grupos existentes, siempre sobre la misma cohorte territorial comparable.
+- **Media anual:** se calcula como CAGR entre el valor inicial y final cuando ambos son positivos; no se divide linealmente la variación acumulada.
 - **Crecimiento relevante:** el titular utiliza el mayor crecimiento sostenido calculado sobre la cohorte territorial comparable, la misma métrica del hallazgo validado. Los descensos relevantes conservan el umbral de volumen acumulado global 2023–2025 ({_format_integer(relevance_threshold)} casos).
 - **Día/noche:** {audit.day_night_difference_rows} filas difieren en ±{audit.day_night_max_abs_difference}; se conserva `Conteo` como denominador sin modificar la fuente.
 - **Interpretación:** todas las lecturas son descriptivas; no implican predicción ni causalidad.

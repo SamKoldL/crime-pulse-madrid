@@ -9,8 +9,11 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 from utils.crime_profile_data import (
+    ANNUAL_AVERAGE_VIEW,
     ANNUAL_VIEW,
+    GROUP_LEVEL,
     IMPACT_VIEW,
+    PERIOD_VARIATION_VIEW,
     QUARTERLY_VIEW,
     TYPE_LEVEL,
     DrugCase,
@@ -230,75 +233,114 @@ def build_trend_diverging_chart(
     trends: pd.DataFrame,
     change_column: str,
     period_label: str,
-    selected_crime_id: str | None = None,
+    selected_entity: str | None = None,
+    level: str = TYPE_LEVEL,
+    metric_view: str = PERIOD_VARIATION_VIEW,
 ) -> go.Figure:
-    """Compara las variaciones porcentuales descriptivas del periodo."""
+    """Compara variación acumulada o CAGR sobre la cohorte ya preparada."""
     period_columns = {
-        "cumulative_change": ("count_2023", "count_2025"),
-        "change_23_24": ("count_2023", "count_2024"),
-        "change_24_25": ("count_2024", "count_2025"),
+        "cumulative_change": ("count_2023", "count_2025", 2),
+        "change_23_24": ("count_2023", "count_2024", 1),
+        "change_24_25": ("count_2024", "count_2025", 1),
     }
-    start_column, end_column = period_columns[change_column]
-    plotted = trends.dropna(subset=[change_column]).sort_values(change_column).copy()
-    plotted["display_label"] = plotted.apply(
-        lambda row: _wrapped_label(f"{row['crime_id']} · {row['crime_type']}", 42),
-        axis=1,
-    )
-    colors = ["#42debc" if value >= 0 else RED for value in plotted[change_column]]
+    start_column, end_column, year_span = period_columns[change_column]
+    plotted = trends.dropna(subset=[change_column]).copy()
+    if metric_view == ANNUAL_AVERAGE_VIEW:
+        valid = plotted[start_column].gt(0) & plotted[end_column].gt(0)
+        plotted = plotted.loc[valid].copy()
+        plotted["display_change"] = (
+            (plotted[end_column].div(plotted[start_column])).pow(1 / year_span) - 1
+        ).mul(100)
+        value_suffix = "% anual"
+        hover_metric = "Variación media anual"
+        axis_title = f"VARIACIÓN MEDIA ANUAL {period_label} (%)"
+    else:
+        plotted["display_change"] = plotted[change_column]
+        value_suffix = "%"
+        hover_metric = "Variación descriptiva"
+        axis_title = f"VARIACIÓN {period_label} (%)"
+
+    if level == GROUP_LEVEL:
+        entity_column = "group"
+        plotted["display_label"] = plotted["group"].map(
+            lambda value: _wrapped_label(value, 34)
+        )
+        left_margin = 260
+    else:
+        entity_column = "crime_id"
+        plotted["display_label"] = plotted.apply(
+            lambda row: _wrapped_label(f"{row['crime_id']} · {row['crime_type']}", 42),
+            axis=1,
+        )
+        left_margin = 330
+
+    plotted = plotted.sort_values("display_change")
+    colors = ["#42debc" if value >= 0 else RED for value in plotted["display_change"]]
     border_colors = [
         "#f4fdff"
-        if selected_crime_id and str(crime_id) == str(selected_crime_id)
-        else AMBER if str(crime_id) == "10" else "rgba(110,222,249,.32)"
-        for crime_id in plotted["crime_id"]
+        if selected_entity and str(entity) == str(selected_entity)
+        else AMBER
+        if (level == TYPE_LEVEL and str(entity) == "10")
+        or (level == GROUP_LEVEL and str(entity) == "Drogas")
+        else "rgba(110,222,249,.32)"
+        for entity in plotted[entity_column]
     ]
     border_widths = [
         2.5
-        if (selected_crime_id and str(crime_id) == str(selected_crime_id))
-        or str(crime_id) == "10"
+        if (selected_entity and str(entity) == str(selected_entity))
+        or (level == TYPE_LEVEL and str(entity) == "10")
+        or (level == GROUP_LEVEL and str(entity) == "Drogas")
         else 0.7
-        for crime_id in plotted["crime_id"]
+        for entity in plotted[entity_column]
     ]
+    plotted["entity_name"] = (
+        plotted["group"] if level == GROUP_LEVEL else plotted["crime_type"]
+    )
+    plotted["entity_id"] = (
+        plotted["group"] if level == GROUP_LEVEL else plotted["crime_id"]
+    )
+    id_line = "" if level == GROUP_LEVEL else "<br>ID: %{customdata[0]}"
     figure = go.Figure(
         go.Bar(
-            x=plotted[change_column],
+            x=plotted["display_change"],
             y=plotted["display_label"],
             orientation="h",
             marker={
                 "color": colors,
                 "line": {"color": border_colors, "width": border_widths},
             },
-            text=[f"{value:+.1f}%" for value in plotted[change_column]],
+            text=[f"{value:+.1f}{value_suffix}" for value in plotted["display_change"]],
             textposition="outside",
             textfont={"color": TEXT, "size": 10},
             cliponaxis=False,
             customdata=plotted[
                 [
-                    "crime_id",
-                    "crime_type",
+                    "entity_id",
+                    "entity_name",
                     start_column,
                     end_column,
-                    change_column,
+                    "display_change",
                     "classification",
                 ]
             ],
             hovertemplate=(
-                "<b>%{customdata[1]}</b><br>ID: %{customdata[0]}"
+                f"<b>%{{customdata[1]}}</b>{id_line}"
                 f"<br>Periodo: {period_label}"
                 "<br>Valor inicial: %{customdata[2]:,.0f}"
                 "<br>Valor final: %{customdata[3]:,.0f}"
-                "<br>Variación descriptiva: %{customdata[4]:+.2f}%"
+                f"<br>{hover_metric}: %{{customdata[4]:+.2f}}%"
                 "<br>Clasificación: %{customdata[5]}<extra></extra>"
             ),
         )
     )
     figure.add_vline(x=0, line_color="rgba(215,238,247,.55)", line_width=1)
-    layout = _base_layout(max(510, 30 * len(plotted) + 105), left_margin=330)
+    layout = _base_layout(max(430, 30 * len(plotted) + 105), left_margin=left_margin)
     layout.update(
         showlegend=False,
         bargap=.32,
         xaxis={
             "title": {
-                "text": f"VARIACIÓN {period_label}",
+                "text": axis_title,
                 "font": {"color": MUTED, "size": 10},
             },
             "ticksuffix": "%",
