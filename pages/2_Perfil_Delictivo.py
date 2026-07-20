@@ -131,7 +131,7 @@ def _comparison_context(selected_year: int | None) -> tuple[tuple[int, ...], str
 
 st.set_page_config(
     page_title="Perfil Delictivo | Crime Pulse Madrid",
-    page_icon="◫",
+    page_icon=str(PAGE_ROOT / "assets" / "icono.png"),
     layout="wide",
     initial_sidebar_state="collapsed",
 )

@@ -54,7 +54,7 @@ def _on_map_selection() -> None:
 
 st.set_page_config(
     page_title="Mapa Criminal | Crime Pulse Madrid",
-    page_icon="⌖",
+    page_icon=str(PAGE_ROOT / "assets" / "icono.png"),
     layout="wide",
     initial_sidebar_state="expanded",
 )

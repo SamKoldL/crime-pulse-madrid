@@ -138,7 +138,7 @@ def _trend_card(label: str, row: pd.Series) -> str:
 
 st.set_page_config(
     page_title="Predicciones 2026 | Crime Pulse Madrid",
-    page_icon="◈",
+    page_icon=str(PAGE_ROOT / "assets" / "icono.png"),
     layout="wide",
     initial_sidebar_state="collapsed",
 )

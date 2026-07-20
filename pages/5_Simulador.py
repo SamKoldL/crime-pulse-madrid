@@ -258,7 +258,7 @@ def _comparison_frame(current: pd.DataFrame, scenario: pd.DataFrame, optimized: 
 
 st.set_page_config(
     page_title="Simulador | Crime Pulse Madrid",
-    page_icon="◇",
+    page_icon=str(PAGE_ROOT / "assets" / "icono.png"),
     layout="wide",
     initial_sidebar_state="collapsed",
 )

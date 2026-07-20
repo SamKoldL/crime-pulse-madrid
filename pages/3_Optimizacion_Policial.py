@@ -143,7 +143,7 @@ def _reset_filters() -> None:
 
 st.set_page_config(
     page_title="Optimización Policial | Crime Pulse Madrid",
-    page_icon="◇",
+    page_icon=str(PAGE_ROOT / "assets" / "icono.png"),
     layout="wide",
     initial_sidebar_state="collapsed",
 )
