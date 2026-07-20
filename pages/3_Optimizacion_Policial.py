@@ -358,11 +358,9 @@ with transfer_column:
     )
 
 transfer_peak = frame.loc[frame["transfer"].abs().idxmax()]
-comparison_peak = comparison.loc[comparison["transfer_difference"].abs().idxmax()]
 insights = (
     f'{pressure_peak["municipality"]} presenta la principal desalineación relativa del escenario ({_signed_pp(pressure_peak["gap"])}).',
     f'{transfer_peak["municipality"]} registra el mayor movimiento teórico en valor absoluto ({_signed_integer(transfer_peak["transfer"])} agentes).',
-    f'La mayor diferencia entre volumen y gravedad corresponde a {comparison_peak["municipality"]} ({_signed_integer(comparison_peak["transfer_difference"])} agentes).',
 )
 insight_html = "".join(
     f'<article><b>{index:02d}</b><p>{escape(text)}</p></article>'
