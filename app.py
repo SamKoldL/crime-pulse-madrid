@@ -8,7 +8,6 @@ from utils.charts import (
     build_change_drivers_chart,
     build_home_mini_map,
     build_home_ranking_chart,
-    build_quarterly_evolution_chart,
 )
 from utils.home_data import (
     ALL_HOME_CRIME_TYPES,
@@ -37,7 +36,44 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 inject_global_styles()
+
 render_top_navigation("home")
+
+# Ajustes visuales específicos de la Home para la limpieza final.
+st.markdown(
+    """
+    <style>
+    .live-status {
+        font-size: 0.82rem !important;
+    }
+    .live-status span {
+        width: 9px !important;
+        height: 9px !important;
+    }
+    .home-clean-heading {
+        margin: 1.15rem 0 1.05rem 0;
+        padding-bottom: 0.85rem;
+        border-bottom: 1px solid rgba(90, 205, 240, 0.16);
+        color: #43d7f4;
+        font-size: 0.92rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+    }
+    [data-testid="stCaptionContainer"] {
+        font-size: 0.9rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
+def _render_home_clean_heading(title: str) -> None:
+    st.markdown(
+        f'<div class="home-clean-heading">{title}</div>',
+        unsafe_allow_html=True,
+    )
 
 try:
     home_model = load_home_model()
@@ -119,20 +155,10 @@ st.markdown(
     f'{snapshot.municipality} · {snapshot.crime_type}</div>',
     unsafe_allow_html=True,
 )
-render_section_heading(
-    eyebrow="PANORAMA",
-    title="PULSO GENERAL",
-    description="Situación agregada, comparación interanual y posición relativa según el contexto seleccionado.",
-    home_compact=True,
-)
+_render_home_clean_heading("PULSO GENERAL")
 render_home_kpis(snapshot)
 
-render_section_heading(
-    eyebrow="TERRITORIO",
-    title="¿DÓNDE SE CONCENTRA?",
-    description="Una lectura ejecutiva de los principales focos; el análisis territorial completo permanece en Mapa Criminal.",
-    home_compact=True,
-)
+_render_home_clean_heading("¿DÓNDE SE CONCENTRA?")
 territory_left, territory_right = st.columns([1, 1.22], gap="large")
 with territory_left:
     if selected_municipality == ALL_HOME_MUNICIPALITIES:
@@ -187,29 +213,7 @@ with territory_right:
             else "La cartografía no está disponible; el ranking permanece operativo."
         )
 
-render_section_heading(
-    eyebrow="TENDENCIA",
-    title="¿QUÉ ESTÁ CAMBIANDO?",
-    description="Evolución trimestral observada entre 2023 y 2025. No incluye predicciones ni interpola periodos ausentes.",
-    home_compact=True,
-)
-st.plotly_chart(
-    build_quarterly_evolution_chart(snapshot.quarterly, selected_year),
-    width="stretch",
-    config={"displayModeBar": False, "responsive": True},
-    key=f"home-quarterly-{selected_municipality}-{selected_crime_type}",
-)
-if snapshot.quarterly["value"].isna().any():
-    st.caption(
-        "Los huecos indican ausencia de un universo criminal comparable en ese periodo; no se sustituyen por ceros ni se interpolan."
-    )
-
-render_section_heading(
-    eyebrow="SEÑALES",
-    title="¿QUÉ EXPLICA EL CAMBIO?",
-    description="Contribuciones absolutas principales frente al año anterior comparable, sin replicar el análisis completo de Perfil Delictivo.",
-    home_compact=True,
-)
+_render_home_clean_heading("¿QUÉ EXPLICA EL CAMBIO?")
 if selected_crime_type == ALL_HOME_CRIME_TYPES:
     st.plotly_chart(
         build_change_drivers_chart(snapshot.drivers),
