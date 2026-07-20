@@ -536,7 +536,7 @@ if kpis.growth_value is None:
     trend_insight = "El contexto activo no dispone de un periodo anterior comparable para calcular variación."
 elif selected_crime_id is None:
     trend_insight = (
-        f"{kpis.growth_type} muestra el mayor crecimiento comparable del periodo "
+        f"ID {kpis.growth_id} · {kpis.growth_type} muestra el mayor crecimiento comparable del periodo "
         f"({_format_change(kpis.growth_value)})."
     )
 else:
