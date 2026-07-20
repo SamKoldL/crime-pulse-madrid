@@ -247,22 +247,6 @@ primary_kpis = (
 for column, content in zip(primary_columns, primary_kpis):
     _render_kpi(column, *content)
 
-relative_columns = st.columns(2, gap="small")
-_render_kpi(
-    relative_columns[0],
-    "pressure_peak",
-    "Mayor presión relativa frente a dotación proporcional",
-    str(pressure_peak["municipality"]),
-    f'Brecha de {_signed_pp(pressure_peak["gap"])} · lectura proporcional, no operativa',
-)
-_render_kpi(
-    relative_columns[1],
-    "police_peak",
-    "Mayor dotación proporcional frente a presión",
-    str(police_peak["municipality"]),
-    f'Brecha de {_signed_pp(police_peak["gap"])} · lectura proporcional, no operativa',
-)
-
 if selected_municipality is not None:
     focus = frame.loc[frame["municipality"].eq(selected_municipality)].iloc[0]
     st.markdown(
