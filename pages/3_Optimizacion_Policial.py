@@ -11,7 +11,6 @@ import streamlit as st
 from utils.navigation import render_top_navigation
 from utils.police_optimization_charts import (
     build_alignment_scatter,
-    build_comparison_scatter,
     build_gap_ranking_chart,
     build_transfer_map,
     build_transfer_ranking_chart,
@@ -278,18 +277,6 @@ if selected_municipality is not None:
         unsafe_allow_html=True,
     )
 
-madrid = frame.loc[frame["municipality"].eq("Madrid")].iloc[0]
-st.markdown(
-    '<section class="madrid-case"><div><span>CASO MADRID · INCLUIDO EN TODOS LOS CÁLCULOS</span>'
-    '<h2>Madrid como referencia estructural</h2><p>Se presenta por separado para no comprimir la lectura del resto.</p></div>'
-    f'<article><b>ACTUALES</b><strong>{_integer(madrid["current_police"])}</strong></article>'
-    f'<article><b>PROPUESTOS</b><strong>{_integer(madrid["proposed_police"])}</strong></article>'
-    f'<article><b>TRANSFERENCIA</b><strong>{_signed_integer(madrid["transfer"])}</strong></article>'
-    f'<article><b>CUOTA PRESIÓN</b><strong>{_decimal(madrid["pressure_share"] * 100, 1)}%</strong></article>'
-    f'<article><b>CUOTA POLICIAL</b><strong>{_decimal(madrid["police_share"] * 100, 1)}%</strong></article></section>',
-    unsafe_allow_html=True,
-)
-
 _section(
     "ALINEACIÓN ENTRE PRESIÓN Y RECURSOS",
     "Dos cuotas, una referencia común",
@@ -368,67 +355,6 @@ with transfer_column:
         width="stretch",
         config={"displayModeBar": False, "responsive": True},
         key=f"optimization-transfer-ranking-{scenario}-{include_madrid}-{selected_municipality}",
-    )
-
-_section(
-    "COMPARACIÓN VOLUMEN VS GRAVEDAD",
-    "Cuánto cambia la propuesta",
-    "La diagonal indica la misma transferencia bajo ambos criterios; la distancia muestra cuánto modifica la gravedad la estimación territorial.",
-)
-comparison = model.comparison.copy()
-same_count = int(comparison["same_transfer"].sum())
-significant_count = int(comparison["significant_change"].sum())
-switch_count = int(comparison["sign_switch"].sum())
-comparison_columns = st.columns(3, gap="small")
-comparison_columns[0].metric("Transferencia idéntica", f"{same_count} municipios")
-comparison_columns[1].metric("Cambio ≥ 5 agentes", f"{significant_count} municipios")
-comparison_columns[2].metric("Cambio de signo", f"{switch_count} municipios")
-st.plotly_chart(
-    build_comparison_scatter(
-        comparison,
-        include_madrid,
-        selected_municipality,
-    ),
-    width="stretch",
-    config={"displayModeBar": False, "responsive": True},
-    key=f"optimization-comparison-{include_madrid}-{selected_municipality}",
-)
-
-with st.expander("Ver municipios con mayores diferencias entre escenarios"):
-    comparison_table = comparison.copy()
-    comparison_table["Cambio de signo"] = comparison_table["sign_switch"].map(
-        {True: "Sí", False: "No"}
-    )
-    comparison_table["Cambio significativo"] = comparison_table[
-        "significant_change"
-    ].map({True: "Sí", False: "No"})
-    comparison_table = comparison_table[
-        [
-            "municipality",
-            "volume_transfer",
-            "weighted_transfer",
-            "transfer_difference",
-            "Cambio de signo",
-            "Cambio significativo",
-        ]
-    ].rename(
-        columns={
-            "municipality": "Municipio",
-            "volume_transfer": "Transferencia volumen",
-            "weighted_transfer": "Transferencia gravedad",
-            "transfer_difference": "Diferencia",
-        }
-    )
-    st.dataframe(
-        comparison_table,
-        hide_index=True,
-        width="stretch",
-        key="optimization-comparison-table",
-        column_config={
-            "Transferencia volumen": st.column_config.NumberColumn(format="%+d"),
-            "Transferencia gravedad": st.column_config.NumberColumn(format="%+d"),
-            "Diferencia": st.column_config.NumberColumn(format="%+d"),
-        },
     )
 
 transfer_peak = frame.loc[frame["transfer"].abs().idxmax()]
