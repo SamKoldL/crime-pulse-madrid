@@ -263,3 +263,17 @@ div[class*="st-key-drug_metric_"] [data-testid="stMetricValue"] { color: #f3fbff
 @media (max-width: 480px) {
     .st-key-profile_kpi_grid [data-testid="stHorizontalBlock"] { grid-template-columns: 1fr; }
 }
+
+
+/* Limpieza final: títulos únicos de sección, coherentes con la Home */
+.profile-clean-section-heading {
+    margin: 3.15rem 0 1.15rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+}
+.profile-clean-section-heading h2 {
+    margin: 0;
+    color: var(--cyan);
+    font: 700 clamp(.82rem, 1.15vw, 1rem)/1.2 'Space Grotesk', sans-serif;
+    letter-spacing: .16em;
+}

@@ -10,12 +10,10 @@ import streamlit as st
 
 from utils.crime_profile_charts import (
     build_crime_ranking_chart,
-    build_drug_quarterly_chart,
     build_frequency_gravity_matrix,
     build_group_composition_chart,
     build_night_profile_chart,
     build_territorial_ranking_chart,
-    build_time_series_chart,
     build_trend_diverging_chart,
 )
 from utils.crime_profile_data import (
@@ -27,7 +25,6 @@ from utils.crime_profile_data import (
     IMPACT_VIEW,
     PERIOD_VARIATION_VIEW,
     PROFILE_DATA_PATH,
-    QUARTERLY_VIEW,
     TYPE_LEVEL,
     VOLUME_VIEW,
     YEARS,
@@ -36,11 +33,8 @@ from utils.crime_profile_data import (
     build_entity_trends,
     build_global_relevance_reference,
     build_profile_kpis,
-    build_time_series,
     filter_profile_data,
     load_profile_workbook,
-    relevant_trends,
-    strongest_comparable_growth,
     summarize_crime_types,
     summarize_groups,
     summarize_territory,
@@ -85,6 +79,14 @@ def _section_heading(eyebrow: str, title: str, description: str) -> None:
     st.markdown(
         f'<header class="profile-section-heading"><div><span>{escape(eyebrow)}</span>'
         f'<h2>{escape(title)}</h2></div><p>{escape(description)}</p></header>',
+        unsafe_allow_html=True,
+    )
+
+
+def _clean_section_heading(title: str) -> None:
+    """Título único de sección para la versión ejecutiva y depurada."""
+    st.markdown(
+        f'<header class="profile-clean-section-heading"><h2>{escape(title)}</h2></header>',
         unsafe_allow_html=True,
     )
 
@@ -266,16 +268,10 @@ growth_scope, growth_cohort_size = build_comparable_scope(
     selected_municipality,
     comparison_years,
 )
-full_trend_scope, full_cohort_size = build_comparable_scope(
-    profile_df,
-    selected_municipality,
-    YEARS,
-)
 comparative_type_summary = summarize_crime_types(comparative_scope)
 group_summary = summarize_groups(comparative_scope)
 growth_trends = build_entity_trends(growth_scope, TYPE_LEVEL)
 group_growth_trends = build_entity_trends(growth_scope, GROUP_LEVEL)
-classification_trends = build_entity_trends(full_trend_scope, TYPE_LEVEL)
 relevant_crime_ids, relevance_threshold = build_global_relevance_reference(profile_df)
 kpis = build_profile_kpis(
     active_scope,
@@ -364,18 +360,21 @@ with st.container(key="profile_kpi_grid"):
                 crime_id=entity_id,
             )
 
-_section_heading(
-    "RADIOGRAFÍA DELICTIVA",
-    "Qué delitos predominan",
-    "Volumen e impacto conservan las 16 tipologías como contexto; el filtro global destaca la selección activa.",
-)
+_clean_section_heading("Qué delitos predominan")
 ranking_view = st.radio(
     "Métrica de radiografía",
     options=(VOLUME_VIEW, IMPACT_VIEW),
     horizontal=True,
     key="profile_ranking_view",
 )
-ranking_tab, composition_tab = st.tabs(["TIPOS DE DELITO", "COMPOSICIÓN POR GRUPOS"])
+composition_tab, ranking_tab = st.tabs(["COMPOSICIÓN POR GRUPOS", "TIPOS DE DELITO"])
+with composition_tab:
+    st.plotly_chart(
+        build_group_composition_chart(group_summary, ranking_view, selected_group),
+        width="stretch",
+        config={"displayModeBar": False, "responsive": True},
+        key=f"profile-groups-{ranking_view}-{year_label}-{selected_municipality}-{selected_group}",
+    )
 with ranking_tab:
     st.plotly_chart(
         build_crime_ranking_chart(
@@ -387,31 +386,8 @@ with ranking_tab:
         config={"displayModeBar": False, "responsive": True},
         key=f"profile-ranking-{ranking_view}-{year_label}-{selected_municipality}-{selected_crime_id}",
     )
-with composition_tab:
-    st.plotly_chart(
-        build_group_composition_chart(group_summary, ranking_view, selected_group),
-        width="stretch",
-        config={"displayModeBar": False, "responsive": True},
-        key=f"profile-groups-{ranking_view}-{year_label}-{selected_municipality}-{selected_group}",
-    )
-st.caption(
-    "Los grupos mantienen las categorías exactas de Peso Crimen. Los IDs 5, 5.1, 5.2, 7 y 7.1 permanecen independientes."
-)
 
-trend_metric_state = st.session_state.get(
-    "profile_trend_metric_view",
-    PERIOD_VARIATION_VIEW,
-)
-trend_method_text = (
-    "Tasa media anual (CAGR) sobre una cohorte territorial comparable; no se imputan municipios ausentes."
-    if trend_metric_state == ANNUAL_AVERAGE_VIEW
-    else "Métrica porcentual sobre una cohorte territorial comparable; no se imputan municipios ausentes."
-)
-_section_heading(
-    "TENDENCIAS",
-    "Qué crece y qué disminuye",
-    trend_method_text,
-)
+_clean_section_heading("Qué crece y qué disminuye")
 trend_metric_view = st.radio(
     "Métrica de tendencias",
     options=(PERIOD_VARIATION_VIEW, ANNUAL_AVERAGE_VIEW),
@@ -458,97 +434,7 @@ else:
                 f"{selected_municipality}-{selected_group}"
             ),
         )
-    comparable = relevant_trends(
-        growth_trends,
-        growth_column,
-        relevant_crime_ids,
-    )
-    strongest_rise = strongest_comparable_growth(
-        growth_trends,
-        growth_column,
-        selected_crime_id,
-    )
-    strongest_fall = comparable.sort_values(growth_column).iloc[0]
-    st.markdown(
-        f'<div class="profile-trend-callouts"><article class="rise"><span>MAYOR CRECIMIENTO RELEVANTE · {escape(growth_period)}</span>'
-        f'<h3>ID {escape(str(strongest_rise["crime_id"]))} · {escape(str(strongest_rise["crime_type"]))}</h3>'
-        f'<strong>{escape(_format_change(strongest_rise[growth_column]))}</strong></article>'
-        f'<article class="fall"><span>MAYOR DESCENSO RELEVANTE · {escape(growth_period)}</span>'
-        f'<h3>ID {escape(str(strongest_fall["crime_id"]))} · {escape(str(strongest_fall["crime_type"]))}</h3>'
-        f'<strong>{escape(_format_change(strongest_fall[growth_column]))}</strong></article></div>',
-        unsafe_allow_html=True,
-    )
-
-classification_order = (
-    "Crecimiento sostenido",
-    "Descenso sostenido",
-    "Tendencia estable",
-    "Comportamiento irregular",
-    "Cobertura parcial",
-)
-classification_html = "".join(
-    '<span><b>'
-    f'{int(classification_trends["classification"].eq(classification).sum())}'
-    f'</b>{escape(classification.upper())}</span>'
-    for classification in classification_order
-)
-st.markdown(
-    f'<div class="profile-trend-summary">{classification_html}</div>',
-    unsafe_allow_html=True,
-)
-
-if drug_case.strongest_sustained_growth and drug_case.accelerating:
-    st.markdown(
-        '<aside class="profile-trend-alert"><span>HALLAZGO VALIDADO · COHORTE COMPARABLE</span>'
-        f'<h3>{escape(drug_case.label)}</h3><p>Presenta la dinámica creciente más destacada del periodo '
-        f'({_format_change(drug_case.comparable_cumulative_change)} en '
-        f'{drug_case.comparable_municipality_count} municipios comunes). La lectura es descriptiva y no causal.</p></aside>',
-        unsafe_allow_html=True,
-    )
-
-if selected_crime_id is None:
-    if st.session_state.get("profile_evolution_type") not in type_labels:
-        st.session_state["profile_evolution_type"] = drug_type_label
-    evolution_type_label = st.selectbox(
-        "Tipología para evolución trimestral",
-        options=type_labels,
-        key="profile_evolution_type",
-    )
-else:
-    evolution_type_label = selected_type_label
-    st.caption(f"Evolución trimestral del filtro activo: {evolution_type_label}")
-
-evolution_series = build_time_series(
-    full_trend_scope,
-    TYPE_LEVEL,
-    QUARTERLY_VIEW,
-    [evolution_type_label],
-)
-if evolution_series.empty:
-    st.info("No existe una serie trimestral comparable completa para la tipología seleccionada.")
-else:
-    st.plotly_chart(
-        build_time_series_chart(evolution_series, TYPE_LEVEL, QUARTERLY_VIEW),
-        width="stretch",
-        config={"displayModeBar": False, "responsive": True},
-        key=f"profile-quarterly-{evolution_type_label}-{selected_municipality}",
-    )
-    if full_cohort_size:
-        st.caption(
-            f"Serie observada 2023–2025 · {full_cohort_size} municipio"
-            f"{'s' if full_cohort_size != 1 else ''} común"
-            f"{'es' if full_cohort_size != 1 else ''} · sin predicciones."
-        )
-    else:
-        st.caption(
-            "Serie observada con cobertura territorial parcial; los periodos ausentes no se interpolan."
-        )
-
-_section_heading(
-    "TEMPORALIDAD E IMPACTO",
-    "Cuándo ocurre y cuánto pesa",
-    "Todas las tipologías permanecen visibles; el delito activo se resalta para conservar su posición relativa.",
-)
+_clean_section_heading("Cuándo ocurre y cuánto pesa")
 night_tab, matrix_tab = st.tabs(["DÍA VS NOCHE", "MATRIZ FRECUENCIA × GRAVEDAD"])
 with night_tab:
     st.plotly_chart(
@@ -572,11 +458,7 @@ with matrix_tab:
         "Cuadrantes definidos con las medianas del contexto activo. Tamaño = conteo ponderado; los pesos originales no se modifican."
     )
 
-_section_heading(
-    "GEOGRAFÍA DEL DELITO",
-    "Cómo cambia el patrón entre municipios",
-    "El conteo identifica volumen; el peso interno muestra qué proporción de la criminalidad municipal representa la tipología.",
-)
+_clean_section_heading("Cómo cambia el patrón entre municipios")
 if selected_crime_id is None:
     if st.session_state.get("profile_territorial_type") not in type_labels:
         st.session_state["profile_territorial_type"] = drug_type_label
@@ -589,7 +471,6 @@ if selected_crime_id is None:
 else:
     territorial_type_label = selected_type_label
     territorial_crime_id = selected_crime_id
-    st.caption(f"Geografía vinculada al filtro global: {territorial_type_label}")
 
 territorial_control_columns = st.columns(2, gap="large")
 with territorial_control_columns[0]:
@@ -635,62 +516,6 @@ st.plotly_chart(
         f"{territorial_scope_option}-{metric_column}-{selected_municipality}"
     ),
 )
-st.caption(
-    "Peso dentro del municipio = casos de la tipología / total de delitos observados en ese municipio × 100. No es una tasa por población."
-)
-
-_section_heading(
-    "CASO DESTACADO",
-    "Drogas: presión emergente",
-    "Hallazgo editorial del periodo completo; se conserva aunque el filtro activo explore otra tipología.",
-)
-annual_drugs = drug_case.annual.set_index("year")["count"]
-comparable_annual_drugs = drug_case.comparable_annual.set_index("year")["count"]
-drug_metric_columns = st.columns(4, gap="small")
-drug_metrics = (
-    ("2023", _format_integer(annual_drugs.loc[2023]), "Universo observado"),
-    (
-        "2024",
-        _format_integer(annual_drugs.loc[2024]),
-        f"{_format_change(drug_case.change_23_24)} interanual",
-    ),
-    (
-        "2025",
-        _format_integer(annual_drugs.loc[2025]),
-        f"{_format_change(drug_case.change_24_25)} interanual",
-    ),
-    (
-        "Acumulado",
-        _format_change(drug_case.cumulative_change),
-        "Universo observado 2023→2025",
-    ),
-)
-for position, (column, metric) in enumerate(zip(drug_metric_columns, drug_metrics)):
-    with column:
-        with st.container(border=True, key=f"drug_metric_{position}"):
-            st.metric(metric[0], metric[1])
-            st.caption(metric[2])
-
-st.markdown(
-    '<p class="profile-case-comparable"><strong>Comprobación comparable:</strong> '
-    f'{_format_integer(comparable_annual_drugs.loc[2023])} → '
-    f'{_format_integer(comparable_annual_drugs.loc[2025])} casos '
-    f'({_format_change(drug_case.comparable_cumulative_change)}) en '
-    f'{drug_case.comparable_municipality_count} municipios presentes durante los tres años.</p>',
-    unsafe_allow_html=True,
-)
-st.plotly_chart(
-    build_drug_quarterly_chart(drug_case),
-    width="stretch",
-    config={"displayModeBar": False, "responsive": True},
-    key="profile-drugs-quarterly",
-)
-st.markdown(
-    '<p class="profile-case-narrative">Tráfico de drogas presenta la dinámica de crecimiento más destacada del periodo analizado. '
-    'La observación describe evolución y no establece causalidad.</p>',
-    unsafe_allow_html=True,
-)
-
 night_candidates = comparative_type_summary.loc[
     comparative_type_summary["count"].gt(0)
     & comparative_type_summary["night_share"].notna()
