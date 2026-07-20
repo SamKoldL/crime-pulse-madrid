@@ -226,8 +226,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 st.markdown(
-    f'<aside class="scenario-definition"><span>{escape(scenario)}</span>'
-    f'<p>{escape(scenario_copy)} Las ausencias no elegibles no se imputan como cero.</p></aside>',
+    '<div class="optimization-clean-title">RESULTADOS DEL ANÁLISIS</div>',
     unsafe_allow_html=True,
 )
 
@@ -261,10 +260,9 @@ if selected_municipality is not None:
         unsafe_allow_html=True,
     )
 
-_section(
-    "ALINEACIÓN ENTRE PRESIÓN Y RECURSOS",
-    "Dos cuotas, una referencia común",
-    "La diagonal representa alineación proporcional y el equilibrio conserva una tolerancia de ±0,10 puntos porcentuales.",
+st.markdown(
+    '<div class="optimization-clean-title optimization-clean-title-spaced">BASE DEL ANÁLISIS</div>',
+    unsafe_allow_html=True,
 )
 alignment_column, gap_column = st.columns([1.05, 1], gap="large")
 with alignment_column:
@@ -296,10 +294,9 @@ with st.expander("Consultar los 37 municipios"):
         f"optimization-full-ranking-{scenario}",
     )
 
-_section(
-    "REDISTRIBUCIÓN TERRITORIAL",
-    "Dónde se producirían los cambios",
-    "El mapa mantiene un encuadre fijo; el ranking cuantifica los principales movimientos teóricos.",
+st.markdown(
+    '<div class="optimization-clean-title optimization-clean-title-spaced">REDISTRIBUCIÓN TERRITORIAL</div>',
+    unsafe_allow_html=True,
 )
 try:
     map_source = prepare_optimization_map(frame)
@@ -330,16 +327,17 @@ with map_column:
                 else "La cartografía no está disponible; el ranking permanece operativo."
             )
 with transfer_column:
-    st.plotly_chart(
-        build_transfer_ranking_chart(
-            frame,
-            include_madrid=include_madrid,
-            selected_municipality=selected_municipality,
-        ),
-        width="stretch",
-        config={"displayModeBar": False, "responsive": True},
-        key=f"optimization-transfer-ranking-{scenario}-{include_madrid}-{selected_municipality}",
-    )
+    with st.container(key="optimization_transfer_shell"):
+        st.plotly_chart(
+            build_transfer_ranking_chart(
+                frame,
+                include_madrid=include_madrid,
+                selected_municipality=selected_municipality,
+            ),
+            width="stretch",
+            config={"displayModeBar": False, "responsive": True},
+            key=f"optimization-transfer-ranking-{scenario}-{include_madrid}-{selected_municipality}",
+        )
 
 transfer_peak = frame.loc[frame["transfer"].abs().idxmax()]
 insights = (

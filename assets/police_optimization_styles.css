@@ -397,3 +397,53 @@
 .st-key-optimization_map_shell .maplibregl-ctrl-attrib-button {
     display: none !important;
 }
+
+
+/* Limpieza visual final de Optimización */
+.optimization-clean-title {
+    margin: 1.45rem 0 1rem;
+    color: var(--cyan);
+    font: 700 clamp(.95rem, 1.25vw, 1.15rem)/1.2 'Space Grotesk', sans-serif;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.optimization-clean-title-spaced {
+    margin-top: 3.25rem;
+}
+
+.optimization-source {
+    font-size: 10px;
+}
+
+/* Mapa y ranking de redistribución con la misma altura */
+.st-key-optimization_map_shell,
+.st-key-optimization_transfer_shell {
+    height: 650px;
+    min-height: 650px;
+    overflow: hidden !important;
+    border: 1px solid rgba(79, 178, 218, .17);
+    border-radius: 4px 4px 16px 4px;
+    background: rgba(3, 13, 22, .72);
+}
+
+.st-key-optimization_map_shell [data-testid="stPlotlyChart"],
+.st-key-optimization_transfer_shell [data-testid="stPlotlyChart"],
+.st-key-optimization_map_shell .js-plotly-plot,
+.st-key-optimization_transfer_shell .js-plotly-plot,
+.st-key-optimization_map_shell .plot-container,
+.st-key-optimization_transfer_shell .plot-container,
+.st-key-optimization_map_shell .svg-container,
+.st-key-optimization_transfer_shell .svg-container {
+    width: 100% !important;
+    height: 650px !important;
+    min-height: 650px !important;
+}
+
+@media (max-width: 760px) {
+    .st-key-optimization_map_shell,
+    .st-key-optimization_transfer_shell {
+        height: 480px;
+        min-height: 480px;
+    }
+}
