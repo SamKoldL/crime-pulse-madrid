@@ -261,7 +261,7 @@ def build_transfer_ranking_chart(
             ),
         )
     )
-    layout = _base_layout(440, left_margin=175)
+    layout = _base_layout(620, left_margin=175)
     layout.update(
         showlegend=False,
         xaxis={
