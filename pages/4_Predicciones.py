@@ -78,6 +78,13 @@ def _section(eyebrow: str, title: str, copy: str) -> None:
     )
 
 
+def _clean_section(title: str) -> None:
+    st.markdown(
+        f'<div class="prediction-clean-title">{escape(title)}</div>',
+        unsafe_allow_html=True,
+    )
+
+
 def _render_kpi(column, key: str, label: str, value: str, detail: str) -> None:
     with column:
         with st.container(border=True, key=f"prediction_kpi_{key}"):
@@ -151,6 +158,60 @@ st.set_page_config(
 inject_global_styles()
 _inject_styles()
 render_top_navigation("predictions")
+
+st.markdown(
+    """
+    <style>
+    .prediction-clean-title {
+        margin: 3.1rem 0 1.05rem;
+        padding-bottom: .95rem;
+        border-bottom: 1px solid rgba(79, 178, 218, .18);
+        color: var(--cyan);
+        font: 700 clamp(.95rem, 1.25vw, 1.15rem)/1.2 'Space Grotesk', sans-serif;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+    }
+    .prediction-source {
+        font-size: 10px !important;
+    }
+    .validation-metrics {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin: 1rem 0 1.2rem;
+        border: 1px solid rgba(79, 178, 218, .17);
+        background: rgba(79, 178, 218, .12);
+        gap: 1px;
+    }
+    .validation-metrics article {
+        padding: 1rem 1.1rem;
+        background: rgba(5, 20, 32, .94);
+    }
+    .validation-metrics b {
+        display: block;
+        color: #82dff4;
+        font-size: 9px;
+        letter-spacing: .13em;
+    }
+    .validation-metrics strong {
+        display: block;
+        margin-top: .45rem;
+        color: #f1fbff;
+        font: 600 1.35rem 'Space Grotesk', sans-serif;
+    }
+    .validation-metrics small {
+        display: block;
+        margin-top: .4rem;
+        color: var(--text-tertiary);
+        font-size: .66rem;
+        line-height: 1.4;
+    }
+    @media (max-width: 900px) {
+        .validation-metrics { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 try:
     model = load_prediction_model()
@@ -377,11 +438,7 @@ if not all_crime_scope and snapshot.includes_high_uncertainty:
         unsafe_allow_html=True,
     )
 
-_section(
-    "HISTÓRICO + FORECAST",
-    "Del patrón observado a la estimación",
-    f"{scope_label}. La línea continua representa datos reales; el tramo discontinuo conecta el último dato observado con Q1–Q3 2026.",
-)
+_clean_section("HISTÓRICO + FORECAST")
 st.plotly_chart(
     build_history_forecast_chart(series),
     width="stretch",
@@ -389,11 +446,7 @@ st.plotly_chart(
     key=f"prediction-history-{selection_level}-{selected_municipality}-{selected_type}",
 )
 
-_section(
-    "COMPARACIÓN 2025 VS 2026",
-    "Mismo trimestre, distinto horizonte",
-    "La comparación utiliza Q1, Q2 y Q3 reales de 2025 frente al trimestre equivalente predicho para 2026.",
-)
+_clean_section("COMPARACIÓN 2025 VS 2026")
 st.plotly_chart(
     build_annual_comparison_chart(comparison),
     width="stretch",
@@ -401,27 +454,7 @@ st.plotly_chart(
     key=f"prediction-year-comparison-{selection_level}-{selected_municipality}-{selected_type}",
 )
 
-_section(
-    "TENDENCIAS PREVISTAS",
-    (
-        "Qué tipologías crecen y cuáles descienden"
-        if selection_level == TYPE_LEVEL
-        else "Qué agrupaciones crecen y cuáles descienden"
-    ),
-    (
-        (
-            "Ranking por tipología para todos los municipios: Q1–Q3 2025 real frente a Q1–Q3 2026 predicho."
-            if selection_level == TYPE_LEVEL
-            else "Ranking por agrupación para todos los municipios: Q1–Q3 2025 real frente a Q1–Q3 2026 predicho."
-        )
-        if all_municipalities
-        else (
-            f"Ranking por tipología de {selected_municipality}: Q1–Q3 2025 real frente a Q1–Q3 2026 predicho."
-            if selection_level == TYPE_LEVEL
-            else f"Ranking por agrupación de {selected_municipality}: Q1–Q3 2025 real frente a Q1–Q3 2026 predicho."
-        )
-    ),
-)
+_clean_section("TENDENCIAS PREVISTAS")
 comparable_trends = type_trends.dropna(subset=["change_percent"])
 strongest_growth = comparable_trends.sort_values("change_percent", ascending=False).iloc[0]
 strongest_decline = comparable_trends.sort_values("change_percent", ascending=True).iloc[0]
@@ -439,19 +472,7 @@ st.plotly_chart(
     key=f"prediction-type-trends-{selection_level}-{selected_municipality}",
 )
 
-_section(
-    "MAPA PREDICTIVO",
-    (
-        "Dónde se concentra la criminalidad total prevista"
-        if all_crime_scope
-        else "Dónde se concentra la selección delictiva"
-    ),
-    (
-        f"Conteo previsto por municipio para {selected_type.lower()} en {selected_quarter} 2026. "
-        f"La escala representa volumen absoluto, no una tasa por población. "
-        f"{'Madrid incluido en la comparación territorial.' if territorial_include_madrid else 'Madrid excluido de la comparación territorial.'}"
-    ),
-)
+_clean_section("MAPA PREDICTIVO")
 try:
     map_source = prepare_prediction_map(territorial)
 except ValueError as exc:
@@ -574,6 +595,14 @@ wape_cards = "".join(
     for quarter, value in WAPE_BY_HORIZON.items()
 )
 rare_items = "".join(f"<li>{escape(name)}</li>" for name in sorted(RARE_CRIME_TYPES))
+validation_metrics = (
+    '<div class="validation-metrics">'
+    '<article><b>R²</b><strong>0,9957</strong><small>Gradient Boosting · validación temporal 2025</small></article>'
+    '<article><b>MAE</b><strong>15,12</strong><small>Error absoluto medio</small></article>'
+    '<article><b>RMSE</b><strong>86,30</strong><small>Penaliza más los errores grandes</small></article>'
+        '<article><b>WAPE</b><strong>9,35%</strong><small>Métrica relativa agregada usada para comparar modelos</small></article>'
+    '</div>'
+)
 with st.expander("Metodología, validación e incertidumbre"):
     st.markdown(
         '<section class="prediction-methodology-panel"><span>MODELO HÍBRIDO · SIN CAUSALIDAD</span>'
@@ -582,7 +611,9 @@ with st.expander("Metodología, validación e incertidumbre"):
         '<p>Variables temporales: lag 1–4, media móvil, tendencia reciente, variación interanual, trimestre, municipio y tipología.</p></article>'
         '<article class="uncertain"><b>ALTA INCERTIDUMBRE</b><h3>Mediana móvil de 4 trimestres</h3>'
         f'<strong>3 tipologías · {model.audit.rare_prediction_rows} predicciones</strong><ul>{rare_items}</ul></article></div>'
-        '<div class="wape-heading"><b>ERROR DE VALIDACIÓN WAPE</b><p>Menor WAPE implica menor error relativo agregado en la validación; no representa un intervalo de confianza.</p></div>'
+        '<div class="wape-heading"><b>MÉTRICAS GLOBALES DE VALIDACIÓN · GRADIENT BOOSTING</b><p>Resultados de la validación temporal sobre 2025. R² no debe interpretarse como porcentaje de precisión.</p></div>'
+        f'{validation_metrics}'
+        '<div class="wape-heading"><b>ERROR DE VALIDACIÓN WAPE POR HORIZONTE</b><p>Menor WAPE implica menor error relativo agregado en la validación; no representa un intervalo de confianza.</p></div>'
         f'<div class="wape-strip">{wape_cards}</div>'
         '<ul class="method-notes"><li><strong>Validación:</strong> predicción temporal recursiva sobre 2025; el rendimiento varía por horizonte y tipología.</li>'
         f'<li><strong>Cobertura histórica:</strong> según municipios incluidos en el ámbito del proyecto: {model.audit.historical_municipalities_by_year[2023]} en 2023, '
