@@ -352,3 +352,35 @@ div[data-testid="stHorizontalBlock"]:has(> [data-testid="stColumn"] .st-key-simu
         margin-top: 0;
     }
 }
+
+
+/* Ajuste final de jerarquía visual de secciones del simulador */
+.simulator-section {
+    display: block;
+    margin: 3.2rem 0 1.25rem;
+    padding-bottom: .85rem;
+    border-bottom: 1px solid rgba(79, 178, 218, .18);
+}
+
+.simulator-section h2 {
+    margin: 0;
+    color: var(--cyan);
+    font: 700 clamp(1.25rem, 2.15vw, 2rem)/1.05 'Space Grotesk', sans-serif;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.simulator-section > span,
+.simulator-section > div,
+.simulator-section p {
+    display: none !important;
+}
+
+
+.simulator-subchart-title {
+    margin: 2.4rem 0 .9rem;
+    color: var(--cyan);
+    font: 700 clamp(.9rem, 1.2vw, 1.1rem)/1.2 'Space Grotesk', sans-serif;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}

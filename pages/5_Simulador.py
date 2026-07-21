@@ -20,6 +20,8 @@ from utils.simulator_charts import (
     build_movement_animation,
     build_scenario_comparison_chart,
     build_simulator_map,
+    build_simulation_timeseries_chart,
+    build_pressure_gap_timeseries_chart,
 )
 from utils.simulator_data import (
     AVAILABLE_PROPOSALS,
@@ -58,10 +60,9 @@ def _signed_percent(value: object) -> str:
     return f"{float(value):+.1f}%".replace(".", ",")
 
 
-def _section(eyebrow: str, title: str, copy: str) -> None:
+def _section(title: str) -> None:
     st.markdown(
-        f'<header class="simulator-section"><div><span>{escape(eyebrow)}</span><h2>{escape(title)}</h2></div>'
-        f'<p>{escape(copy)}</p></header>',
+        f'<header class="simulator-section"><h2>{escape(title)}</h2></header>',
         unsafe_allow_html=True,
     )
 
@@ -342,11 +343,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-_section(
-    "CENTRO DE MANDO",
-    "Diseña la redistribución",
-    "Edita una cola manual o carga una adaptación de la propuesta existente. Los mapas se preparan únicamente al ejecutar.",
-)
+_section("CENTRO DE MANDO")
 st.markdown('<div class="simulator-command-label">CONSTRUIR MANUALMENTE</div>', unsafe_allow_html=True)
 
 pending_movements = [dict(item) for item in st.session_state["simulator_movements"]]
@@ -559,11 +556,7 @@ if executed:
     )
     stats = simulation_stats(result_frame)
 
-    _section(
-        "RESULTADO EJECUTADO",
-        "Cobertura antes y después",
-        "El forecast permanece fijo. Solo cambia su relación con la distribución de agentes.",
-    )
+    _section("RESULTADO EJECUTADO")
     kpis = st.columns(5, gap="small")
     kpi_data = (
         ("redistributed", "Agentes redistribuidos", _integer(stats["redistributed_agents"]), "Suma de transferencias positivas"),
@@ -578,11 +571,7 @@ if executed:
                 st.metric(label, value)
                 st.caption(detail)
 
-    _section(
-        "MAPA DE PRESIÓN",
-        "Resultado territorial",
-        "Antes y Después comparten escala; Variación expresa mejora de cobertura y Movimientos representa las rutas de la cola.",
-    )
+    _section("MAPA DE PRESIÓN")
     map_view = st.radio(
         "Vista territorial",
         options=("ANTES", "DESPUÉS", "VARIACIÓN", "MOVIMIENTOS"),
@@ -616,11 +605,7 @@ if executed:
             else "La cartografía municipal no está disponible; los resultados tabulares siguen operativos."
         )
 
-    _section(
-        "COMPARACIÓN",
-        "Actual, tu escenario y referencia optimizada",
-        "La referencia optimizada reproduce el modelo original de Optimización sin imponer el límite operativo elegido en este simulador.",
-    )
+    _section("COMPARACIÓN")
     comparison = _comparison_frame(current_frame, result_frame, optimized_frame)
     comparison_left, comparison_right = st.columns([1.12, 0.88], gap="large")
     with comparison_left:
@@ -637,6 +622,31 @@ if executed:
             config={"displayModeBar": False, "responsive": True},
             key=f"simulator-coverage-{hash(current_signature)}",
         )
+
+    st.plotly_chart(
+        build_simulation_timeseries_chart(
+            simulator_model,
+            result_frame,
+            selected_quarter,
+        ),
+        width="stretch",
+        config={"displayModeBar": False, "responsive": True},
+        key=f"simulator-timeseries-{selected_quarter}-{hash(current_signature)}",
+    )
+
+    st.markdown(
+        '<div class="simulator-subchart-title">IMPACTO DEL ESCENARIO SOBRE LA PRESIÓN TERRITORIAL</div>',
+        unsafe_allow_html=True,
+    )
+    st.plotly_chart(
+        build_pressure_gap_timeseries_chart(
+            simulator_model,
+            result_frame,
+        ),
+        width="stretch",
+        config={"displayModeBar": False, "responsive": True},
+        key=f"simulator-pressure-gap-timeseries-{hash(current_signature)}",
+    )
 
     with st.expander("DETALLE MUNICIPAL DEL ESCENARIO"):
         affected_only = st.radio(

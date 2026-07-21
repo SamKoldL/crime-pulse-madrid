@@ -385,3 +385,228 @@ def build_scenario_comparison_chart(comparison: pd.DataFrame) -> go.Figure:
     )
     figure.update_layout(**layout)
     return figure
+
+
+def build_simulation_timeseries_chart(
+    model: Any,
+    result_frame: pd.DataFrame,
+    selected_quarter: str,
+) -> go.Figure:
+    """Histórico real 2023-2025 y forecast 2026, sin atribuir causalidad al simulador."""
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    candidates = [
+        root / "data" / "crime_lab_historico_predicciones.csv",
+        Path("/mnt/data/crime_lab_historico_predicciones(3).csv"),
+    ]
+    history_path = next((path for path in candidates if path.exists()), None)
+
+    figure = go.Figure()
+    last_real_period = None
+    last_real_value = None
+
+    if history_path is not None:
+        history = pd.read_csv(history_path)
+        required = {"año", "trimestre", "valor", "tipo_dato"}
+
+        if required.issubset(history.columns):
+            real = history.loc[
+                history["tipo_dato"].astype(str).str.lower().eq("real")
+            ].copy()
+
+            real["año"] = pd.to_numeric(real["año"], errors="coerce")
+            real["valor"] = pd.to_numeric(real["valor"], errors="coerce")
+            real = real.dropna(subset=["año", "trimestre", "valor"])
+            real = real.loc[real["año"].between(2023, 2025)]
+
+            real["trimestre_num"] = (
+                real["trimestre"].astype(str)
+                .str.extract(r"(\d+)", expand=False)
+                .astype(float)
+            )
+            real = real.dropna(subset=["trimestre_num"])
+            real["trimestre_num"] = real["trimestre_num"].astype(int)
+
+            real = (
+                real.groupby(["año", "trimestre_num"], as_index=False)["valor"]
+                .sum()
+                .sort_values(["año", "trimestre_num"])
+            )
+            real["period"] = (
+                real["año"].astype(int).astype(str)
+                + " Q"
+                + real["trimestre_num"].astype(str)
+            )
+
+            if not real.empty:
+                last_real_period = str(real.iloc[-1]["period"])
+                last_real_value = float(real.iloc[-1]["valor"])
+                figure.add_trace(
+                    go.Scatter(
+                        x=real["period"],
+                        y=real["valor"],
+                        mode="lines+markers",
+                        name="REAL",
+                        line={"color": CYAN, "width": 3},
+                        marker={"size": 7},
+                        hovertemplate="<b>%{x}</b><br>Real: %{y:,.0f}<extra></extra>",
+                    )
+                )
+
+    forecast = (
+        model.municipal_quarters.groupby("quarter", as_index=False)["predicted_crime"]
+        .sum()
+        .copy()
+    )
+    forecast["quarter_num"] = (
+        forecast["quarter"].astype(str)
+        .str.extract(r"(\d+)", expand=False)
+        .astype(int)
+    )
+    forecast = forecast.sort_values("quarter_num")
+    forecast["period"] = "2026 Q" + forecast["quarter_num"].astype(str)
+
+    forecast_x = forecast["period"].tolist()
+    forecast_y = forecast["predicted_crime"].astype(float).tolist()
+
+    if last_real_period is not None and last_real_value is not None:
+        forecast_x = [last_real_period] + forecast_x
+        forecast_y = [last_real_value] + forecast_y
+
+    figure.add_trace(
+        go.Scatter(
+            x=forecast_x,
+            y=forecast_y,
+            mode="lines+markers",
+            name="PREDICCIÓN",
+            line={"color": RED, "width": 3, "dash": "dash"},
+            marker={"size": 7},
+            hovertemplate="<b>%{x}</b><br>Predicción: %{y:,.0f}<extra></extra>",
+        )
+    )
+
+    layout = _base_layout(500, left_margin=78)
+    layout.update(
+        showlegend=True,
+        legend={
+            "orientation": "h",
+            "x": 1,
+            "xanchor": "right",
+            "y": 1.12,
+            "yanchor": "top",
+        },
+        xaxis={
+            "title": {"text": "PERIODO", "font": {"color": MUTED, "size": 10}},
+            "gridcolor": GRID,
+            "categoryorder": "array",
+            "categoryarray": [
+                "2023 Q1", "2023 Q2", "2023 Q3", "2023 Q4",
+                "2024 Q1", "2024 Q2", "2024 Q3", "2024 Q4",
+                "2025 Q1", "2025 Q2", "2025 Q3", "2025 Q4",
+                "2026 Q1", "2026 Q2", "2026 Q3",
+            ],
+        },
+        yaxis={
+            "title": {"text": "CONTEO", "font": {"color": MUTED, "size": 10}},
+            "gridcolor": GRID,
+            "rangemode": "tozero",
+        },
+    )
+    figure.update_layout(**layout)
+    return figure
+
+
+def build_pressure_gap_timeseries_chart(
+    model: Any,
+    result_frame: pd.DataFrame,
+) -> go.Figure:
+    """Compara la brecha máxima de presión 2026 con distribución actual y escenario ejecutado."""
+    agents = result_frame[
+        ["municipality", "agents_before", "agents_after"]
+    ].drop_duplicates("municipality")
+
+    rows = []
+    for quarter in sorted(
+        model.municipal_quarters["quarter"].astype(str).unique(),
+        key=lambda value: int(str(value).replace("Q", "")),
+    ):
+        scope = model.municipal_quarters.loc[
+            model.municipal_quarters["quarter"].astype(str).eq(str(quarter)),
+            ["municipality", "predicted_crime"],
+        ].merge(
+            agents,
+            on="municipality",
+            how="inner",
+            validate="one_to_one",
+        )
+
+        scope["pressure_current"] = (
+            scope["predicted_crime"] / scope["agents_before"]
+        )
+        scope["pressure_scenario"] = (
+            scope["predicted_crime"] / scope["agents_after"]
+        )
+
+        rows.append(
+            {
+                "period": f"2026 {quarter}",
+                "current_gap": float(
+                    scope["pressure_current"].max()
+                    - scope["pressure_current"].min()
+                ),
+                "scenario_gap": float(
+                    scope["pressure_scenario"].max()
+                    - scope["pressure_scenario"].min()
+                ),
+            }
+        )
+
+    gaps = pd.DataFrame(rows)
+
+    figure = go.Figure()
+    figure.add_trace(
+        go.Scatter(
+            x=gaps["period"],
+            y=gaps["current_gap"],
+            mode="lines+markers",
+            name="DISTRIBUCIÓN ACTUAL",
+            line={"color": RED, "width": 3, "dash": "dash"},
+            marker={"size": 8},
+            hovertemplate="<b>%{x}</b><br>Brecha actual: %{y:.2f}<extra></extra>",
+        )
+    )
+    figure.add_trace(
+        go.Scatter(
+            x=gaps["period"],
+            y=gaps["scenario_gap"],
+            mode="lines+markers",
+            name="TU ESCENARIO",
+            line={"color": "#4ce1c0", "width": 3, "dash": "dash"},
+            marker={"size": 8},
+            hovertemplate="<b>%{x}</b><br>Brecha escenario: %{y:.2f}<extra></extra>",
+        )
+    )
+
+    layout = _base_layout(420, left_margin=78)
+    layout.update(
+        showlegend=True,
+        legend={
+            "orientation": "h",
+            "x": 1,
+            "xanchor": "right",
+            "y": 1.14,
+            "yanchor": "top",
+        },
+        xaxis={
+            "title": {"text": "HORIZONTE", "font": {"color": MUTED, "size": 10}},
+            "gridcolor": GRID,
+        },
+        yaxis={
+            "title": {"text": "BRECHA MÁXIMA DE PRESIÓN", "font": {"color": MUTED, "size": 10}},
+            "gridcolor": GRID,
+            "rangemode": "tozero",
+        },
+    )
+    figure.update_layout(**layout)
+    return figure
