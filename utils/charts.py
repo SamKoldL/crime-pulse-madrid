@@ -204,6 +204,64 @@ def build_home_ranking_chart(
     return figure
 
 
+
+def build_home_bottom_ranking_chart(
+    territorial: pd.DataFrame,
+    selected_municipality: str,
+) -> go.Figure:
+    """Bottom 5 regional del índice criminal."""
+    eligible = territorial.loc[territorial["eligible"]].copy()
+    scope = (
+        eligible.nsmallest(5, "relative_metric")
+        .sort_values("relative_metric", ascending=False)
+    )
+
+    colors = [
+        "#ff6573" if name == selected_municipality else "#f2b85b"
+        for name in scope["municipality"]
+    ]
+
+    figure = go.Figure(
+        go.Bar(
+            x=scope["relative_metric"],
+            y=scope["municipality"],
+            orientation="h",
+            marker={
+                "color": colors,
+                "line": {"color": "rgba(255, 214, 133, 0.55)", "width": 1},
+            },
+            text=[f"{value:,.1f}" for value in scope["relative_metric"]],
+            textposition="outside",
+            textfont={"color": "#fff0cf", "size": 11},
+            cliponaxis=False,
+            customdata=scope[["computed_rank", "crime_count", "population"]],
+            hovertemplate=(
+                "<b>%{y}</b><br>Índice criminal: %{x:,.2f}"
+                "<br>Posición: #%{customdata[0]:.0f}"
+                "<br>Delitos: %{customdata[1]:,.0f}"
+                "<br>Población: %{customdata[2]:,.0f}<extra></extra>"
+            ),
+        )
+    )
+
+    regional_max = float(eligible["relative_metric"].max()) if not eligible.empty else 1.0
+    layout = _base_layout()
+    layout.update(
+        height=410,
+        bargap=.40,
+        margin={"l": 12, "r": 72, "t": 18, "b": 42},
+        xaxis={
+            "title": {"text": "VALOR PONDERADO / 10.000 HAB.", "font": {"size": 9, "color": MUTED}},
+            "gridcolor": GRID,
+            "zeroline": False,
+            "range": [0, regional_max * 1.08],
+            "tickfont": {"size": 9, "color": MUTED},
+        },
+        yaxis={"automargin": True, "tickfont": {"size": 11, "color": TEXT}},
+    )
+    figure.update_layout(**layout)
+    return figure
+
 def _home_map_text(frame: pd.DataFrame) -> list[str]:
     texts: list[str] = []
     for _, row in frame.iterrows():
@@ -327,25 +385,53 @@ def build_quarterly_evolution_chart(
     quarterly: pd.DataFrame,
     selected_year: int,
 ) -> go.Figure:
-    """Serie 2023–2025 sin interpolar periodos ausentes."""
+    """Serie histórica 2023–2025 con escala dinámica y sin forecast."""
     scope = quarterly.copy()
+
+    if scope.empty:
+        figure = go.Figure()
+        figure.add_annotation(
+            text="Sin serie histórica disponible para el filtro seleccionado.",
+            x=.5, y=.5, xref="paper", yref="paper",
+            showarrow=False,
+            font={"color": MUTED, "size": 12},
+        )
+        layout = _base_layout()
+        layout.update(height=440)
+        figure.update_layout(**layout)
+        return figure
+
     scope["variation"] = scope["value"].pct_change(fill_method=None) * 100
     variation_text = [
         f"{value:+.1f}%" if pd.notna(value) else "Sin periodo anterior comparable"
         for value in scope["variation"]
     ]
     customdata = np.column_stack([scope["quarter"], variation_text])
+
+    valid_values = pd.to_numeric(scope["value"], errors="coerce").dropna()
+    y_range = None
+    if not valid_values.empty:
+        y_min = float(valid_values.min())
+        y_max = float(valid_values.max())
+        spread = y_max - y_min
+        padding = max(spread * 0.12, abs(y_max) * 0.03, 1.0)
+        lower = max(0.0, y_min - padding)
+        upper = y_max + padding
+        if upper <= lower:
+            upper = lower + max(abs(y_max) * 0.05, 1.0)
+        y_range = [lower, upper]
+
     figure = go.Figure(
         go.Scatter(
             x=scope["period_label"],
             y=scope["value"],
             mode="lines+markers",
             connectgaps=False,
-            line={"color": CYAN, "width": 2.8},
+            line={"color": CYAN, "width": 3},
             marker={
-                "size": np.where(scope["year"].eq(selected_year), 9, 6),
-                "color": np.where(scope["year"].eq(selected_year), "#ff6573", "#dff8ff"),
-                "line": {"color": CYAN, "width": 1.2},
+                "size": 7,
+                "color": "#dff8ff",
+                "line": {"color": CYAN, "width": 1.5},
             },
             customdata=customdata,
             hovertemplate=(
@@ -355,10 +441,11 @@ def build_quarterly_evolution_chart(
             showlegend=False,
         )
     )
+
     layout = _base_layout()
     layout.update(
         height=440,
-        margin={"l": 58, "r": 24, "t": 24, "b": 72},
+        margin={"l": 64, "r": 28, "t": 28, "b": 72},
         xaxis={
             "title": {"text": "PERIODO", "font": {"size": 9, "color": MUTED}},
             "tickangle": -35,
@@ -371,12 +458,12 @@ def build_quarterly_evolution_chart(
             "title": {"text": "DELITOS REGISTRADOS", "font": {"size": 9, "color": MUTED}},
             "gridcolor": GRID,
             "zeroline": False,
-            "rangemode": "tozero",
+            "range": y_range,
+            "tickfont": {"size": 10, "color": TEXT},
         },
     )
     figure.update_layout(**layout)
     return figure
-
 
 def build_change_drivers_chart(drivers: pd.DataFrame) -> go.Figure:
     """Contribuciones absolutas principales, evitando rankings porcentuales inestables."""

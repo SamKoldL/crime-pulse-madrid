@@ -5,8 +5,8 @@ from __future__ import annotations
 import streamlit as st
 
 from utils.charts import (
-    build_change_drivers_chart,
-    build_home_mini_map,
+    build_quarterly_evolution_chart,
+    build_home_bottom_ranking_chart,
     build_home_ranking_chart,
 )
 from utils.home_data import (
@@ -15,7 +15,6 @@ from utils.home_data import (
     build_home_signals,
     build_home_snapshot,
     load_home_model,
-    prepare_home_map,
 )
 from utils.navigation import render_top_navigation
 from utils.ui import (
@@ -25,7 +24,6 @@ from utils.ui import (
     render_home_kpis,
     render_home_signals,
     render_section_heading,
-    render_specific_type_context,
 )
 
 
@@ -159,14 +157,16 @@ _render_home_clean_heading("PULSO GENERAL")
 render_home_kpis(snapshot)
 
 _render_home_clean_heading("¿DÓNDE SE CONCENTRA?")
-territory_left, territory_right = st.columns([1, 1.22], gap="large")
+territory_left, territory_right = st.columns([1, 1], gap="large")
+
 with territory_left:
     if selected_municipality == ALL_HOME_MUNICIPALITIES:
-        ranking_title = "TOP 5 MUNICIPIOS POR VALOR RELATIVO"
+        ranking_title = "TOP 5 ÍNDICE CRIMINAL POR MUNICIPIO"
     elif snapshot.selected_rank is None:
         ranking_title = f"REFERENCIA REGIONAL · {selected_municipality} SIN DATO COMPARABLE"
     else:
         ranking_title = f"ENTORNO DE RANKING · {selected_municipality}"
+
     st.markdown(
         f'<div class="chart-kicker">{ranking_title}</div>',
         unsafe_allow_html=True,
@@ -181,48 +181,26 @@ with territory_left:
         st.caption(
             f"{selected_municipality} no pertenece al universo criminal válido de {selected_year}; se mantiene el Top 5 regional como referencia."
         )
+
 with territory_right:
     st.markdown(
-        '<div class="chart-kicker">MINI MAPA · FOCOS TERRITORIALES</div>',
+        '<div class="chart-kicker">BOTTOM 5 ÍNDICE CRIMINAL POR MUNICIPIO</div>',
         unsafe_allow_html=True,
     )
-    try:
-        map_source = prepare_home_map(snapshot)
-    except ValueError as exc:
-        map_source = None
-        st.warning(f"No se ha podido preparar el mini mapa: {exc}")
-    if map_source is not None and map_source.available:
-        with st.container(key="home_mini_map"):
-            st.plotly_chart(
-                build_home_mini_map(map_source, selected_municipality),
-                width="stretch",
-                config={
-                    "displayModeBar": False,
-                    "displaylogo": False,
-                    "scrollZoom": False,
-                    "doubleClick": False,
-                    "responsive": True,
-                },
-                key=f"home-map-{selected_year}-{selected_municipality}-{selected_crime_type}",
-            )
-        
-    else:
-        st.warning(
-            map_source.message
-            if map_source is not None and map_source.message
-            else "La cartografía no está disponible; el ranking permanece operativo."
-        )
-
-_render_home_clean_heading("¿QUÉ EXPLICA EL CAMBIO?")
-if selected_crime_type == ALL_HOME_CRIME_TYPES:
     st.plotly_chart(
-        build_change_drivers_chart(snapshot.drivers),
+        build_home_bottom_ranking_chart(snapshot.territorial, selected_municipality),
         width="stretch",
         config={"displayModeBar": False, "responsive": True},
-        key=f"home-drivers-{selected_year}-{selected_municipality}",
+        key=f"home-bottom-ranking-{selected_year}-{selected_municipality}-{selected_crime_type}",
     )
-else:
-    render_specific_type_context(snapshot)
+
+_render_home_clean_heading("¿CÓMO EVOLUCIONA?")
+st.plotly_chart(
+    build_quarterly_evolution_chart(snapshot.quarterly, selected_year),
+    width="stretch",
+    config={"displayModeBar": False, "responsive": True},
+    key=f"home-quarterly-{selected_year}-{selected_municipality}-{selected_crime_type}",
+)
 
 render_home_signals(build_home_signals(snapshot))
 render_footer(selected_year, home_compact=True)
