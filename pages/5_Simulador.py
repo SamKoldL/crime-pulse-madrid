@@ -17,7 +17,6 @@ from utils.police_optimization_data import (
 from utils.predictions_data import FORECAST_QUARTERS
 from utils.simulator_charts import (
     build_coverage_change_chart,
-    build_movement_animation,
     build_scenario_comparison_chart,
     build_simulator_map,
     build_simulation_timeseries_chart,
@@ -572,12 +571,14 @@ if executed:
                 st.caption(detail)
 
     _section("MAPA DE PRESIÓN")
-    map_view = st.radio(
-        "Vista territorial",
-        options=("ANTES", "DESPUÉS", "VARIACIÓN", "MOVIMIENTOS"),
+
+    right_map_view = st.radio(
+        "Vista del mapa derecho",
+        options=("DESPUÉS", "VARIACIÓN"),
         horizontal=True,
         key="simulator_map_view",
     )
+
     try:
         map_source = prepare_optimization_map(result_frame)
     except ValueError as exc:
@@ -585,19 +586,33 @@ if executed:
         st.warning(f"No se ha podido preparar la cartografía: {exc}")
 
     if map_source is not None and map_source.available:
-        map_figure = (
-            build_movement_animation(map_source, pending_movements)
-            if map_view == "MOVIMIENTOS"
-            else build_simulator_map(map_source, map_view, pending_movements)
-        )
-        st.plotly_chart(
-            map_figure,
-            width="stretch",
-            config={"displayModeBar": False, "scrollZoom": True, "responsive": True},
-            key=f"simulator-map-{selected_quarter}-{map_view}-{hash(current_signature)}",
-        )
-        if map_view == "MOVIMIENTOS":
-            st.caption("Pulsa ▶ REPRODUCIR MOVIMIENTOS dentro del mapa. La animación usa frames de Plotly y no genera reruns sucesivos.")
+        map_left, map_right = st.columns(2, gap="medium")
+
+        with map_left:
+            st.markdown(
+                '<div class="simulator-map-title">ANTES</div>',
+                unsafe_allow_html=True,
+            )
+            with st.container(key="simulator_map_before_shell"):
+                st.plotly_chart(
+                    build_simulator_map(map_source, "ANTES"),
+                    width="stretch",
+                    config={"displayModeBar": False, "scrollZoom": True, "responsive": True},
+                    key=f"simulator-map-before-{selected_quarter}-{hash(current_signature)}",
+                )
+
+        with map_right:
+            st.markdown(
+                f'<div class="simulator-map-title">{escape(right_map_view)}</div>',
+                unsafe_allow_html=True,
+            )
+            with st.container(key="simulator_map_after_shell"):
+                st.plotly_chart(
+                    build_simulator_map(map_source, right_map_view),
+                    width="stretch",
+                    config={"displayModeBar": False, "scrollZoom": True, "responsive": True},
+                    key=f"simulator-map-right-{selected_quarter}-{right_map_view}-{hash(current_signature)}",
+                )
     else:
         st.warning(
             map_source.message

@@ -384,3 +384,28 @@ div[data-testid="stHorizontalBlock"]:has(> [data-testid="stColumn"] .st-key-simu
     letter-spacing: .12em;
     text-transform: uppercase;
 }
+
+
+/* Comparativa territorial: ANTES fijo + DESPUÉS/VARIACIÓN */
+.simulator-map-title {
+    margin: .35rem 0 .55rem;
+    color: var(--cyan);
+    font: 700 .78rem/1.2 'Space Grotesk', sans-serif;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.st-key-simulator_map_before_shell,
+.st-key-simulator_map_after_shell {
+    overflow: hidden;
+    border: 1px solid rgba(79, 178, 218, .19);
+    border-radius: 4px 4px 16px 4px;
+    background: rgba(3, 13, 22, .72);
+}
+
+.st-key-simulator_map_before_shell [data-testid="stPlotlyChart"],
+.st-key-simulator_map_after_shell [data-testid="stPlotlyChart"] {
+    width: 100% !important;
+    overflow: hidden !important;
+    border-radius: inherit !important;
+}
