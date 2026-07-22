@@ -758,3 +758,12 @@ header[data-testid="stHeader"] {
     display: none !important;
     pointer-events: none !important;
 }
+
+
+/* Home · tercera tarjeta KPI: título Índice Criminal más visible */
+[class*="st-key-home_kpi_index"] [data-testid="stMetricLabel"] p {
+    font-size: .82rem !important;
+    font-weight: 800 !important;
+    letter-spacing: .10em !important;
+    color: #dff7ff !important;
+}

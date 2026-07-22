@@ -264,9 +264,9 @@ def render_home_kpis(snapshot: HomeSnapshot) -> None:
         ("yoy", "Variación interanual", yoy_value, (yoy_detail,), False),
         (
             "index",
-            snapshot.relative_metric_label,
+            "Índice Criminal",
             relative_value,
-            (snapshot.relative_metric_detail,),
+            ("Métrica oficial ponderada por gravedad y normalizada por población (10.000 habs)",),
             True,
         ),
         ("context", context_label, context_value, (context_detail,), False),
