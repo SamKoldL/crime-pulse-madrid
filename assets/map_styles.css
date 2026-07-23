@@ -104,3 +104,55 @@ div[class*="st-key-map_detail"] [data-testid="stVerticalBlockBorderWrapper"] {
     .map-page-hero h1 { font-size: 2.8rem; }
     .map-panel-metric-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Mapa Criminal · Contexto activo, coherente con Perfil Delictivo */
+.map-insights {
+    margin-top: 2rem;
+    padding: clamp(1.6rem, 3vw, 2.8rem);
+    background: linear-gradient(120deg, rgba(7, 29, 44, .88), rgba(4, 14, 24, .78));
+    border: 1px solid rgba(80, 180, 230, .20);
+    border-radius: 4px 4px 23px 4px;
+}
+.map-insights > span {
+    color: var(--cyan);
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+}
+.map-insights h2 {
+    margin: .4rem 0 1.25rem;
+    color: #eaf9ff;
+    font: 600 1.7rem 'Space Grotesk', sans-serif;
+}
+.map-insight-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 1.4rem;
+}
+.map-insight-list article {
+    padding-top: .9rem;
+    border-top: 1px solid rgba(73, 190, 228, .22);
+}
+.map-insight-list b {
+    color: rgba(92, 220, 249, .86);
+    font: 500 .68rem 'Space Grotesk', sans-serif;
+}
+.map-insight-list p {
+    margin: .55rem 0 0;
+    color: var(--text-secondary);
+    font-size: .73rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 1000px) {
+    .map-insight-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .map-insight-list {
+        grid-template-columns: 1fr;
+    }
+}

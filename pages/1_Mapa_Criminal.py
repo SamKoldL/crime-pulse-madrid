@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from html import escape
 from pathlib import Path
 
 import streamlit as st
@@ -14,7 +15,7 @@ from utils.map_data import (
     municipality_from_map_selection,
     prepare_map_source,
 )
-from utils.map_metrics import build_map_regional_snapshot
+from utils.map_metrics import build_map_insights, build_map_regional_snapshot
 from utils.map_ui import ALL_MAP_MUNICIPALITIES, render_map_context_panel
 from utils.ui import inject_global_styles, render_footer
 from utils.navigation import render_top_navigation
@@ -190,5 +191,24 @@ with map_column:
 
 with detail_column:
     render_map_context_panel(regional_snapshot, selected_municipality)
+
+map_insights = build_map_insights(
+    regional_snapshot,
+    selected_municipality,
+    selected_year,
+    ALL_MAP_MUNICIPALITIES,
+)
+map_insight_html = "".join(
+    f'<article><b>{position:02d}</b><p>{escape(text)}</p></article>'
+    for position, text in enumerate(map_insights, start=1)
+)
+st.markdown(
+    '<section class="map-insights">'
+    '<span>LECTURAS TERRITORIALES · ASOCIACIONES DESCRIPTIVAS · SIN INFERENCIA CAUSAL</span>'
+    f'<h2>Contexto activo</h2>'
+    f'<div class="map-insight-list">{map_insight_html}</div>'
+    '</section>',
+    unsafe_allow_html=True,
+)
 
 render_footer(selected_year)
