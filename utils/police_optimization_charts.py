@@ -222,6 +222,9 @@ def build_transfer_ranking_chart(
     selected_municipality: str | None = None,
 ) -> go.Figure:
     visual_frame = _visual_scope(frame, include_madrid)
+    # El gráfico "Top y Bottom 5 transferencias" muestra siempre
+    # exactamente los 5 mayores receptores y los 5 mayores cedentes.
+    count_each = 5
     receivers = visual_frame.loc[visual_frame["transfer"].gt(0)].nlargest(count_each, "transfer")
     ceders = visual_frame.loc[visual_frame["transfer"].lt(0)].nsmallest(count_each, "transfer")
     scope = pd.concat([ceders, receivers]).sort_values("transfer")
