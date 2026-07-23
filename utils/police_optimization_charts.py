@@ -103,19 +103,13 @@ def build_alignment_scatter(
                         "pressure_share",
                         "police_share",
                         "gap_pp",
-                        "current_police",
-                        "proposed_police",
-                        "transfer",
                     ]
                 ],
                 hovertemplate=(
                     "<b>%{customdata[0]}</b>"
                     "<br>Presión criminal: %{customdata[1]:.2%}"
                     "<br>Cuota policial: %{customdata[2]:.2%}"
-                    "<br>Brecha: %{customdata[3]:+.2f} pp"
-                    "<br>Actuales: %{customdata[4]:,.0f}"
-                    "<br>Propuestos: %{customdata[5]:,.0f}"
-                    "<br>Transferencia: %{customdata[6]:+,.0f}<extra></extra>"
+                    "<br>Brecha: %{customdata[3]:+.2f} pp<extra></extra>"
                 ),
             )
         )
@@ -130,14 +124,14 @@ def build_alignment_scatter(
             "font": {"color": MUTED, "size": 10},
         },
         xaxis={
-            "title": {"text": "% DE PRESIÓN CRIMINAL", "font": {"color": MUTED, "size": 10}},
+            "title": {"text": "PRESIÓN CRIMINAL", "font": {"color": MUTED, "size": 10}},
             "ticksuffix": "%",
             "gridcolor": GRID,
             "zeroline": False,
             "rangemode": "tozero",
         },
         yaxis={
-            "title": {"text": "% DE POLICÍAS", "font": {"color": MUTED, "size": 10}},
+            "title": {"text": "CUOTA POLICIAL", "font": {"color": MUTED, "size": 10}},
             "ticksuffix": "%",
             "gridcolor": GRID,
             "zeroline": False,
@@ -152,7 +146,7 @@ def build_alignment_scatter(
 
 def build_gap_ranking_chart(
     frame: pd.DataFrame,
-    count_each: int = 8,
+    count_each: int = 5,
     include_madrid: bool = False,
     selected_municipality: str | None = None,
 ) -> go.Figure:
@@ -204,7 +198,7 @@ def build_gap_ranking_chart(
             ),
         )
     )
-    layout = _base_layout(560, left_margin=205)
+    layout = _base_layout(520, left_margin=205)
     layout.update(
         showlegend=False,
         bargap=.32,
@@ -223,7 +217,7 @@ def build_gap_ranking_chart(
 
 def build_transfer_ranking_chart(
     frame: pd.DataFrame,
-    count_each: int = 6,
+    count_each: int = 5,
     include_madrid: bool = False,
     selected_municipality: str | None = None,
 ) -> go.Figure:
@@ -261,7 +255,7 @@ def build_transfer_ranking_chart(
             ),
         )
     )
-    layout = _base_layout(620, left_margin=175)
+    layout = _base_layout(610, left_margin=175)
     layout.update(
         showlegend=False,
         xaxis={
@@ -376,8 +370,8 @@ def build_transfer_map(
         showlegend=True,
         legend={
             "orientation": "h",
-            "yanchor": "bottom",
-            "y": .01,
+            "yanchor": "top",
+            "y": .99,
             "xanchor": "center",
             "x": .5,
             "font": {"color": MUTED, "size": 10},

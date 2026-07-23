@@ -397,26 +397,9 @@ trend_metric_view = st.radio(
 if growth_column is None:
     st.info("2023 no dispone de un año anterior dentro de la fuente para construir una variación comparable.")
 else:
-    trend_type_tab, trend_group_tab = st.tabs(
-        ["TIPOS DE DELITO", "COMPOSICIÓN POR GRUPOS"]
+    trend_group_tab, trend_type_tab = st.tabs(
+        ["COMPOSICIÓN POR GRUPOS", "TIPOS DE DELITO"]
     )
-    with trend_type_tab:
-        st.plotly_chart(
-            build_trend_diverging_chart(
-                growth_trends,
-                growth_column,
-                growth_period,
-                selected_crime_id,
-                TYPE_LEVEL,
-                trend_metric_view,
-            ),
-            width="stretch",
-            config={"displayModeBar": False, "responsive": True},
-            key=(
-                f"profile-trends-types-{trend_metric_view}-{growth_period}-"
-                f"{selected_municipality}-{selected_crime_id}"
-            ),
-        )
     with trend_group_tab:
         st.plotly_chart(
             build_trend_diverging_chart(
@@ -432,6 +415,23 @@ else:
             key=(
                 f"profile-trends-groups-{trend_metric_view}-{growth_period}-"
                 f"{selected_municipality}-{selected_group}"
+            ),
+        )
+    with trend_type_tab:
+        st.plotly_chart(
+            build_trend_diverging_chart(
+                growth_trends,
+                growth_column,
+                growth_period,
+                selected_crime_id,
+                TYPE_LEVEL,
+                trend_metric_view,
+            ),
+            width="stretch",
+            config={"displayModeBar": False, "responsive": True},
+            key=(
+                f"profile-trends-types-{trend_metric_view}-{growth_period}-"
+                f"{selected_municipality}-{selected_crime_id}"
             ),
         )
 _clean_section_heading("Cuándo ocurre y cuánto pesa")
@@ -476,9 +476,9 @@ territorial_control_columns = st.columns(2, gap="large")
 with territorial_control_columns[0]:
     territorial_scope_option = st.radio(
         "Ámbito territorial",
-        options=(WITH_MADRID, WITHOUT_MADRID),
+        options=(WITHOUT_MADRID, WITH_MADRID),
         horizontal=True,
-        key="profile_territorial_scope",
+        key="profile_territorial_scope_v2",
     )
 with territorial_control_columns[1]:
     territorial_metric = st.radio(

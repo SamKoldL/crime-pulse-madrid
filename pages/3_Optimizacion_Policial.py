@@ -74,11 +74,6 @@ def _render_kpi(column, key: str, label: str, value: str, detail: str) -> None:
 
 
 def _scenario_table(frame: pd.DataFrame, scenario: str) -> pd.DataFrame:
-    pressure_label = (
-        "Media anual de delitos"
-        if scenario == VOLUME_SCENARIO
-        else "Media anual del índice ponderado"
-    )
     table = frame.copy()
     table["pressure_share_pct"] = table["pressure_share"] * 100
     table["police_share_pct"] = table["police_share"] * 100
@@ -86,8 +81,6 @@ def _scenario_table(frame: pd.DataFrame, scenario: str) -> pd.DataFrame:
     return table[
         [
             "municipality",
-            "pressure",
-            "eligible_years",
             "pressure_share_pct",
             "police_share_pct",
             "gap_pp",
@@ -98,10 +91,8 @@ def _scenario_table(frame: pd.DataFrame, scenario: str) -> pd.DataFrame:
     ].rename(
         columns={
             "municipality": "Municipio",
-            "pressure": pressure_label,
-            "eligible_years": "Años elegibles",
-            "pressure_share_pct": "% presión",
-            "police_share_pct": "% policías",
+            "pressure_share_pct": "Presión Criminal",
+            "police_share_pct": "Cuota Policial",
             "gap_pp": "Brecha (pp)",
             "current_police": "Policías actuales",
             "proposed_police": "Policías propuestos",
@@ -111,21 +102,14 @@ def _scenario_table(frame: pd.DataFrame, scenario: str) -> pd.DataFrame:
 
 
 def _show_scenario_table(frame: pd.DataFrame, scenario: str, key: str) -> None:
-    pressure_label = (
-        "Media anual de delitos"
-        if scenario == VOLUME_SCENARIO
-        else "Media anual del índice ponderado"
-    )
     st.dataframe(
         _scenario_table(frame, scenario),
         hide_index=True,
         width="stretch",
         key=key,
         column_config={
-            pressure_label: st.column_config.NumberColumn(format="%.1f"),
-            "Años elegibles": st.column_config.NumberColumn(format="%d"),
-            "% presión": st.column_config.NumberColumn(format="%.2f%%"),
-            "% policías": st.column_config.NumberColumn(format="%.2f%%"),
+            "Presión Criminal": st.column_config.NumberColumn(format="%.2f%%"),
+            "Cuota Policial": st.column_config.NumberColumn(format="%.2f%%"),
             "Brecha (pp)": st.column_config.NumberColumn(format="%+.2f"),
             "Policías actuales": st.column_config.NumberColumn(format="%d"),
             "Policías propuestos": st.column_config.NumberColumn(format="%d"),
@@ -173,10 +157,7 @@ st.markdown(
     '<h1>OPTIMIZACIÓN <span>POLICIAL</span></h1>'
     '<h2>¿Está la distribución de Policía Local alineada con la presión criminal observada?</h2>'
     '<p>Dos escenarios teóricos redistribuyen una plantilla constante según volumen o gravedad. '
-    'Son modelos exploratorios de alineación proporcional, no una dotación óptima definitiva.</p>'
-    '<div class="optimization-flow"><span>MAPA</span><i></i><strong>DÓNDE</strong><b>→</b>'
-    '<span>PERFIL</span><i></i><strong>QUÉ</strong><b>→</b>'
-    '<span>OPTIMIZACIÓN</span><i></i><strong>ALINEACIÓN TEÓRICA</strong></div></section>',
+    'Son modelos exploratorios de alineación proporcional, no una dotación óptima definitiva.</p></section>',
     unsafe_allow_html=True,
 )
 
@@ -221,11 +202,6 @@ scenario_copy = (
 )
 
 st.markdown(
-    f'<div class="optimization-source"><i></i>37 MUNICIPIOS · 2023–2025 · '
-    f'{_integer(model.audit.total_police)} POLICÍAS LOCALES · PLANTILLA CONSTANTE · MAYORES RESTOS</div>',
-    unsafe_allow_html=True,
-)
-st.markdown(
     '<div class="optimization-clean-title">RESULTADOS DEL ANÁLISIS</div>',
     unsafe_allow_html=True,
 )
@@ -238,7 +214,7 @@ police_peak = frame.loc[frame["gap"].idxmax()]
 
 primary_columns = st.columns(4, gap="small")
 primary_kpis = (
-    ("total", "Plantilla total", _integer(frame["current_police"].sum()), "Constante en todos los escenarios"),
+    ("total", "Policía local", _integer(frame["current_police"].sum()), "Constante en todos los escenarios"),
     ("moved", "Agentes reasignados", _integer(moved_agents), "Suma de transferencias positivas"),
     ("receive", "Municipios receptores", _integer(receivers), "Transferencia teórica positiva"),
     ("cede", "Municipios cedentes", _integer(ceders), "Transferencia teórica negativa"),
@@ -266,6 +242,7 @@ st.markdown(
 )
 alignment_column, gap_column = st.columns([1.05, 1], gap="large")
 with alignment_column:
+    st.markdown("#### EQUILIBRIO PRESIÓN CRIMINAL / CUOTA POLICIAL")
     st.plotly_chart(
         build_alignment_scatter(frame, include_madrid, selected_municipality),
         width="stretch",
@@ -273,6 +250,7 @@ with alignment_column:
         key=f"optimization-alignment-{scenario}-{include_madrid}-{selected_municipality}",
     )
 with gap_column:
+    st.markdown("#### BRECHA ENTRE PRESIÓN CRIMINAL Y CUOTA POLICIAL")
     st.plotly_chart(
         build_gap_ranking_chart(
             frame,
@@ -283,17 +261,6 @@ with gap_column:
         config={"displayModeBar": False, "responsive": True},
         key=f"optimization-gap-{scenario}-{include_madrid}-{selected_municipality}",
     )
-st.caption(
-    "Brecha = cuota policial − cuota de presión. Una brecha negativa indica mayor presión proporcional; una positiva, mayor dotación proporcional. No demuestra insuficiencia ni exceso operativo."
-)
-
-with st.expander("Consultar los 37 municipios"):
-    _show_scenario_table(
-        frame.sort_values("gap"),
-        scenario,
-        f"optimization-full-ranking-{scenario}",
-    )
-
 st.markdown(
     '<div class="optimization-clean-title optimization-clean-title-spaced">REDISTRIBUCIÓN TERRITORIAL</div>',
     unsafe_allow_html=True,
@@ -304,8 +271,22 @@ except ValueError as exc:
     map_source = None
     st.warning(f"No se ha podido preparar la cartografía: {exc}")
 
-map_column, transfer_column = st.columns([1.55, .8], gap="large")
+transfer_column, map_column = st.columns([.8, 1.55], gap="large")
+with transfer_column:
+    st.markdown("#### TOP Y BOTTOM 5 TRANSFERENCIAS")
+    with st.container(key="optimization_transfer_shell"):
+        st.plotly_chart(
+            build_transfer_ranking_chart(
+                frame,
+                include_madrid=include_madrid,
+                selected_municipality=selected_municipality,
+            ),
+            width="stretch",
+            config={"displayModeBar": False, "responsive": True},
+            key=f"optimization-transfer-ranking-{scenario}-{include_madrid}-{selected_municipality}",
+        )
 with map_column:
+    st.markdown("#### MUNICIPIOS RECEPTORES Y CEDENTES")
     with st.container(key="optimization_map_shell"):
         if map_source is not None and map_source.available:
             st.plotly_chart(
@@ -326,18 +307,13 @@ with map_column:
                 if map_source is not None and map_source.message
                 else "La cartografía no está disponible; el ranking permanece operativo."
             )
-with transfer_column:
-    with st.container(key="optimization_transfer_shell"):
-        st.plotly_chart(
-            build_transfer_ranking_chart(
-                frame,
-                include_madrid=include_madrid,
-                selected_municipality=selected_municipality,
-            ),
-            width="stretch",
-            config={"displayModeBar": False, "responsive": True},
-            key=f"optimization-transfer-ranking-{scenario}-{include_madrid}-{selected_municipality}",
-        )
+
+with st.expander("Consultar los 37 municipios"):
+    _show_scenario_table(
+        frame.sort_values("gap"),
+        scenario,
+        f"optimization-full-ranking-{scenario}",
+    )
 
 transfer_peak = frame.loc[frame["transfer"].abs().idxmax()]
 insights = (

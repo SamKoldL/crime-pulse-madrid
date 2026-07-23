@@ -294,6 +294,7 @@ with st.container(key="home_filter_bar"):
         st.selectbox(
             "Horizonte",
             options=FORECAST_QUARTERS,
+            label_visibility="collapsed",
             format_func=lambda value: f"{value} 2026",
             key="simulator_quarter",
             on_change=_invalidate_execution,
@@ -302,6 +303,7 @@ with st.container(key="home_filter_bar"):
         st.selectbox(
             "Criterio de referencia",
             options=AVAILABLE_PROPOSALS,
+            label_visibility="collapsed",
             key="simulator_criterion",
             on_change=_on_criterion_change,
         )
@@ -309,6 +311,7 @@ with st.container(key="home_filter_bar"):
         st.selectbox(
             "Flexibilidad",
             options=tuple(FLEXIBILITY_RATIOS),
+            label_visibility="collapsed",
             key="simulator_flexibility",
             on_change=_invalidate_execution,
         )

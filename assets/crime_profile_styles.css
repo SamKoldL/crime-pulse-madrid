@@ -277,3 +277,15 @@ div[class*="st-key-drug_metric_"] [data-testid="stMetricValue"] { color: #f3fbff
     font: 700 clamp(.82rem, 1.15vw, 1rem)/1.2 'Space Grotesk', sans-serif;
     letter-spacing: .16em;
 }
+
+
+/* Alineación consistente de las tarjetas KPI que muestran un ID */
+.profile-kpi-card--has-id .profile-kpi-card__main {
+    grid-template-rows: .95rem minmax(0, 1fr);
+}
+.profile-kpi-card--has-id .profile-kpi-card__id {
+    min-height: .95rem;
+}
+.profile-kpi-card--has-id .profile-kpi-card__main strong {
+    margin-top: .22rem;
+}
