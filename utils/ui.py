@@ -308,20 +308,29 @@ def render_specific_type_context(snapshot: HomeSnapshot) -> None:
     )
 
 
-def render_home_signals(signals: tuple[HomeSignal, ...]) -> None:
-    articles = "".join(
-        '<article>'
-        f'<span>{escape(signal.signal_type)}</span>'
-        f'<h4>{escape(signal.title)}</h4>'
-        f'<p>{escape(signal.text)}</p>'
-        f'<b>PROFUNDIZAR · {escape(signal.module)}</b>'
-        '</article>'
-        for signal in signals[:4]
+def render_home_signals() -> None:
+    """Cierre ejecutivo ultracompacto de la Home con cuatro insights clave."""
+    insights = (
+        ("CONCENTRACIÓN TERRITORIAL", "La presión criminal no es homogénea"),
+        ("CAMBIO DELICTIVO", "Evolución desigual por tipología"),
+        ("PERSPECTIVA TEMPORAL", "Variaciones trimestrales"),
+        ("ANTICIPACIÓN", "Estabilidad prevista para 2026"),
     )
+
+    cards = "".join(
+        '<article>'
+        f'<span>{escape(category)}</span>'
+        f'<h4>{escape(title)}</h4>'
+        '</article>'
+        for category, title in insights
+    )
+
     st.markdown(
-        '<section class="home-signals"><div class="home-signals-title">'
-        '<span>INSIGHTS DINÁMICOS · SIN CAUSALIDAD</span><h3>Señales del periodo</h3>'
-        '<p>Lecturas ejecutivas calculadas desde el filtro activo.</p></div>'
-        f'<div class="home-signal-grid">{articles}</div></section>',
+        '<section class="home-insights-quick">'
+        '<div class="home-insights-quick-header">'
+        '<h3>Insights clave</h3>'
+        '</div>'
+        f'<div class="home-insights-quick-grid">{cards}</div>'
+        '</section>',
         unsafe_allow_html=True,
     )

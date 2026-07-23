@@ -21,8 +21,8 @@ class NavigationItem:
 # Para activar un módulo futuro solo hay que sustituir ``None`` por su ruta.
 NAVIGATION_ITEMS = (
     NavigationItem("home", "HOME", "app.py", 1.0),
-    NavigationItem("map", "MAPA CRIMINAL", "pages/1_Mapa_Criminal.py", 1.25),
     NavigationItem("profile", "PERFIL DELICTIVO", "pages/2_Perfil_Delictivo.py", 1.35),
+    NavigationItem("map", "MAPA CRIMINAL", "pages/1_Mapa_Criminal.py", 1.25),
     NavigationItem(
         "optimization",
         "OPTIMIZACIÓN",

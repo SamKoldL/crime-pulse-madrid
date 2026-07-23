@@ -12,7 +12,6 @@ from utils.charts import (
 from utils.home_data import (
     ALL_HOME_CRIME_TYPES,
     ALL_HOME_MUNICIPALITIES,
-    build_home_signals,
     build_home_snapshot,
     load_home_model,
 )
@@ -202,5 +201,5 @@ st.plotly_chart(
     key=f"home-quarterly-{selected_year}-{selected_municipality}-{selected_crime_type}",
 )
 
-render_home_signals(build_home_signals(snapshot))
+render_home_signals()
 render_footer(selected_year, home_compact=True)
