@@ -419,8 +419,8 @@
 /* Mapa y ranking de redistribución con la misma altura */
 .st-key-optimization_map_shell,
 .st-key-optimization_transfer_shell {
-    height: 650px;
-    min-height: 650px;
+    min-height: 610px;
+    height: auto;
     overflow: hidden !important;
     border: 1px solid rgba(79, 178, 218, .17);
     border-radius: 4px 4px 16px 4px;
@@ -436,14 +436,25 @@
 .st-key-optimization_map_shell .svg-container,
 .st-key-optimization_transfer_shell .svg-container {
     width: 100% !important;
-    height: 650px !important;
-    min-height: 650px !important;
+    max-width: 100% !important;
 }
 
 @media (max-width: 760px) {
     .st-key-optimization_map_shell,
     .st-key-optimization_transfer_shell {
-        height: 480px;
-        min-height: 480px;
+        min-height: 0;
+        height: auto;
     }
+}
+
+
+/* Gráficos de redistribución: el alto lo controla Plotly (610 px) y el shell se adapta.
+   Evita barras de desplazamiento internas sin recortar el contenido. */
+.st-key-optimization_map_shell [data-testid="stVerticalBlock"],
+.st-key-optimization_transfer_shell [data-testid="stVerticalBlock"],
+.st-key-optimization_map_shell [data-testid="stVerticalBlockBorderWrapper"],
+.st-key-optimization_transfer_shell [data-testid="stVerticalBlockBorderWrapper"] {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
 }

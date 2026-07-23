@@ -289,3 +289,10 @@ div[class*="st-key-drug_metric_"] [data-testid="stMetricValue"] { color: #f3fbff
 .profile-kpi-card--has-id .profile-kpi-card__main strong {
     margin-top: .22rem;
 }
+
+
+/* Perfil delictivo: los gráficos Plotly usan su altura declarada por figura.
+   No se impone una ventana interna desplazable. */
+[data-testid="stPlotlyChart"] {
+    max-height: none !important;
+}
