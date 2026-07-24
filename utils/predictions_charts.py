@@ -92,7 +92,7 @@ def build_history_forecast_chart(series: pd.DataFrame) -> go.Figure:
                 ),
             )
         )
-    layout = _base_layout(460)
+    layout = _base_layout(510)
     layout.update(
         legend={
             "orientation": "h",

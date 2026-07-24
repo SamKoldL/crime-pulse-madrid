@@ -438,7 +438,7 @@ if not all_crime_scope and snapshot.includes_high_uncertainty:
         unsafe_allow_html=True,
     )
 
-_clean_section("HISTÓRICO + FORECAST")
+_clean_section("EVOLUCIÓN HISTÓRICA Y FORECAST")
 st.plotly_chart(
     build_history_forecast_chart(series),
     width="stretch",
@@ -446,7 +446,7 @@ st.plotly_chart(
     key=f"prediction-history-{selection_level}-{selected_municipality}-{selected_type}",
 )
 
-_clean_section("COMPARACIÓN 2025 VS 2026")
+_clean_section("EVOLUCIÓN PREVISTA 2026")
 st.plotly_chart(
     build_annual_comparison_chart(comparison),
     width="stretch",
@@ -472,7 +472,7 @@ st.plotly_chart(
     key=f"prediction-type-trends-{selection_level}-{selected_municipality}",
 )
 
-_clean_section("MAPA PREDICTIVO")
+_clean_section("INTENSIDAD CRIMINAL PREVISTA")
 try:
     map_source = prepare_prediction_map(territorial)
 except ValueError as exc:
@@ -481,6 +481,7 @@ except ValueError as exc:
 
 map_column, ranking_column = st.columns([1.5, .82], gap="large")
 with map_column:
+    st.markdown("#### DISTRIBUCIÓN TERRITORIAL")
     with st.container(key="prediction_map_shell"):
         if map_source is not None and map_source.available:
             st.plotly_chart(
@@ -508,6 +509,7 @@ with map_column:
                 else "El mapa no está disponible; el ranking territorial permanece operativo."
             )
 with ranking_column:
+    st.markdown("#### MUNICIPIOS CON MAYOR PREVISIÓN")
     st.plotly_chart(
         build_territorial_ranking_chart(
             territorial_view,

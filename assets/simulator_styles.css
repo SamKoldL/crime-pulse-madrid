@@ -409,3 +409,36 @@ div[data-testid="stHorizontalBlock"]:has(> [data-testid="stColumn"] .st-key-simu
     overflow: hidden !important;
     border-radius: inherit !important;
 }
+
+
+/* Cierre metodológico ejecutivo del simulador */
+.simulator-final-caveat {
+    margin: 1.35rem 0 1rem;
+    padding: .85rem 1rem;
+    color: var(--text-secondary);
+    background: rgba(7, 25, 39, .66);
+    border: 1px solid rgba(73, 191, 229, .20);
+    border-left: 3px solid var(--cyan);
+    font-size: .72rem;
+    line-height: 1.55;
+}
+.simulator-final-caveat b {
+    color: var(--cyan);
+    font-size: .62rem;
+    letter-spacing: .14em;
+}
+
+
+/* Títulos ejecutivos sobre las dos tarjetas de comparación */
+.simulator-chart-title {
+    min-height: 2.45rem;
+    display: flex;
+    align-items: flex-end;
+    margin: .2rem 0 .7rem;
+    padding-bottom: .6rem;
+    border-bottom: 1px solid rgba(79, 178, 218, .18);
+    color: var(--cyan);
+    font: 700 clamp(.78rem, 1vw, .94rem)/1.25 'Space Grotesk', sans-serif;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+}

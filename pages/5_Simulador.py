@@ -19,7 +19,6 @@ from utils.simulator_charts import (
     build_coverage_change_chart,
     build_scenario_comparison_chart,
     build_simulator_map,
-    build_simulation_timeseries_chart,
     build_pressure_gap_timeseries_chart,
 )
 from utils.simulator_data import (
@@ -324,9 +323,9 @@ selected_flexibility = str(st.session_state["simulator_flexibility"])
 
 st.markdown(
     '<section class="simulator-hero"><div class="simulator-eyebrow">INTELIGENCIA OPERATIVA · ESCENARIOS INTERACTIVOS</div>'
-    '<h1>SIMULADOR DE <span>REDISTRIBUCIÓN</span></h1>'
-    '<h2>Cobertura policial frente a presión criminal prevista</h2>'
-    '<p>Construye, valida y compara movimientos de agentes entre los municipios analizados.</p>'
+    '<h1>SIMULACIÓN <span>OPERATIVA</span></h1>'
+    '<h2>Laboratorio de redistribución frente a presión criminal prevista</h2>'
+    '<p>Construye, valida y compara escenarios de movimiento de agentes entre los municipios analizados.</p>'
     '<div class="simulator-caveat"><b>ESCENARIO NO CAUSAL</b> · Redistribuir agentes modifica la cobertura relativa; '
     'no demuestra ni cuantifica una reducción de la criminalidad.</div></section>',
     unsafe_allow_html=True,
@@ -627,6 +626,10 @@ if executed:
     comparison = _comparison_frame(current_frame, result_frame, optimized_frame)
     comparison_left, comparison_right = st.columns([1.12, 0.88], gap="large")
     with comparison_left:
+        st.markdown(
+            '<div class="simulator-chart-title">COMPARACIÓN DE ESCENARIOS DE COBERTURA</div>',
+            unsafe_allow_html=True,
+        )
         st.plotly_chart(
             build_scenario_comparison_chart(comparison),
             width="stretch",
@@ -634,23 +637,16 @@ if executed:
             key=f"simulator-comparison-{hash(current_signature)}",
         )
     with comparison_right:
+        st.markdown(
+            '<div class="simulator-chart-title">IMPACTO TERRITORIAL DEL ESCENARIO</div>',
+            unsafe_allow_html=True,
+        )
         st.plotly_chart(
             build_coverage_change_chart(result_frame, count_each=5),
             width="stretch",
             config={"displayModeBar": False, "responsive": True},
             key=f"simulator-coverage-{hash(current_signature)}",
         )
-
-    st.plotly_chart(
-        build_simulation_timeseries_chart(
-            simulator_model,
-            result_frame,
-            selected_quarter,
-        ),
-        width="stretch",
-        config={"displayModeBar": False, "responsive": True},
-        key=f"simulator-timeseries-{selected_quarter}-{hash(current_signature)}",
-    )
 
     st.markdown(
         '<div class="simulator-subchart-title">IMPACTO DEL ESCENARIO SOBRE LA PRESIÓN TERRITORIAL</div>',
@@ -729,6 +725,14 @@ with st.expander("METODOLOGÍA Y LÍMITES"):
         'eventos, especialización ni competencias de otros cuerpos. Es un modelo exploratorio de cobertura, no una dotación óptima definitiva.</p></article></div>',
         unsafe_allow_html=True,
     )
+
+
+st.markdown(
+    '<div class="simulator-final-caveat"><b>INTERPRETACIÓN</b> · '
+    'El resultado representa un escenario comparativo de cobertura. '
+    'No constituye una redistribución operativa real ni una estimación causal de reducción delictiva.</div>',
+    unsafe_allow_html=True,
+)
 
 st.markdown(
     '<footer class="app-footer"><span>CRIME PULSE MADRID · SIMULADOR</span>'
