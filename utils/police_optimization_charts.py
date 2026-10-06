@@ -308,7 +308,7 @@ def build_transfer_map(
         [1.0, TRANSFER_COLORS["Recibiría"]],
     ]
     figure = go.Figure(
-        go.Choroplethmapbox(
+        go.Choroplethmap(
             geojson=source.geojson,
             featureidkey="properties.feature_id",
             locations=frame["_feature_id"],
@@ -326,7 +326,7 @@ def build_transfer_map(
     )
     for band in ("Recibiría", "Sin cambio", "Cedería"):
         figure.add_trace(
-            go.Scattermapbox(
+            go.Scattermap(
                 lon=[None],
                 lat=[None],
                 mode="markers",
@@ -350,7 +350,7 @@ def build_transfer_map(
             ],
         }
         figure.add_trace(
-            go.Choroplethmapbox(
+            go.Choroplethmap(
                 geojson=selected_geojson,
                 featureidkey="properties.feature_id",
                 locations=[selected_id],
@@ -381,7 +381,7 @@ def build_transfer_map(
             "bgcolor": "rgba(2,10,16,.76)",
         },
         dragmode=False,
-        mapbox={"style": "carto-darkmatter", **viewport},
+        map={"style": "carto-darkmatter", **viewport},
         hoverlabel={
             "bgcolor": "#071521",
             "bordercolor": "#238bb5",

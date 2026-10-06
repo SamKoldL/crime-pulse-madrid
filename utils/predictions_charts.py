@@ -327,7 +327,7 @@ def build_prediction_map(
         if band != "No incluido"
     ]
     figure = go.Figure(
-        go.Choroplethmapbox(
+        go.Choroplethmap(
             geojson=source.geojson,
             featureidkey="properties.feature_id",
             locations=active_plot_frame["_feature_id"],
@@ -356,7 +356,7 @@ def build_prediction_map(
                 for _, row in madrid_plot.iterrows()
             ]
             figure.add_trace(
-                go.Choroplethmapbox(
+                go.Choroplethmap(
                     geojson=source.geojson,
                     featureidkey="properties.feature_id",
                     locations=madrid_plot["_feature_id"],
@@ -376,7 +376,7 @@ def build_prediction_map(
         selected_color = RISK_COLORS[str(selected.iloc[0]["_prediction_band"])]
         selected_position = int(frame.index.get_loc(selected.index[0]))
         figure.add_trace(
-            go.Choroplethmapbox(
+            go.Choroplethmap(
                 geojson=geojson_subset(source.geojson, selected["_feature_id"]),
                 featureidkey="properties.feature_id",
                 locations=selected["_feature_id"],
@@ -416,7 +416,7 @@ def build_prediction_map(
             "font": {"color": MUTED, "size": 10},
             "bgcolor": "rgba(2,10,16,.76)",
         },
-        mapbox={"style": "carto-darkmatter", **viewport},
+        map={"style": "carto-darkmatter", **viewport},
         hoverlabel={
             "bgcolor": "#071521",
             "bordercolor": "#238bb5",

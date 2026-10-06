@@ -298,7 +298,7 @@ def build_home_mini_map(
     figure = go.Figure()
     if not ineligible.empty:
         figure.add_trace(
-            go.Choroplethmapbox(
+            go.Choroplethmap(
                 geojson=geojson_subset(source.geojson, ineligible["_feature_id"]),
                 featureidkey="properties.feature_id",
                 locations=ineligible["_feature_id"],
@@ -314,7 +314,7 @@ def build_home_mini_map(
     if not eligible.empty:
         eligible["_risk_code"] = eligible["_risk_band"].map(RISK_CODES).astype(float)
         figure.add_trace(
-            go.Choroplethmapbox(
+            go.Choroplethmap(
                 geojson=source.geojson,
                 featureidkey="properties.feature_id",
                 locations=eligible["_feature_id"],
@@ -336,7 +336,7 @@ def build_home_mini_map(
         if not selected.empty:
             selected_color = RISK_COLORS[str(selected.iloc[0]["_risk_band"])]
             figure.add_trace(
-                go.Choroplethmapbox(
+                go.Choroplethmap(
                     geojson=geojson_subset(source.geojson, selected["_feature_id"]),
                     featureidkey="properties.feature_id",
                     locations=selected["_feature_id"],
@@ -371,7 +371,7 @@ def build_home_mini_map(
             "font": {"color": "#93adbd", "size": 9},
             "bgcolor": "rgba(2, 10, 16, .78)",
         },
-        mapbox={"style": "carto-darkmatter", **viewport},
+        map={"style": "carto-darkmatter", **viewport},
         hoverlabel={
             "bgcolor": "#071521",
             "bordercolor": "#238bb5",

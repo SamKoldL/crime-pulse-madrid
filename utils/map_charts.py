@@ -105,7 +105,7 @@ def add_risk_legend_traces(figure: go.Figure, risk_bands: pd.Series) -> None:
         if risk_band not in present:
             continue
         figure.add_trace(
-            go.Scattermapbox(
+            go.Scattermap(
                 lat=[None],
                 lon=[None],
                 mode="markers",
@@ -155,7 +155,7 @@ def build_territorial_map(
 
     if not excluded.empty:
         figure.add_trace(
-            go.Choroplethmapbox(
+            go.Choroplethmap(
                 geojson=geojson_subset(source.geojson, excluded["_feature_id"]),
                 featureidkey="properties.feature_id",
                 locations=excluded["_feature_id"],
@@ -176,7 +176,7 @@ def build_territorial_map(
     if not eligible.empty:
         eligible["_risk_code"] = eligible["_risk_band"].map(RISK_CODES).astype(float)
         figure.add_trace(
-            go.Choroplethmapbox(
+            go.Choroplethmap(
                 geojson=source.geojson,
                 featureidkey="properties.feature_id",
                 locations=eligible["_feature_id"],
@@ -204,7 +204,7 @@ def build_territorial_map(
         if not selected.empty:
             selected_color = RISK_COLORS[str(selected.iloc[0]["_risk_band"])]
             figure.add_trace(
-                go.Choroplethmapbox(
+                go.Choroplethmap(
                     geojson=geojson_subset(
                         source.geojson,
                         selected["_feature_id"],
@@ -242,7 +242,7 @@ def build_territorial_map(
             "font": {"color": "#93adbd", "size": 10},
             "bgcolor": "rgba(2, 10, 16, .72)",
         },
-        mapbox={
+        map={
             "style": "carto-darkmatter",
             **(
                 source.territorial_viewport

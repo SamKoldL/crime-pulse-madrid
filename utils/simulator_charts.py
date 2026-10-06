@@ -83,7 +83,7 @@ def _map_layout(source: MapSource, *, height: int = 610) -> dict[str, Any]:
         "height": height,
         "margin": {"l": 0, "r": 0, "t": 0, "b": 0},
         "paper_bgcolor": "rgba(0,0,0,0)",
-        "mapbox": {
+        "map": {
             "style": "carto-darkmatter",
             **(viewport or {"center": source.center or {"lon": -3.65, "lat": 40.42}, "zoom": 7.15}),
         },
@@ -114,10 +114,10 @@ def _hover_text(frame: pd.DataFrame) -> list[str]:
 def _route_traces(
     source: MapSource,
     movements: Sequence[Mapping[str, object]],
-) -> tuple[list[go.Scattermapbox], list[tuple[float, float, str]]]:
+) -> tuple[list[go.Scattermap], list[tuple[float, float, str]]]:
     centres = _municipality_centres(source)
     maximum = max((int(item["agents"]) for item in movements), default=1)
-    traces: list[go.Scattermapbox] = []
+    traces: list[go.Scattermap] = []
     midpoints: list[tuple[float, float, str]] = []
     for movement in movements:
         origin = str(movement["origin"])
@@ -129,7 +129,7 @@ def _route_traces(
         destination_lon, destination_lat = centres[destination]
         label = f"{escape(origin)} → {escape(destination)} · {agents} agentes"
         traces.append(
-            go.Scattermapbox(
+            go.Scattermap(
                 lon=[origin_lon, destination_lon],
                 lat=[origin_lat, destination_lat],
                 mode="lines",
@@ -163,7 +163,7 @@ def build_simulator_map(
         pressure_min = float(min(frame["pressure_before"].min(), frame["pressure_after"].min()))
         pressure_max = float(max(frame["pressure_before"].max(), frame["pressure_after"].max()))
         figure.add_trace(
-            go.Choroplethmapbox(
+            go.Choroplethmap(
                 geojson=source.geojson,
                 featureidkey="properties.feature_id",
                 locations=frame["_feature_id"],
@@ -188,7 +188,7 @@ def build_simulator_map(
     elif view == "VARIACIÓN":
         maximum = max(abs(float(frame["coverage_improvement_pct"].min())), abs(float(frame["coverage_improvement_pct"].max())), 0.01)
         figure.add_trace(
-            go.Choroplethmapbox(
+            go.Choroplethmap(
                 geojson=source.geojson,
                 featureidkey="properties.feature_id",
                 locations=frame["_feature_id"],
@@ -214,7 +214,7 @@ def build_simulator_map(
         )
     else:
         figure.add_trace(
-            go.Choroplethmapbox(
+            go.Choroplethmap(
                 geojson=source.geojson,
                 featureidkey="properties.feature_id",
                 locations=frame["_feature_id"],
@@ -231,7 +231,7 @@ def build_simulator_map(
             figure.add_trace(trace)
         if midpoints:
             figure.add_trace(
-                go.Scattermapbox(
+                go.Scattermap(
                     lon=[item[0] for item in midpoints],
                     lat=[item[1] for item in midpoints],
                     text=[item[2] for item in midpoints],
@@ -263,7 +263,7 @@ def build_movement_animation(
     animated_trace_index = len(figure.data)
     first_lon, first_lat, first_label = midpoints[0]
     figure.add_trace(
-        go.Scattermapbox(
+        go.Scattermap(
             lon=[first_lon],
             lat=[first_lat],
             text=[first_label],
@@ -277,7 +277,7 @@ def build_movement_animation(
         go.Frame(
             name=str(index),
             data=[
-                go.Scattermapbox(
+                go.Scattermap(
                     lon=[longitude],
                     lat=[latitude],
                     text=[label],
